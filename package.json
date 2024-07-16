@@ -1,0 +1,15 @@
+﻿{
+	"name": "com.lvl3mage.cameramanagement",
+	"version": "1.0.0",
+	"displayName": "Camera Management",
+	"description": "A package that provides an extendable camera management system.",
+	"unity": "2021.3",
+	"dependencies": {
+		"com.lvl3mage.interpolation": "1.0.0",
+		"com.domybest.mybox": "1.8.0"
+	},
+	"author": {
+		"name": "Lvl3Mage",
+		"url": "https://github.com/Lvl3Mage"
+	}
+}
