@@ -56,7 +56,7 @@ namespace CameraManagement2D
         /// </summary>
         /// <param name="objects">The gameobjects to track.</param>
         /// <param name="boundsType">The type of bounds to use for tracking.</param>
-		public void SetTrackedObjects(GameObject[] objects, TrackedObject.BoundsType boundsType = TrackedObject.BoundsType.None)
+		public void SetTrackedObjects(GameObject[] objects, BoundsSource boundsType = BoundsSource.None)
 		{
 			trackedObjects = new List<TrackedObject>();
 			trackedObjects.Capacity = objects.Length;
@@ -69,7 +69,7 @@ namespace CameraManagement2D
 		/// </summary>
 		/// <param name="obj">The gameobject to track.</param>
 		/// <param name="boundsType">The type of bounds to use for tracking.</param>
-		public void AddTrackedObject(GameObject obj, TrackedObject.BoundsType boundsType = TrackedObject.BoundsType.None)
+		public void AddTrackedObject(GameObject obj, BoundsSource boundsType = BoundsSource.None)
 		{
 			if(trackedObjects.Any((el)=>el.Tracks(obj)))
 			{
