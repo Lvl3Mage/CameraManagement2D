@@ -1,0 +1,5 @@
+<map id="CameraManagement2D.TrackerCameraModule" name="CameraManagement2D.TrackerCameraModule">
+<area shape="rect" id="node1" title="A camera module that tracks multiple objects and adjusts the camera&#39;s state to ensure all tracked obj..." alt="" coords="5,155,211,196"/>
+<area shape="rect" id="node2" href="$a00044.html" title="An abstract base class for camera controllers." alt="" coords="47,80,169,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="52,5,164,32"/>
+</map>

@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d5/df9/a00044.html" target="_top" xlink:title="An abstract base class for camera controllers.">
+<g id="a_node2"><a xlink:href="a00044.html" target="_top" xlink:title="An abstract base class for camera controllers.">
 <polygon fill="white" stroke="black" points="120,-73.5 120,-103.5 275,-103.5 275,-73.5 120,-73.5"/>
 <text text-anchor="start" x="128" y="-91.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraManagement2D.Camera</text>
 <text text-anchor="middle" x="197.5" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">Controller</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d4/dca/a00048.html" target="_top" xlink:title="Manages multiple camera controllers, allowing switching between them.">
+<g id="a_node3"><a xlink:href="a00048.html" target="_top" xlink:title="Manages multiple camera controllers, allowing switching between them.">
 <polygon fill="white" stroke="black" points="311,-147.5 311,-177.5 466,-177.5 466,-147.5 311,-147.5"/>
 <text text-anchor="start" x="319" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraManagement2D.Camera</text>
 <text text-anchor="middle" x="388.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">ModuleManager</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d1/d84/a00052.html" target="_top" xlink:title="A camera controller module that allows for panning and zooming of the camera based on user input.">
+<g id="a_node4"><a xlink:href="a00052.html" target="_top" xlink:title="A camera controller module that allows for panning and zooming of the camera based on user input.">
 <polygon fill="white" stroke="black" points="311,-98.5 311,-128.5 466,-128.5 466,-98.5 311,-98.5"/>
 <text text-anchor="start" x="319" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraManagement2D.Camera</text>
 <text text-anchor="middle" x="388.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">PanModule</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="d9/d2e/a00056.html" target="_top" xlink:title="A module for smoothing camera movement, including position, zoom, and rotation. This class extends th...">
+<g id="a_node5"><a xlink:href="a00056.html" target="_top" xlink:title="A module for smoothing camera movement, including position, zoom, and rotation. This class extends th...">
 <polygon fill="white" stroke="black" points="311,-49.5 311,-79.5 466,-79.5 466,-49.5 311,-49.5"/>
 <text text-anchor="start" x="319" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraManagement2D.Camera</text>
 <text text-anchor="middle" x="388.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">SmoothingModule</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="da/d24/a00068.html" target="_top" xlink:title="A camera module that tracks multiple objects and adjusts the camera&#39;s state to ensure all tracked obj...">
+<g id="a_node6"><a xlink:href="a00068.html" target="_top" xlink:title="A camera module that tracks multiple objects and adjusts the camera&#39;s state to ensure all tracked obj...">
 <polygon fill="white" stroke="black" points="311.5,-0.5 311.5,-30.5 465.5,-30.5 465.5,-0.5 311.5,-0.5"/>
 <text text-anchor="start" x="319.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraManagement2D.Tracker</text>
 <text text-anchor="middle" x="388.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraModule</text>

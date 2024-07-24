@@ -32,10 +32,10 @@ var NAVTREE =
       [ "Documentation", "index.html#autotoc_md6", null ],
       [ "Author", "index.html#autotoc_md7", null ]
     ] ],
-    [ "[1.0.0] - 2024-07-16", "d3/d00/a00113.html", [
-      [ "[1.0.1] - 2024-07-24", "d3/d00/a00113.html#autotoc_md1", null ]
+    [ "[1.0.0] - 2024-07-16", "a00113.html", [
+      [ "[1.0.1] - 2024-07-24", "a00113.html#autotoc_md1", null ]
     ] ],
-    [ "LICENSE", "d8/d17/a00114.html", null ],
+    [ "LICENSE", "a00114.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -63,7 +63,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
+"a00008_source.html",
 "index.html#autotoc_md5"
 ];
 
