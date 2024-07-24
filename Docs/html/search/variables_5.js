@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['useuserinput_0',['useUserInput',['../class_camera_management2_d_1_1_camera_controller.html#a69909d5226af787d4c13c73f4ceafc2b',1,'CameraManagement2D::CameraController']]]
+  ['gameobject_0',['gameObject',['../class_camera_management2_d_1_1_tracked_object.html#ac53de77b0f4639349bff613c85e62156',1,'CameraManagement2D::TrackedObject']]]
 ];

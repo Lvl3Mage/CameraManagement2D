@@ -23,13 +23,13 @@ namespace CameraManagement2D
 		[SerializeField] protected bool active = true;
 		bool initialized;
 
-		/// <remarks>Make sure to call the base if overloading</remarks>
-		protected void Awake()
+		/// <remarks>When overriding call the base method</remarks>
+		protected virtual void Awake()
 		{
 			controllerCamera = gameObject.GetComponent<Camera>();
 		}
-		/// <remarks>Make sure to call the base if overloading</remarks>
-		protected void Start()
+		/// <remarks>Do not redefine. Use <see cref="InitializeCameraController"/> to initialize the component instead</remarks>
+		void Start()
 		{
 			if(!initialized){
 				InitializeCameraController();

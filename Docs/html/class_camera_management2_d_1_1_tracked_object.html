@@ -62,6 +62,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Camera Management
+   &#160;<span id="projectnumber">1.0.1</span>
    </div>
    <div id="projectbrief">A drop-in 2D camera management library for Unity</div>
   </td>
@@ -132,8 +133,8 @@ $(function(){initNavTree('class_camera_management2_d_1_1_tracked_object.html',''
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_camera_management2_d_1_1_tracked_object-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">CameraManagement2D.TrackedObject Class Reference</div></div>
 </div><!--header-->
@@ -142,23 +143,14 @@ $(function(){initNavTree('class_camera_management2_d_1_1_tracked_object.html',''
 <p>Represents an object being tracked by the camera, including its bounds and prediction capabilities.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a700377504a6543beff350ad1cc5d637e" id="r_a700377504a6543beff350ad1cc5d637e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a700377504a6543beff350ad1cc5d637e">BoundsType</a> { <a class="el" href="#a700377504a6543beff350ad1cc5d637ea6adf97f83acf6453d4a6a4b1070f3754">None</a>
-, <a class="el" href="#a700377504a6543beff350ad1cc5d637ea07b20ae970048fc2002d756f27acc863">Renderer</a>
-, <a class="el" href="#a700377504a6543beff350ad1cc5d637ea39e1450275f6b9c731ff9faafab3f44c">Collider</a>
-, <a class="el" href="#a700377504a6543beff350ad1cc5d637eab1c94ca2fbc3e78fc30069c8d0f01680">All</a>
- }</td></tr>
-<tr class="memdesc:a700377504a6543beff350ad1cc5d637e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration for the types of bounds that can be used for tracking.  <a href="#a700377504a6543beff350ad1cc5d637e">More...</a><br /></td></tr>
-<tr class="separator:a700377504a6543beff350ad1cc5d637e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad4a2953fc7444c540ef93a47a7d91e62" id="r_ad4a2953fc7444c540ef93a47a7d91e62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4a2953fc7444c540ef93a47a7d91e62">TrackedObject</a> (GameObject gameObject, <a class="el" href="#a700377504a6543beff350ad1cc5d637e">BoundsType</a> boundsType=<a class="el" href="#a700377504a6543beff350ad1cc5d637ea6adf97f83acf6453d4a6a4b1070f3754">BoundsType.None</a>, float boundsPadding=0f)</td></tr>
-<tr class="memdesc:ad4a2953fc7444c540ef93a47a7d91e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_camera_management2_d_1_1_tracked_object.html" title="Represents an object being tracked by the camera, including its bounds and prediction capabilities.">TrackedObject</a> class.  <br /></td></tr>
-<tr class="separator:ad4a2953fc7444c540ef93a47a7d91e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae371fd0a1b3c6839265b0576e11d29d8" id="r_ae371fd0a1b3c6839265b0576e11d29d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae371fd0a1b3c6839265b0576e11d29d8">Initialize</a> ()</td></tr>
-<tr class="memdesc:ae371fd0a1b3c6839265b0576e11d29d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the tracked object, including setting up the transform, renderer, and collider.  <br /></td></tr>
+<tr class="memitem:a3800205c95417aae5b40ec61bada083a" id="r_a3800205c95417aae5b40ec61bada083a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3800205c95417aae5b40ec61bada083a">TrackedObject</a> (GameObject <a class="el" href="#ac53de77b0f4639349bff613c85e62156">gameObject</a>, <a class="el" href="namespace_camera_management2_d.html#a357009425e866bf9f64c1e08d26641db">BoundsSource</a> <a class="el" href="#a4d925ceb7f501ec6dfc0299079e62da9">boundsSource</a>=<a class="el" href="namespace_camera_management2_d.html#a357009425e866bf9f64c1e08d26641dba6adf97f83acf6453d4a6a4b1070f3754">BoundsSource.None</a>, float <a class="el" href="#ad67b13762ae6d68a8d6b805e12028f5d">boundsPadding</a>=0f)</td></tr>
+<tr class="memdesc:a3800205c95417aae5b40ec61bada083a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_camera_management2_d_1_1_tracked_object.html" title="Represents an object being tracked by the camera, including its bounds and prediction capabilities.">TrackedObject</a> class.  <br /></td></tr>
+<tr class="separator:a3800205c95417aae5b40ec61bada083a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae371fd0a1b3c6839265b0576e11d29d8" id="r_ae371fd0a1b3c6839265b0576e11d29d8"><td class="memItemLeft" align="right" valign="top"><a id="ae371fd0a1b3c6839265b0576e11d29d8" name="ae371fd0a1b3c6839265b0576e11d29d8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()</td></tr>
+<tr class="memdesc:ae371fd0a1b3c6839265b0576e11d29d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the tracked object, including setting up the transform, renderer, and collider. <br /></td></tr>
 <tr class="separator:ae371fd0a1b3c6839265b0576e11d29d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aaac69301ca7ccdcedaeb1682a3fab0" id="r_a5aaac69301ca7ccdcedaeb1682a3fab0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5aaac69301ca7ccdcedaeb1682a3fab0">Tracks</a> (GameObject obj)</td></tr>
 <tr class="memdesc:a5aaac69301ca7ccdcedaeb1682a3fab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this tracked object is the same as the specified object.  <br /></td></tr>
@@ -172,35 +164,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a267ee5107a0115d42ec61513d91fe495" id="r_a267ee5107a0115d42ec61513d91fe495"><td class="memItemLeft" align="right" valign="top">Bounds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a267ee5107a0115d42ec61513d91fe495">GetPredictedBounds</a> (float predictionTime)</td></tr>
 <tr class="memdesc:a267ee5107a0115d42ec61513d91fe495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the predicted bounds of the tracked object based on its velocity and the specified prediction time.  <br /></td></tr>
 <tr class="separator:a267ee5107a0115d42ec61513d91fe495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac53de77b0f4639349bff613c85e62156" id="r_ac53de77b0f4639349bff613c85e62156"><td class="memItemLeft" align="right" valign="top"><a id="ac53de77b0f4639349bff613c85e62156" name="ac53de77b0f4639349bff613c85e62156"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>gameObject</b></td></tr>
+<tr class="memdesc:ac53de77b0f4639349bff613c85e62156"><td class="mdescLeft">&#160;</td><td class="mdescRight">The game object being tracked. <br /></td></tr>
+<tr class="separator:ac53de77b0f4639349bff613c85e62156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d925ceb7f501ec6dfc0299079e62da9" id="r_a4d925ceb7f501ec6dfc0299079e62da9"><td class="memItemLeft" align="right" valign="top"><a id="a4d925ceb7f501ec6dfc0299079e62da9" name="a4d925ceb7f501ec6dfc0299079e62da9"></a>
+<a class="el" href="namespace_camera_management2_d.html#a357009425e866bf9f64c1e08d26641db">BoundsSource</a>&#160;</td><td class="memItemRight" valign="bottom"><b>boundsSource</b></td></tr>
+<tr class="memdesc:a4d925ceb7f501ec6dfc0299079e62da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of bounds to use for tracking the object. <br /></td></tr>
+<tr class="separator:a4d925ceb7f501ec6dfc0299079e62da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad67b13762ae6d68a8d6b805e12028f5d" id="r_ad67b13762ae6d68a8d6b805e12028f5d"><td class="memItemLeft" align="right" valign="top"><a id="ad67b13762ae6d68a8d6b805e12028f5d" name="ad67b13762ae6d68a8d6b805e12028f5d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>boundsPadding</b> = 0f</td></tr>
+<tr class="memdesc:ad67b13762ae6d68a8d6b805e12028f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Padding to add around the object's bounds. <br /></td></tr>
+<tr class="separator:ad67b13762ae6d68a8d6b805e12028f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents an object being tracked by the camera, including its bounds and prediction capabilities. </p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a700377504a6543beff350ad1cc5d637e" name="a700377504a6543beff350ad1cc5d637e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a700377504a6543beff350ad1cc5d637e">&#9670;&#160;</a></span>BoundsType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="#a700377504a6543beff350ad1cc5d637e">CameraManagement2D.TrackedObject.BoundsType</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enumeration for the types of bounds that can be used for tracking. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a700377504a6543beff350ad1cc5d637ea6adf97f83acf6453d4a6a4b1070f3754" name="a700377504a6543beff350ad1cc5d637ea6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a700377504a6543beff350ad1cc5d637ea07b20ae970048fc2002d756f27acc863" name="a700377504a6543beff350ad1cc5d637ea07b20ae970048fc2002d756f27acc863"></a>Renderer&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a700377504a6543beff350ad1cc5d637ea39e1450275f6b9c731ff9faafab3f44c" name="a700377504a6543beff350ad1cc5d637ea39e1450275f6b9c731ff9faafab3f44c"></a>Collider&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a700377504a6543beff350ad1cc5d637eab1c94ca2fbc3e78fc30069c8d0f01680" name="a700377504a6543beff350ad1cc5d637eab1c94ca2fbc3e78fc30069c8d0f01680"></a>All&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad4a2953fc7444c540ef93a47a7d91e62" name="ad4a2953fc7444c540ef93a47a7d91e62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4a2953fc7444c540ef93a47a7d91e62">&#9670;&#160;</a></span>TrackedObject()</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3800205c95417aae5b40ec61bada083a" name="a3800205c95417aae5b40ec61bada083a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3800205c95417aae5b40ec61bada083a">&#9670;&#160;</a></span>TrackedObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +200,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a700377504a6543beff350ad1cc5d637e">BoundsType</a></td>          <td class="paramname"><span class="paramname"><em>boundsType</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a700377504a6543beff350ad1cc5d637ea6adf97f83acf6453d4a6a4b1070f3754">BoundsType::None</a></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_camera_management2_d.html#a357009425e866bf9f64c1e08d26641db">BoundsSource</a></td>          <td class="paramname"><span class="paramname"><em>boundsSource</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_camera_management2_d.html#a357009425e866bf9f64c1e08d26641dba6adf97f83acf6453d4a6a4b1070f3754">BoundsSource::None</a></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -235,7 +219,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">gameObject</td><td>The game object to track.</td></tr>
-    <tr><td class="paramname">boundsType</td><td>The type of bounds to use for tracking.</td></tr>
+    <tr><td class="paramname">boundsSource</td><td>The type of bounds to use for tracking.</td></tr>
     <tr><td class="paramname">boundsPadding</td><td>The padding to add around the object's bounds.</td></tr>
   </table>
   </dd>
@@ -306,33 +290,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae371fd0a1b3c6839265b0576e11d29d8" name="ae371fd0a1b3c6839265b0576e11d29d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae371fd0a1b3c6839265b0576e11d29d8">&#9670;&#160;</a></span>Initialize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CameraManagement2D.TrackedObject.Initialize </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Initializes the tracked object, including setting up the transform, renderer, and collider. </p>
-
-</div>
-</div>
 <a id="a5aaac69301ca7ccdcedaeb1682a3fab0" name="a5aaac69301ca7ccdcedaeb1682a3fab0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5aaac69301ca7ccdcedaeb1682a3fab0">&#9670;&#160;</a></span>Tracks()</h2>
 
@@ -400,9 +357,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Runtime/<a class="el" href="_tracker_camera_module_8cs.html">TrackerCameraModule.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

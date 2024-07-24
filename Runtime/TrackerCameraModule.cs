@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MyBox;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace CameraManagement2D
 {
@@ -132,23 +133,35 @@ namespace CameraManagement2D
 			trackedObjects.ForEach((el)=>el.Update(Time.fixedDeltaTime));
 		}
 	}
-
+	/// <summary>
+	/// Enumeration for the types of bounds that can be used for tracking.
+	/// </summary>
+	public enum BoundsSource
+	{
+		/// <summary>
+		/// No bounds are used for tracking. Only the object's transform is considered.
+		/// </summary>
+		None,
+		/// <summary>
+		/// The object's renderer bounds are used for tracking.
+		/// </summary>
+		Renderer,
+		/// <summary>
+		/// The object's collider bounds are used for tracking.
+		/// </summary>
+		Collider,
+		/// <summary>
+		/// Both the renderer and collider bounds are used for tracking.
+		/// </summary>
+		All,
+	}
 	/// <summary>
 	/// Represents an object being tracked by the camera, including its bounds and prediction capabilities.
 	/// </summary>
 	[System.Serializable]
 	public class TrackedObject
 	{
-		/// <summary>
-		/// Enumeration for the types of bounds that can be used for tracking.
-		/// </summary>
-		public enum BoundsType
-		{
-			None,
-			Renderer,
-			Collider,
-			All,
-		}
+		
 		/// <summary>
 		/// The game object being tracked.
 		/// </summary>
@@ -156,7 +169,7 @@ namespace CameraManagement2D
 		/// <summary>
 		/// The type of bounds to use for tracking the object.
 		/// </summary>
-		[SerializeField] BoundsType boundsType;
+		[SerializeField] BoundsSource boundsSource;
 		/// <summary>
 		/// Padding to add around the object's bounds.
 		/// </summary>
@@ -171,12 +184,12 @@ namespace CameraManagement2D
 		/// Initializes a new instance of the <see cref="TrackedObject"/> class.
 		/// </summary>
 		/// <param name="gameObject">The game object to track.</param>
-		/// <param name="boundsType">The type of bounds to use for tracking.</param>
+		/// <param name="boundsSource">The type of bounds to use for tracking.</param>
 		/// <param name="boundsPadding">The padding to add around the object's bounds.</param>
-		public TrackedObject(GameObject gameObject, BoundsType boundsType = BoundsType.None, float boundsPadding = 0f)
+		public TrackedObject(GameObject gameObject, BoundsSource boundsSource = BoundsSource.None, float boundsPadding = 0f)
 		{
 			this.gameObject = gameObject;
-			this.boundsType = boundsType;
+			this.boundsSource = boundsSource;
 			this.boundsPadding = boundsPadding;
 			Initialize();
 		}
@@ -193,13 +206,13 @@ namespace CameraManagement2D
 			pastPosition = transform.position;
 			
 			renderer = gameObject.GetComponent<Renderer>();
-			if (!renderer && boundsType is BoundsType.Renderer){
+			if (!renderer && boundsSource is BoundsSource.Renderer){
 				Debug.LogWarning("Renderer not found on object", gameObject);
 				
 			}
 			collider = gameObject.GetComponent<Collider2D>();
 			
-			if (!collider && boundsType is BoundsType.Collider){
+			if (!collider && boundsSource is BoundsSource.Collider){
 				Debug.LogWarning("Collider2D not found on object", gameObject);
 				
 			}
@@ -229,11 +242,11 @@ namespace CameraManagement2D
 		public Bounds GetBounds()
 		{
 			Bounds bounds = new Bounds(transform.position, Vector3.zero);
-			if(renderer && boundsType is BoundsType.Renderer or BoundsType.All)
+			if(renderer && boundsSource is BoundsSource.Renderer or BoundsSource.All)
 			{
 				bounds.Encapsulate(renderer.bounds);
 			}
-			if(collider && boundsType is BoundsType.Collider or BoundsType.All)
+			if(collider && boundsSource is BoundsSource.Collider or BoundsSource.All)
 			{
 				bounds.Encapsulate(collider.bounds);
 			}

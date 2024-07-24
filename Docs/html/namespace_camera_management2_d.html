@@ -62,6 +62,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Camera Management
+   &#160;<span id="projectnumber">1.0.1</span>
    </div>
    <div id="projectbrief">A drop-in 2D camera management library for Unity</div>
   </td>
@@ -132,7 +133,8 @@ $(function(){initNavTree('namespace_camera_management2_d.html',''); initResizabl
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">CameraManagement2D Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -163,7 +165,44 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_management2_d_1_1_tracker_camera_module.html">TrackerCameraModule</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A camera module that tracks multiple objects and adjusts the camera's state to ensure all tracked objects are visible within the camera's view. Provides options for predicting object movement and adjusting the camera's bounds to include padding around tracked objects.  <a href="class_camera_management2_d_1_1_tracker_camera_module.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a357009425e866bf9f64c1e08d26641db" id="r_a357009425e866bf9f64c1e08d26641db"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a357009425e866bf9f64c1e08d26641db">BoundsSource</a> { <a class="el" href="#a357009425e866bf9f64c1e08d26641dba6adf97f83acf6453d4a6a4b1070f3754">None</a>
+, <a class="el" href="#a357009425e866bf9f64c1e08d26641dba07b20ae970048fc2002d756f27acc863">Renderer</a>
+, <a class="el" href="#a357009425e866bf9f64c1e08d26641dba39e1450275f6b9c731ff9faafab3f44c">Collider</a>
+, <a class="el" href="#a357009425e866bf9f64c1e08d26641dbab1c94ca2fbc3e78fc30069c8d0f01680">All</a>
+ }</td></tr>
+<tr class="memdesc:a357009425e866bf9f64c1e08d26641db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration for the types of bounds that can be used for tracking.  <a href="#a357009425e866bf9f64c1e08d26641db">More...</a><br /></td></tr>
+<tr class="separator:a357009425e866bf9f64c1e08d26641db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a357009425e866bf9f64c1e08d26641db" name="a357009425e866bf9f64c1e08d26641db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a357009425e866bf9f64c1e08d26641db">&#9670;&#160;</a></span>BoundsSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a357009425e866bf9f64c1e08d26641db">CameraManagement2D.BoundsSource</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumeration for the types of bounds that can be used for tracking. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a357009425e866bf9f64c1e08d26641dba6adf97f83acf6453d4a6a4b1070f3754" name="a357009425e866bf9f64c1e08d26641dba6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>No bounds are used for tracking. Only the object's transform is considered. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a357009425e866bf9f64c1e08d26641dba07b20ae970048fc2002d756f27acc863" name="a357009425e866bf9f64c1e08d26641dba07b20ae970048fc2002d756f27acc863"></a>Renderer&#160;</td><td class="fielddoc"><p>The object's renderer bounds are used for tracking. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a357009425e866bf9f64c1e08d26641dba39e1450275f6b9c731ff9faafab3f44c" name="a357009425e866bf9f64c1e08d26641dba39e1450275f6b9c731ff9faafab3f44c"></a>Collider&#160;</td><td class="fielddoc"><p>The object's collider bounds are used for tracking. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a357009425e866bf9f64c1e08d26641dbab1c94ca2fbc3e78fc30069c8d0f01680" name="a357009425e866bf9f64c1e08d26641dbab1c94ca2fbc3e78fc30069c8d0f01680"></a>All&#160;</td><td class="fielddoc"><p>Both the renderer and collider bounds are used for tracking. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

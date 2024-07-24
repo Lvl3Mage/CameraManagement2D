@@ -62,6 +62,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Camera Management
+   &#160;<span id="projectnumber">1.0.1</span>
    </div>
    <div id="projectbrief">A drop-in 2D camera management library for Unity</div>
   </td>
@@ -134,6 +135,7 @@ $(function(){initNavTree('class_camera_management2_d_1_1_camera_module_manager.h
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_camera_management2_d_1_1_camera_module_manager-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">CameraManagement2D.CameraModuleManager Class Reference</div></div>
 </div><!--header-->
@@ -172,28 +174,37 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a5305cd12bd78d318e92df09d1a70f567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the current camera state based on the active camera controller.  <br /></td></tr>
 <tr class="separator:a5305cd12bd78d318e92df09d1a70f567"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_camera_management2_d_1_1_camera_controller"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_camera_management2_d_1_1_camera_controller')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_camera_management2_d_1_1_camera_controller.html">CameraManagement2D.CameraController</a></td></tr>
-<tr class="memitem:a31f239eeef522b9b8936a1b2b70cb3b1 inherit pro_methods_class_camera_management2_d_1_1_camera_controller" id="r_a31f239eeef522b9b8936a1b2b70cb3b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_management2_d_1_1_camera_controller.html#a31f239eeef522b9b8936a1b2b70cb3b1">Awake</a> ()</td></tr>
-<tr class="separator:a31f239eeef522b9b8936a1b2b70cb3b1 inherit pro_methods_class_camera_management2_d_1_1_camera_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8181c491fd9a30d4bf8a49e15550ee48 inherit pro_methods_class_camera_management2_d_1_1_camera_controller" id="r_a8181c491fd9a30d4bf8a49e15550ee48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_management2_d_1_1_camera_controller.html#a8181c491fd9a30d4bf8a49e15550ee48">Start</a> ()</td></tr>
-<tr class="separator:a8181c491fd9a30d4bf8a49e15550ee48 inherit pro_methods_class_camera_management2_d_1_1_camera_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe10960725f546c147f21dae96b06ac3 inherit pro_methods_class_camera_management2_d_1_1_camera_controller" id="r_afe10960725f546c147f21dae96b06ac3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_management2_d_1_1_camera_controller.html#afe10960725f546c147f21dae96b06ac3">InitializeCameraController</a> ()</td></tr>
-<tr class="memdesc:afe10960725f546c147f21dae96b06ac3 inherit pro_methods_class_camera_management2_d_1_1_camera_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the first ComputeCameraState or Update call. Override to initialize the camera controller.  <br /></td></tr>
+<tr class="memitem:ad5e47231f0ee37ddcb9825b1698a4fae inherit pro_methods_class_camera_management2_d_1_1_camera_controller" id="r_ad5e47231f0ee37ddcb9825b1698a4fae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_management2_d_1_1_camera_controller.html#ad5e47231f0ee37ddcb9825b1698a4fae">Awake</a> ()</td></tr>
+<tr class="separator:ad5e47231f0ee37ddcb9825b1698a4fae inherit pro_methods_class_camera_management2_d_1_1_camera_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe10960725f546c147f21dae96b06ac3 inherit pro_methods_class_camera_management2_d_1_1_camera_controller" id="r_afe10960725f546c147f21dae96b06ac3"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeCameraController</b> ()</td></tr>
+<tr class="memdesc:afe10960725f546c147f21dae96b06ac3 inherit pro_methods_class_camera_management2_d_1_1_camera_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the first ComputeCameraState or Update call. Override to initialize the camera controller. <br /></td></tr>
 <tr class="separator:afe10960725f546c147f21dae96b06ac3 inherit pro_methods_class_camera_management2_d_1_1_camera_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15cbd4657818cd25f8d15b93cb800491 inherit pro_methods_class_camera_management2_d_1_1_camera_controller" id="r_a15cbd4657818cd25f8d15b93cb800491"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_camera_management2_d_1_1_camera_state.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_management2_d_1_1_camera_controller.html#a15cbd4657818cd25f8d15b93cb800491">ComputeCameraState</a> ()</td></tr>
 <tr class="memdesc:a15cbd4657818cd25f8d15b93cb800491 inherit pro_methods_class_camera_management2_d_1_1_camera_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the camera state based on the available data. Must not have any side effects.  <br /></td></tr>
 <tr class="separator:a15cbd4657818cd25f8d15b93cb800491 inherit pro_methods_class_camera_management2_d_1_1_camera_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a44e732a23455bf3dfc236c61ef13887d" id="r_a44e732a23455bf3dfc236c61ef13887d"><td class="memItemLeft" align="right" valign="top"><a id="a44e732a23455bf3dfc236c61ef13887d" name="a44e732a23455bf3dfc236c61ef13887d"></a>
+<a class="el" href="class_camera_management2_d_1_1_camera_controller.html">CameraController</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>cameraControllers</b></td></tr>
+<tr class="memdesc:a44e732a23455bf3dfc236c61ef13887d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The array of camera controllers managed by this module. <br /></td></tr>
+<tr class="separator:a44e732a23455bf3dfc236c61ef13887d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_camera_management2_d_1_1_camera_controller"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_camera_management2_d_1_1_camera_controller')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_camera_management2_d_1_1_camera_controller.html">CameraManagement2D.CameraController</a></td></tr>
-<tr class="memitem:a69909d5226af787d4c13c73f4ceafc2b inherit pro_attribs_class_camera_management2_d_1_1_camera_controller" id="r_a69909d5226af787d4c13c73f4ceafc2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_management2_d_1_1_camera_controller.html#a69909d5226af787d4c13c73f4ceafc2b">useUserInput</a> = true</td></tr>
-<tr class="memdesc:a69909d5226af787d4c13c73f4ceafc2b inherit pro_attribs_class_camera_management2_d_1_1_camera_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether user input is used to control the camera.  <br /></td></tr>
+<tr class="memitem:a69909d5226af787d4c13c73f4ceafc2b inherit pro_attribs_class_camera_management2_d_1_1_camera_controller" id="r_a69909d5226af787d4c13c73f4ceafc2b"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>useUserInput</b> = true</td></tr>
+<tr class="memdesc:a69909d5226af787d4c13c73f4ceafc2b inherit pro_attribs_class_camera_management2_d_1_1_camera_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether user input is used to control the camera. <br /></td></tr>
 <tr class="separator:a69909d5226af787d4c13c73f4ceafc2b inherit pro_attribs_class_camera_management2_d_1_1_camera_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31b55dec25ecdb10c58cd499784a4f60 inherit pro_attribs_class_camera_management2_d_1_1_camera_controller" id="r_a31b55dec25ecdb10c58cd499784a4f60"><td class="memItemLeft" align="right" valign="top">Camera&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_management2_d_1_1_camera_controller.html#a31b55dec25ecdb10c58cd499784a4f60">controllerCamera</a></td></tr>
-<tr class="memdesc:a31b55dec25ecdb10c58cd499784a4f60 inherit pro_attribs_class_camera_management2_d_1_1_camera_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">The camera that this controller is managing.  <br /></td></tr>
+<tr class="memitem:a31b55dec25ecdb10c58cd499784a4f60 inherit pro_attribs_class_camera_management2_d_1_1_camera_controller" id="r_a31b55dec25ecdb10c58cd499784a4f60"><td class="memItemLeft" align="right" valign="top">
+Camera&#160;</td><td class="memItemRight" valign="bottom"><b>controllerCamera</b></td></tr>
+<tr class="memdesc:a31b55dec25ecdb10c58cd499784a4f60 inherit pro_attribs_class_camera_management2_d_1_1_camera_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">The camera that this controller is managing. <br /></td></tr>
 <tr class="separator:a31b55dec25ecdb10c58cd499784a4f60 inherit pro_attribs_class_camera_management2_d_1_1_camera_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c21150c565fe73897fa08a62be0bae2 inherit pro_attribs_class_camera_management2_d_1_1_camera_controller" id="r_a2c21150c565fe73897fa08a62be0bae2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_management2_d_1_1_camera_controller.html#a2c21150c565fe73897fa08a62be0bae2">active</a> = true</td></tr>
-<tr class="memdesc:a2c21150c565fe73897fa08a62be0bae2 inherit pro_attribs_class_camera_management2_d_1_1_camera_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the camera controller is active.  <br /></td></tr>
+<tr class="memitem:a2c21150c565fe73897fa08a62be0bae2 inherit pro_attribs_class_camera_management2_d_1_1_camera_controller" id="r_a2c21150c565fe73897fa08a62be0bae2"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = true</td></tr>
+<tr class="memdesc:a2c21150c565fe73897fa08a62be0bae2 inherit pro_attribs_class_camera_management2_d_1_1_camera_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the camera controller is active. <br /></td></tr>
 <tr class="separator:a2c21150c565fe73897fa08a62be0bae2 inherit pro_attribs_class_camera_management2_d_1_1_camera_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -295,9 +306,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Runtime/<a class="el" href="_camera_module_manager_8cs.html">CameraModuleManager.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

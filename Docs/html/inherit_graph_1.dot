@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="CameraManagement2D.Camera\lStateClamp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_camera_management2_d_1_1_camera_state_clamp.html",tooltip="Provides functionality to clamp the camera state, including position, bounds, and zoom."];
+  Node0 [id="Node000000",label="CameraManagement2D.Camera\lState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$struct_camera_management2_d_1_1_camera_state.html",tooltip="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation...."];
 }

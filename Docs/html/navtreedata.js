@@ -26,12 +26,16 @@ var NAVTREE =
 [
   [ "Camera Management", "index.html", [
     [ "Camera Management Package", "index.html", "index" ],
-    [ "[1.0.0] - 2024-07-16", "md__c_h_a_n_g_e_l_o_g.html", [
-      [ "[1.0.1] - 2024-07-24", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md1", null ]
+    [ "[1.0.0] - 2024-07-16", "md__c_1_2_projects_2_unity_package_dev_2_package_env_2_assets_2_packages_2_camera_management_2_c_h_a_n_g_e_l_o_g.html", [
+      [ "[1.0.1] - 2024-07-24", "md__c_1_2_projects_2_unity_package_dev_2_package_env_2_assets_2_packages_2_camera_management_2_c_h_a_n_g_e_l_o_g.html#autotoc_md1", null ]
     ] ],
-    [ "LICENSE", "md__l_i_c_e_n_s_e.html", null ],
+    [ "LICENSE", "md__c_1_2_projects_2_unity_package_dev_2_package_env_2_assets_2_packages_2_camera_management_2_l_i_c_e_n_s_e.html", null ],
     [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -44,16 +48,14 @@ var NAVTREE =
         [ "Enumerations", "functions_enum.html", null ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
-    ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_camera_controller_8cs.html"
+"annotated.html",
+"struct_camera_management2_d_1_1_camera_state.html#af79051b52ddbecd55f87493c4e7e710b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

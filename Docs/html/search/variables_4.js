@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rotation_0',['rotation',['../struct_camera_management2_d_1_1_camera_state.html#a02d50d4bd1c75a3cc0d8e31f1202b69d',1,'CameraManagement2D::CameraState']]]
+  ['enforcecurrentbounds_0',['enforceCurrentBounds',['../class_camera_management2_d_1_1_tracker_camera_module.html#a6f2429f1d7ed970fdc4564d58ac3741f',1,'CameraManagement2D::TrackerCameraModule']]]
 ];
