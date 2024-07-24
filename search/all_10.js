@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['withoutposition_0',['WithoutPosition',['../struct_camera_management2_d_1_1_camera_state.html#a60925d7517bb95f9da5a813437309b96',1,'CameraManagement2D::CameraState']]],
-  ['withoutrotation_1',['WithoutRotation',['../struct_camera_management2_d_1_1_camera_state.html#a1bd1ea0bae9f7f943f4f31ec2f38c14e',1,'CameraManagement2D::CameraState']]],
-  ['withoutzoom_2',['WithoutZoom',['../struct_camera_management2_d_1_1_camera_state.html#ab42b77f2330c8272a2b197caaf0a3941',1,'CameraManagement2D::CameraState']]],
-  ['withposition_3',['WithPosition',['../struct_camera_management2_d_1_1_camera_state.html#af79051b52ddbecd55f87493c4e7e710b',1,'CameraManagement2D.CameraState.WithPosition(Vector2? position)'],['../struct_camera_management2_d_1_1_camera_state.html#a7462724e0f7e4dd1d62d6c38d93c4ccd',1,'CameraManagement2D.CameraState.WithPosition(Vector2 position)'],['../struct_camera_management2_d_1_1_camera_state.html#a1c0efb74f1d4c4c19f8991a1899d0630',1,'CameraManagement2D.CameraState.WithPosition(CameraState other)']]],
-  ['withrotation_4',['WithRotation',['../struct_camera_management2_d_1_1_camera_state.html#ad48a4ddc770eacdbbdf717680bdcedc9',1,'CameraManagement2D.CameraState.WithRotation(float rotation)'],['../struct_camera_management2_d_1_1_camera_state.html#aff08ba9b25452e54b1ab1e3ed10cfd22',1,'CameraManagement2D.CameraState.WithRotation(float? rotation)'],['../struct_camera_management2_d_1_1_camera_state.html#ae1a47e60bfbaa0ad89a8ff590c7678e2',1,'CameraManagement2D.CameraState.WithRotation(CameraState other)']]],
-  ['withzoom_5',['WithZoom',['../struct_camera_management2_d_1_1_camera_state.html#aeece113bb1415e572e3aee5c2bff73ad',1,'CameraManagement2D.CameraState.WithZoom(float zoom)'],['../struct_camera_management2_d_1_1_camera_state.html#ad9c31f90a7a7c95b732b292007f8a824',1,'CameraManagement2D.CameraState.WithZoom(float? zoom)'],['../struct_camera_management2_d_1_1_camera_state.html#aef93ca3e261a7a82f5af35181a22ab56',1,'CameraManagement2D.CameraState.WithZoom(CameraState other)']]]
+  ['removetrackedobject_0',['RemoveTrackedObject',['../class_camera_management2_d_1_1_tracker_camera_module.html#a5c55884b7c8942a647be4ee2f2083299',1,'CameraManagement2D::TrackerCameraModule']]],
+  ['renderer_1',['Renderer',['../namespace_camera_management2_d.html#a357009425e866bf9f64c1e08d26641dba07b20ae970048fc2002d756f27acc863',1,'CameraManagement2D']]],
+  ['representsposition_2',['RepresentsPosition',['../struct_camera_management2_d_1_1_camera_state.html#a0e08827c27541ba607f9cba4535bb936',1,'CameraManagement2D::CameraState']]],
+  ['representsrotation_3',['RepresentsRotation',['../struct_camera_management2_d_1_1_camera_state.html#a6495a7e55cb217764a9fb5f8d94934c8',1,'CameraManagement2D::CameraState']]],
+  ['representszoom_4',['RepresentsZoom',['../struct_camera_management2_d_1_1_camera_state.html#a0fef011fb4419eba1fb4ed5663048ca4',1,'CameraManagement2D::CameraState']]],
+  ['requirements_5',['Requirements',['../index.html#autotoc_md4',1,'']]],
+  ['rotation_6',['Rotation',['../struct_camera_management2_d_1_1_camera_state.html#a0e226fbe6d35fb5db6c86e29d269099f',1,'CameraManagement2D::CameraState']]]
 ];

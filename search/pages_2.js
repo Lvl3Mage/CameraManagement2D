@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['license_0',['LICENSE',['../md__l_i_c_e_n_s_e.html',1,'']]]
+  ['2024_2007_2016_0',['[1.0.0] - 2024-07-16',['../md__c_h_a_n_g_e_l_o_g.html',1,'']]]
 ];

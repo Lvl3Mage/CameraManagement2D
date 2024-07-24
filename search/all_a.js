@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['onuserinputchange_0',['OnUserInputChange',['../class_camera_management2_d_1_1_camera_controller.html#a74a3fd0dbaa19afc36f8c39771404478',1,'CameraManagement2D.CameraController.OnUserInputChange()'],['../class_camera_management2_d_1_1_camera_module_manager.html#ac18d3aecf0253895874627983018b642',1,'CameraManagement2D.CameraModuleManager.OnUserInputChange()'],['../class_camera_management2_d_1_1_camera_smoothing_module.html#aba64c0c92b5c8272147351030daea537',1,'CameraManagement2D.CameraSmoothingModule.OnUserInputChange()']]]
+  ['initialize_0',['Initialize',['../class_camera_management2_d_1_1_tracked_object.html#ae371fd0a1b3c6839265b0576e11d29d8',1,'CameraManagement2D::TrackedObject']]],
+  ['initializecameracontroller_1',['InitializeCameraController',['../class_camera_management2_d_1_1_camera_controller.html#afe10960725f546c147f21dae96b06ac3',1,'CameraManagement2D.CameraController.InitializeCameraController()'],['../class_camera_management2_d_1_1_camera_pan_module.html#a80ca01914fcc4839fada75b1f6452adc',1,'CameraManagement2D.CameraPanModule.InitializeCameraController()'],['../class_camera_management2_d_1_1_camera_smoothing_module.html#a155db87f6c4423a78d26cc791112b5d6',1,'CameraManagement2D.CameraSmoothingModule.InitializeCameraController()'],['../class_camera_management2_d_1_1_tracker_camera_module.html#a96b557ac0dcdccfbbb8170d33b644787',1,'CameraManagement2D.TrackerCameraModule.InitializeCameraController()']]],
+  ['installation_2',['Installation',['../index.html#autotoc_md5',1,'']]],
+  ['isempty_3',['IsEmpty',['../struct_camera_management2_d_1_1_camera_state.html#ad4e2adc381eb71196db39cd0b6ac194f',1,'CameraManagement2D::CameraState']]]
 ];

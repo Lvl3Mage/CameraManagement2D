@@ -1,21 +1,10 @@
 var searchData=
 [
-  ['camera_20management_20package_0',['Camera Management Package',['../index.html',1,'']]],
-  ['cameracontroller_1',['CameraController',['../class_camera_management2_d_1_1_camera_controller.html',1,'CameraManagement2D']]],
-  ['cameramanagement2d_2',['CameraManagement2D',['../namespace_camera_management2_d.html',1,'']]],
-  ['cameramodulemanager_3',['CameraModuleManager',['../class_camera_management2_d_1_1_camera_module_manager.html',1,'CameraManagement2D']]],
-  ['camerapanmodule_4',['CameraPanModule',['../class_camera_management2_d_1_1_camera_pan_module.html',1,'CameraManagement2D']]],
-  ['camerasmoothingmodule_5',['CameraSmoothingModule',['../class_camera_management2_d_1_1_camera_smoothing_module.html',1,'CameraManagement2D']]],
-  ['camerastate_6',['CameraState',['../struct_camera_management2_d_1_1_camera_state.html',1,'CameraManagement2D.CameraState'],['../struct_camera_management2_d_1_1_camera_state.html#a3614bec923c162ec1b6b71fefe1355d8',1,'CameraManagement2D.CameraState.CameraState(Vector2 position, float zoom, float rotation, bool local=false)'],['../struct_camera_management2_d_1_1_camera_state.html#aceafb44cc29b702d6d159e30ed1ca02f',1,'CameraManagement2D.CameraState.CameraState(CameraState other)']]],
-  ['camerastateclamp_7',['CameraStateClamp',['../class_camera_management2_d_1_1_camera_state_clamp.html',1,'CameraManagement2D']]],
-  ['clampedposition_8',['ClampedPosition',['../struct_camera_management2_d_1_1_camera_state.html#a1089d62657a31c1781d1fbaa2080109f',1,'CameraManagement2D::CameraState']]],
-  ['clampedpositionx_9',['ClampedPositionX',['../struct_camera_management2_d_1_1_camera_state.html#a3395e428adec58ed7304db9b8ef3e641',1,'CameraManagement2D::CameraState']]],
-  ['clampedpositiony_10',['ClampedPositionY',['../struct_camera_management2_d_1_1_camera_state.html#ab3d7fa05e96e264502286d898a22d0a9',1,'CameraManagement2D::CameraState']]],
-  ['clampedzoom_11',['ClampedZoom',['../struct_camera_management2_d_1_1_camera_state.html#adbcd4122e624f7932d5b1d971c938f5e',1,'CameraManagement2D.CameraState.ClampedZoom(Vector2 clamp)'],['../struct_camera_management2_d_1_1_camera_state.html#a017cd662461c6f8355ccc705cc542111',1,'CameraManagement2D.CameraState.ClampedZoom(float min, float max)']]],
-  ['clampstate_12',['ClampState',['../class_camera_management2_d_1_1_camera_state_clamp.html#ab05fc682782c3fcd93624ab49c540d17',1,'CameraManagement2D::CameraStateClamp']]],
-  ['clone_13',['Clone',['../struct_camera_management2_d_1_1_camera_state.html#a0aaf851d256523c133b5a82f29541e81',1,'CameraManagement2D::CameraState']]],
-  ['computecamerastate_14',['ComputeCameraState',['../class_camera_management2_d_1_1_camera_controller.html#ad1c4bfe33c118fec2768b7f36b79ad16',1,'CameraManagement2D.CameraController.ComputeCameraState()'],['../class_camera_management2_d_1_1_camera_module_manager.html#a5305cd12bd78d318e92df09d1a70f567',1,'CameraManagement2D.CameraModuleManager.ComputeCameraState()'],['../class_camera_management2_d_1_1_camera_pan_module.html#a02b667439c95efd63e3c2a76ead5083f',1,'CameraManagement2D.CameraPanModule.ComputeCameraState()'],['../class_camera_management2_d_1_1_camera_smoothing_module.html#acbd69775e1613ffc4e18651fc20699dc',1,'CameraManagement2D.CameraSmoothingModule.ComputeCameraState()'],['../class_camera_management2_d_1_1_tracker_camera_module.html#a0f6aef26d50a92153bffead8becd3a95',1,'CameraManagement2D.TrackerCameraModule.ComputeCameraState()']]],
-  ['containingbounds_15',['ContainingBounds',['../struct_camera_management2_d_1_1_camera_state.html#a1cbbb61cee5c833f1c296bd9440272d2',1,'CameraManagement2D.CameraState.ContainingBounds(Bounds bounds, float aspectRatio)'],['../struct_camera_management2_d_1_1_camera_state.html#ac35fd14cf53f8271c22c4f446559e41b',1,'CameraManagement2D.CameraState.ContainingBounds(Bounds bounds, float aspectRatio, Vector2 pivot)']]],
-  ['controllercamera_16',['controllerCamera',['../class_camera_management2_d_1_1_camera_controller.html#a31b55dec25ecdb10c58cd499784a4f60',1,'CameraManagement2D::CameraController']]],
-  ['coveringbounds_17',['CoveringBounds',['../struct_camera_management2_d_1_1_camera_state.html#af6e0784cfefbf8dacc3816149b9a640d',1,'CameraManagement2D.CameraState.CoveringBounds(Bounds bounds, float aspectRatio)'],['../struct_camera_management2_d_1_1_camera_state.html#a4f80d4dbbea0d26d06cb6674e270bba3',1,'CameraManagement2D.CameraState.CoveringBounds(Bounds bounds, float aspectRatio, Vector2 pivot)']]]
+  ['active_0',['active',['../class_camera_management2_d_1_1_camera_controller.html#a2c21150c565fe73897fa08a62be0bae2',1,'CameraManagement2D::CameraController']]],
+  ['addtrackedobject_1',['AddTrackedObject',['../class_camera_management2_d_1_1_tracker_camera_module.html#ab9926dca70411d2878f3544411ff4f24',1,'CameraManagement2D::TrackerCameraModule']]],
+  ['all_2',['All',['../namespace_camera_management2_d.html#a357009425e866bf9f64c1e08d26641dbab1c94ca2fbc3e78fc30069c8d0f01680',1,'CameraManagement2D']]],
+  ['applyto_3',['ApplyTo',['../struct_camera_management2_d_1_1_camera_state.html#a2edc0b4a4df4e68387ebc705a15f05e1',1,'CameraManagement2D::CameraState']]],
+  ['aslocal_4',['AsLocal',['../struct_camera_management2_d_1_1_camera_state.html#a36a75245618bead9eeb41d74f9980f49',1,'CameraManagement2D::CameraState']]],
+  ['author_5',['Author',['../index.html#autotoc_md6',1,'']]],
+  ['awake_6',['Awake',['../class_camera_management2_d_1_1_camera_controller.html#ad5e47231f0ee37ddcb9825b1698a4fae',1,'CameraManagement2D::CameraController']]]
 ];

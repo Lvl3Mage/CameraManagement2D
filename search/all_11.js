@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['zoom_0',['Zoom',['../struct_camera_management2_d_1_1_camera_state.html#ae5214be366353d9800b4a88d9b57f441',1,'CameraManagement2D::CameraState']]],
-  ['zoomtowards_1',['ZoomTowards',['../struct_camera_management2_d_1_1_camera_state.html#adf7ca0f9500a694dd3f099e6d5ec499f',1,'CameraManagement2D.CameraState.ZoomTowards(float targetZoom, Vector2 target)'],['../struct_camera_management2_d_1_1_camera_state.html#a07a484f428817d2edd68ac6d05e18fd2',1,'CameraManagement2D.CameraState.ZoomTowards(CameraState other, Vector2 target)']]]
+  ['setactive_0',['SetActive',['../class_camera_management2_d_1_1_camera_controller.html#a789f8ca371ddb52182ecfc743c723fe6',1,'CameraManagement2D::CameraController']]],
+  ['settrackedobjects_1',['SetTrackedObjects',['../class_camera_management2_d_1_1_tracker_camera_module.html#adedaf1f12aca3dd7d676a2aa35e099cd',1,'CameraManagement2D::TrackerCameraModule']]],
+  ['switchtocontroller_2',['SwitchToController',['../class_camera_management2_d_1_1_camera_module_manager.html#aaecb91c21bc5be9db3a7b1c10b4d4f21',1,'CameraManagement2D::CameraModuleManager']]]
 ];

@@ -25,12 +25,7 @@
 var NAVTREE =
 [
   [ "Camera Management", "index.html", [
-    [ "Camera Management Package", "index.html", [
-      [ "Features", "index.html#autotoc_md3", null ],
-      [ "Requirements", "index.html#autotoc_md4", null ],
-      [ "Installation", "index.html#autotoc_md5", null ],
-      [ "Author", "index.html#autotoc_md6", null ]
-    ] ],
+    [ "Camera Management Package", "index.html", "index" ],
     [ "[1.0.0] - 2024-07-16", "md__c_h_a_n_g_e_l_o_g.html", [
       [ "[1.0.1] - 2024-07-24", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md1", null ]
     ] ],
