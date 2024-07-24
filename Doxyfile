@@ -2909,5 +2909,4 @@ MSCGEN_TOOL            =
 # command).
 
 MSCFILE_DIRS           =
-CREATE_SUBDIRS         = YES
 SOURCE_BROWSER         = YES
