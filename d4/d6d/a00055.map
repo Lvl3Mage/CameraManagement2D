@@ -1,0 +1,5 @@
+<map id="CameraManagement2D.CameraSmoothingModule" name="CameraManagement2D.CameraSmoothingModule">
+<area shape="rect" id="node1" title="A module for smoothing camera movement, including position, zoom, and rotation. This class extends th..." alt="" coords="5,155,212,196"/>
+<area shape="rect" id="node2" href="$d5/df9/a00044.html" title="An abstract base class for camera controllers." alt="" coords="47,80,170,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="53,5,165,32"/>
+</map>
