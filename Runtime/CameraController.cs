@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace CameraManagement2D
 {
@@ -7,12 +8,22 @@ namespace CameraManagement2D
 	{
 		protected bool useUserInput = true;
 		protected Camera controllerCamera;
-		[SerializeField] bool active = true;
+		[SerializeField] protected bool active = true;
+		bool initialized = false;
 
 		protected void Awake()
 		{
 			controllerCamera = gameObject.GetComponent<Camera>();
 		}
+
+		protected void Start()
+		{
+			if(!initialized){
+				InitializeCameraController();
+				initialized = true;
+			}
+		}
+
 		public void UseUserInput(bool value)
 		{
 			useUserInput = value;
@@ -29,16 +40,31 @@ namespace CameraManagement2D
 			if (active){
 				Debug.LogWarning("Camera Controller is still active when getting state. This may cause unexpected behaviour.");
 			}
-
-			return CalculateCameraState();
+			if(!initialized){
+				InitializeCameraController();
+				initialized = true;
+			}
+			return ComputeCameraState();
 		}
 		void LateUpdate()
 		{
 			if(!active){return;}
-			CalculateCameraState().ApplyTo(controllerCamera);
+			if(!initialized){
+				InitializeCameraController();
+				initialized = true;
+			}
+			ComputeCameraState().ApplyTo(controllerCamera);
 		}
-
-		protected abstract CameraState CalculateCameraState();
+		/// <summary>
+		/// Called before the first ComputeCameraState call
+		/// </summary>
+		protected virtual void InitializeCameraController(){}
+		
+		/// <summary>
+		/// Must not have any side effects. Should calculate the camera state based on the available data
+		/// </summary>
+		/// <returns>A camera state calculated from the available data</returns>
+		protected abstract CameraState ComputeCameraState();
 	}
 
 	

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CameraManagement2D
 {
-	public class CameraManager : CameraController
+	public class CameraModuleManager : CameraController
 	{
 		[SerializeField] CameraController[] cameraControllers;
 		int activeIndex = 0;
@@ -18,7 +18,7 @@ namespace CameraManagement2D
 		{
 			activeIndex = index;
 		}
-		protected override CameraState CalculateCameraState()
+		protected override CameraState ComputeCameraState()
 		{
 			return cameraControllers[activeIndex].GetCameraState();
 		}
