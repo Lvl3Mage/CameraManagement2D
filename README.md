@@ -16,7 +16,8 @@ Include a scoped registry with
 - _url:_ `https://registry.npmjs.org`
 
 Add the package to your Unity project by importing the `com.lvl3Mage.cameramanagement` package.
-
+## Documentation
+The documentation for the CameraManagement package can be found [here](https://lvl3mage.github.io/CameraManagement/).
 
 ## Author
 Lvl3Mage - [GitHub](https://github.com/Lvl3Mage)
