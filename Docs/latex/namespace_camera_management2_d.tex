@@ -1,0 +1,21 @@
+\doxysection{Camera\+Management2D Namespace Reference}
+\hypertarget{namespace_camera_management2_d}{}\label{namespace_camera_management2_d}\index{CameraManagement2D@{CameraManagement2D}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller}{Camera\+Controller}}
+\begin{DoxyCompactList}\small\item\em An abstract base class for camera controllers. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_camera_management2_d_1_1_camera_module_manager}{Camera\+Module\+Manager}}
+\begin{DoxyCompactList}\small\item\em Manages multiple camera controllers, allowing switching between them. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_camera_management2_d_1_1_camera_pan_module}{Camera\+Pan\+Module}}
+\begin{DoxyCompactList}\small\item\em A camera controller module that allows for panning and zooming of the camera based on user input. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_camera_management2_d_1_1_camera_smoothing_module}{Camera\+Smoothing\+Module}}
+\begin{DoxyCompactList}\small\item\em A module for smoothing camera movement, including position, zoom, and rotation. This class extends the \doxylink{class_camera_management2_d_1_1_camera_controller}{Camera\+Controller} and provides options to interpolate the camera\textquotesingle{}s state based on the specified speeds. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}}
+\begin{DoxyCompactList}\small\item\em Encapsulates the state of a 2D camera, including its position, zoom level, and rotation. It provides functionality to manage, modify, and apply camera states in a flexible manner. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_camera_management2_d_1_1_camera_state_clamp}{Camera\+State\+Clamp}}
+\begin{DoxyCompactList}\small\item\em Provides functionality to clamp the camera state, including position, bounds, and zoom. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_camera_management2_d_1_1_tracked_object}{Tracked\+Object}}
+\begin{DoxyCompactList}\small\item\em Represents an object being tracked by the camera, including its bounds and prediction capabilities. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_camera_management2_d_1_1_tracker_camera_module}{Tracker\+Camera\+Module}}
+\begin{DoxyCompactList}\small\item\em A camera module that tracks multiple objects and adjusts the camera\textquotesingle{}s state to ensure all tracked objects are visible within the camera\textquotesingle{}s view. Provides options for predicting object movement and adjusting the camera\textquotesingle{}s bounds to include padding around tracked objects. \end{DoxyCompactList}\end{DoxyCompactItemize}

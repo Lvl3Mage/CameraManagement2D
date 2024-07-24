@@ -1,0 +1,76 @@
+\doxysection{Camera\+Management2\+D.\+Camera\+Pan\+Module Class Reference}
+\hypertarget{class_camera_management2_d_1_1_camera_pan_module}{}\label{class_camera_management2_d_1_1_camera_pan_module}\index{CameraManagement2D.CameraPanModule@{CameraManagement2D.CameraPanModule}}
+
+
+A camera controller module that allows for panning and zooming of the camera based on user input.  
+
+
+Inheritance diagram for Camera\+Management2\+D.\+Camera\+Pan\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_camera_management2_d_1_1_camera_pan_module}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_pan_module_a80ca01914fcc4839fada75b1f6452adc}{Initialize\+Camera\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Called before the first Compute\+Camera\+State or Update call. Override to initialize the camera controller. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_management2_d_1_1_camera_pan_module_a02b667439c95efd63e3c2a76ead5083f}\label{class_camera_management2_d_1_1_camera_pan_module_a02b667439c95efd63e3c2a76ead5083f} 
+override \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} {\bfseries Compute\+Camera\+State} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller}{Camera\+Management2\+D.\+Camera\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a31f239eeef522b9b8936a1b2b70cb3b1}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a8181c491fd9a30d4bf8a49e15550ee48}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a74a3fd0dbaa19afc36f8c39771404478}{On\+User\+Input\+Change}} (bool value)
+\begin{DoxyCompactList}\small\item\em Called when the user input state changes. Override to propagate user input changes to derived classes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a15cbd4657818cd25f8d15b93cb800491}{Compute\+Camera\+State}} ()
+\begin{DoxyCompactList}\small\item\em Computes the camera state based on the available data. Must not have any side effects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller}{Camera\+Management2\+D.\+Camera\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a23a73d4798da68734f83d679c5439379}{Use\+User\+Input}} (bool value)
+\begin{DoxyCompactList}\small\item\em Enables or disables user input for the camera controller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a789f8ca371ddb52182ecfc743c723fe6}{Set\+Active}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the active state of the camera controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a5e905934e4898b44271cc9b2f72cb99f}{Get\+Camera\+State}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current state of the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller}{Camera\+Management2\+D.\+Camera\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries use\+User\+Input} = true
+\begin{DoxyCompactList}\small\item\em Indicates whether user input is used to control the camera. \end{DoxyCompactList}\item 
+Camera {\bfseries controller\+Camera}
+\begin{DoxyCompactList}\small\item\em The camera that this controller is managing. \end{DoxyCompactList}\item 
+bool {\bfseries active} = true
+\begin{DoxyCompactList}\small\item\em Indicates whether the camera controller is active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A camera controller module that allows for panning and zooming of the camera based on user input. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_camera_management2_d_1_1_camera_pan_module_a80ca01914fcc4839fada75b1f6452adc}\index{CameraManagement2D.CameraPanModule@{CameraManagement2D.CameraPanModule}!InitializeCameraController@{InitializeCameraController}}
+\index{InitializeCameraController@{InitializeCameraController}!CameraManagement2D.CameraPanModule@{CameraManagement2D.CameraPanModule}}
+\doxysubsubsection{\texorpdfstring{InitializeCameraController()}{InitializeCameraController()}}
+{\footnotesize\ttfamily \label{class_camera_management2_d_1_1_camera_pan_module_a80ca01914fcc4839fada75b1f6452adc} 
+override void Camera\+Management2\+D.\+Camera\+Pan\+Module.\+Initialize\+Camera\+Controller (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called before the first Compute\+Camera\+State or Update call. Override to initialize the camera controller. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_afe10960725f546c147f21dae96b06ac3}{Camera\+Management2\+D.\+Camera\+Controller}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Runtime/Camera\+Pan\+Module.\+cs\end{DoxyCompactItemize}

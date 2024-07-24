@@ -1,0 +1,62 @@
+\doxysection{Camera\+Management2\+D.\+Camera\+State\+Clamp Class Reference}
+\hypertarget{class_camera_management2_d_1_1_camera_state_clamp}{}\label{class_camera_management2_d_1_1_camera_state_clamp}\index{CameraManagement2D.CameraStateClamp@{CameraManagement2D.CameraStateClamp}}
+
+
+Provides functionality to clamp the camera state, including position, bounds, and zoom.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{class_camera_management2_d_1_1_camera_state_clamp_ab05fc682782c3fcd93624ab49c540d17}{Clamp\+State}} (\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} state, float camera\+Aspect)
+\begin{DoxyCompactList}\small\item\em Clamps the camera state based on the configured clamp settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_state_clamp_a451ae68b17a5e53e3cc6e7139e6501d3}{Draw\+Gizmos}} (Camera camera, Vector3 reference=new())
+\begin{DoxyCompactList}\small\item\em Draws gizmos to visualize the clamping bounds and the camera frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functionality to clamp the camera state, including position, bounds, and zoom. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_camera_management2_d_1_1_camera_state_clamp_ab05fc682782c3fcd93624ab49c540d17}\index{CameraManagement2D.CameraStateClamp@{CameraManagement2D.CameraStateClamp}!ClampState@{ClampState}}
+\index{ClampState@{ClampState}!CameraManagement2D.CameraStateClamp@{CameraManagement2D.CameraStateClamp}}
+\doxysubsubsection{\texorpdfstring{ClampState()}{ClampState()}}
+{\footnotesize\ttfamily \label{class_camera_management2_d_1_1_camera_state_clamp_ab05fc682782c3fcd93624ab49c540d17} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State\+Clamp.\+Clamp\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}}}]{state}{, }\item[{float}]{camera\+Aspect}{}\end{DoxyParamCaption})}
+
+
+
+Clamps the camera state based on the configured clamp settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The camera state to clamp.\\
+\hline
+{\em camera\+Aspect} & The aspect ratio of the camera.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The clamped camera state.
+\end{DoxyReturn}
+\Hypertarget{class_camera_management2_d_1_1_camera_state_clamp_a451ae68b17a5e53e3cc6e7139e6501d3}\index{CameraManagement2D.CameraStateClamp@{CameraManagement2D.CameraStateClamp}!DrawGizmos@{DrawGizmos}}
+\index{DrawGizmos@{DrawGizmos}!CameraManagement2D.CameraStateClamp@{CameraManagement2D.CameraStateClamp}}
+\doxysubsubsection{\texorpdfstring{DrawGizmos()}{DrawGizmos()}}
+{\footnotesize\ttfamily \label{class_camera_management2_d_1_1_camera_state_clamp_a451ae68b17a5e53e3cc6e7139e6501d3} 
+void Camera\+Management2\+D.\+Camera\+State\+Clamp.\+Draw\+Gizmos (\begin{DoxyParamCaption}\item[{Camera}]{camera}{, }\item[{Vector3}]{reference}{ = {\ttfamily new()}}\end{DoxyParamCaption})}
+
+
+
+Draws gizmos to visualize the clamping bounds and the camera frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The camera whose bounds are to be visualized.\\
+\hline
+{\em reference} & The reference point for drawing gizmos.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Runtime/Camera\+State\+Clamp.\+cs\end{DoxyCompactItemize}

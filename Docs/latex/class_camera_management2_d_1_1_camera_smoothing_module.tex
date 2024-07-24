@@ -1,0 +1,95 @@
+\doxysection{Camera\+Management2\+D.\+Camera\+Smoothing\+Module Class Reference}
+\hypertarget{class_camera_management2_d_1_1_camera_smoothing_module}{}\label{class_camera_management2_d_1_1_camera_smoothing_module}\index{CameraManagement2D.CameraSmoothingModule@{CameraManagement2D.CameraSmoothingModule}}
+
+
+A module for smoothing camera movement, including position, zoom, and rotation. This class extends the \doxylink{class_camera_management2_d_1_1_camera_controller}{Camera\+Controller} and provides options to interpolate the camera\textquotesingle{}s state based on the specified speeds.  
+
+
+Inheritance diagram for Camera\+Management2\+D.\+Camera\+Smoothing\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_camera_management2_d_1_1_camera_smoothing_module}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_smoothing_module_aba64c0c92b5c8272147351030daea537}{On\+User\+Input\+Change}} (bool value)
+\begin{DoxyCompactList}\small\item\em Called when the user input state changes. Override to propagate user input changes to derived classes. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_smoothing_module_a155db87f6c4423a78d26cc791112b5d6}{Initialize\+Camera\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Called before the first Compute\+Camera\+State or Update call. Override to initialize the camera controller. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_management2_d_1_1_camera_smoothing_module_acbd69775e1613ffc4e18651fc20699dc}\label{class_camera_management2_d_1_1_camera_smoothing_module_acbd69775e1613ffc4e18651fc20699dc} 
+override \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} {\bfseries Compute\+Camera\+State} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller}{Camera\+Management2\+D.\+Camera\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a31f239eeef522b9b8936a1b2b70cb3b1}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a8181c491fd9a30d4bf8a49e15550ee48}{Start}} ()
+\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a15cbd4657818cd25f8d15b93cb800491}{Compute\+Camera\+State}} ()
+\begin{DoxyCompactList}\small\item\em Computes the camera state based on the available data. Must not have any side effects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller}{Camera\+Management2\+D.\+Camera\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a23a73d4798da68734f83d679c5439379}{Use\+User\+Input}} (bool value)
+\begin{DoxyCompactList}\small\item\em Enables or disables user input for the camera controller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a789f8ca371ddb52182ecfc743c723fe6}{Set\+Active}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the active state of the camera controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a5e905934e4898b44271cc9b2f72cb99f}{Get\+Camera\+State}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current state of the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller}{Camera\+Management2\+D.\+Camera\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries use\+User\+Input} = true
+\begin{DoxyCompactList}\small\item\em Indicates whether user input is used to control the camera. \end{DoxyCompactList}\item 
+Camera {\bfseries controller\+Camera}
+\begin{DoxyCompactList}\small\item\em The camera that this controller is managing. \end{DoxyCompactList}\item 
+bool {\bfseries active} = true
+\begin{DoxyCompactList}\small\item\em Indicates whether the camera controller is active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A module for smoothing camera movement, including position, zoom, and rotation. This class extends the \doxylink{class_camera_management2_d_1_1_camera_controller}{Camera\+Controller} and provides options to interpolate the camera\textquotesingle{}s state based on the specified speeds. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_camera_management2_d_1_1_camera_smoothing_module_a155db87f6c4423a78d26cc791112b5d6}\index{CameraManagement2D.CameraSmoothingModule@{CameraManagement2D.CameraSmoothingModule}!InitializeCameraController@{InitializeCameraController}}
+\index{InitializeCameraController@{InitializeCameraController}!CameraManagement2D.CameraSmoothingModule@{CameraManagement2D.CameraSmoothingModule}}
+\doxysubsubsection{\texorpdfstring{InitializeCameraController()}{InitializeCameraController()}}
+{\footnotesize\ttfamily \label{class_camera_management2_d_1_1_camera_smoothing_module_a155db87f6c4423a78d26cc791112b5d6} 
+override void Camera\+Management2\+D.\+Camera\+Smoothing\+Module.\+Initialize\+Camera\+Controller (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called before the first Compute\+Camera\+State or Update call. Override to initialize the camera controller. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_afe10960725f546c147f21dae96b06ac3}{Camera\+Management2\+D.\+Camera\+Controller}}.
+
+\Hypertarget{class_camera_management2_d_1_1_camera_smoothing_module_aba64c0c92b5c8272147351030daea537}\index{CameraManagement2D.CameraSmoothingModule@{CameraManagement2D.CameraSmoothingModule}!OnUserInputChange@{OnUserInputChange}}
+\index{OnUserInputChange@{OnUserInputChange}!CameraManagement2D.CameraSmoothingModule@{CameraManagement2D.CameraSmoothingModule}}
+\doxysubsubsection{\texorpdfstring{OnUserInputChange()}{OnUserInputChange()}}
+{\footnotesize\ttfamily \label{class_camera_management2_d_1_1_camera_smoothing_module_aba64c0c92b5c8272147351030daea537} 
+override void Camera\+Management2\+D.\+Camera\+Smoothing\+Module.\+On\+User\+Input\+Change (\begin{DoxyParamCaption}\item[{bool}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when the user input state changes. Override to propagate user input changes to derived classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The new user input state.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_camera_management2_d_1_1_camera_controller_a74a3fd0dbaa19afc36f8c39771404478}{Camera\+Management2\+D.\+Camera\+Controller}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Runtime/Camera\+Smoothing\+Module.\+cs\end{DoxyCompactItemize}

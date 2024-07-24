@@ -1,0 +1,842 @@
+\doxysection{Camera\+Management2\+D.\+Camera\+State Struct Reference}
+\hypertarget{struct_camera_management2_d_1_1_camera_state}{}\label{struct_camera_management2_d_1_1_camera_state}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+
+
+Encapsulates the state of a 2D camera, including its position, zoom level, and rotation. It provides functionality to manage, modify, and apply camera states in a flexible manner.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a3614bec923c162ec1b6b71fefe1355d8}{Camera\+State}} (Vector2 position, float zoom, float rotation, bool local=false)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} class with the specified position, zoom, rotation, and local flag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_aceafb44cc29b702d6d159e30ed1ca02f}{Camera\+State}} (\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} other)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} class by copying another \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a0aaf851d256523c133b5a82f29541e81}{Clone}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that is a copy of the current instance. \end{DoxyCompactList}\item 
+Bounds \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a75a3ae565182cc8dac15d4352fba1d86}{Get\+Bounds}} (float aspect\+Ratio)
+\begin{DoxyCompactList}\small\item\em Gets the bounds of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} based on the specified aspect ratio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_af79051b52ddbecd55f87493c4e7e710b}{With\+Position}} (Vector2? position)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified position value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a7462724e0f7e4dd1d62d6c38d93c4ccd}{With\+Position}} (Vector2 position)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified position value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a1c0efb74f1d4c4c19f8991a1899d0630}{With\+Position}} (\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} other)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the position value from another \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a60925d7517bb95f9da5a813437309b96}{Without\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} without a position value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_aeece113bb1415e572e3aee5c2bff73ad}{With\+Zoom}} (float zoom)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified zoom value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_ad9c31f90a7a7c95b732b292007f8a824}{With\+Zoom}} (float? zoom)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified zoom value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_aef93ca3e261a7a82f5af35181a22ab56}{With\+Zoom}} (\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} other)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the zoom value from another \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_ab42b77f2330c8272a2b197caaf0a3941}{Without\+Zoom}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} without a zoom value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_ad48a4ddc770eacdbbdf717680bdcedc9}{With\+Rotation}} (float rotation)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified rotation value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_aff08ba9b25452e54b1ab1e3ed10cfd22}{With\+Rotation}} (float? rotation)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified rotation value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_ae1a47e60bfbaa0ad89a8ff590c7678e2}{With\+Rotation}} (\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} other)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the rotation value from another \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a1bd1ea0bae9f7f943f4f31ec2f38c14e}{Without\+Rotation}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} without a rotation value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a36a75245618bead9eeb41d74f9980f49}{As\+Local}} (bool local=true)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified local value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a2edc0b4a4df4e68387ebc705a15f05e1}{Apply\+To}} (Camera camera)
+\begin{DoxyCompactList}\small\item\em Applies the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to a given Camera. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a0fef011fb4419eba1fb4ed5663048ca4}{Represents\+Zoom}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} represents a zoom value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a6495a7e55cb217764a9fb5f8d94934c8}{Represents\+Rotation}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} represents a rotation value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a0e08827c27541ba607f9cba4535bb936}{Represents\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} represents a position value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_ad4e2adc381eb71196db39cd0b6ac194f}{Is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} is empty (i.\+e., no position, zoom, or rotation values). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a2e86a2226f175c98431e75dd2297969f}{Decay\+Position\+To}} (\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} target, float factor, float delta\+Time=-\/1)
+\begin{DoxyCompactList}\small\item\em Decays the position of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to a target position over multiple calls. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a511377fe27901d9e4da52050e32d0296}{Decay\+Zoom\+To}} (\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} target, float factor, float delta\+Time=-\/1)
+\begin{DoxyCompactList}\small\item\em Decays the zoom of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to a target position over multiple calls. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a7da0621e7d5638a881d2a7732f2e2f9d}{Decay\+Rotation\+To}} (\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} target, float factor, float delta\+Time=-\/1)
+\begin{DoxyCompactList}\small\item\em Decays the rotation of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to a target position over multiple calls. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_adf7ca0f9500a694dd3f099e6d5ec499f}{Zoom\+Towards}} (float target\+Zoom, Vector2 target)
+\begin{DoxyCompactList}\small\item\em Zooms the camera state to a target zoom towards a target position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a07a484f428817d2edd68ac6d05e18fd2}{Zoom\+Towards}} (\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} other, Vector2 target)
+\begin{DoxyCompactList}\small\item\em Zooms the camera state to a target zoom towards a target position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a040169ca79a2a961d447cb21eb9a14b6}{Exponential\+Zoom}} (float zoom\+Change, Vector2 target)
+\begin{DoxyCompactList}\small\item\em Zooms the camera exponentially with the value provided towards a target position. This allows for linear zoom \textquotesingle{}feel\textquotesingle{} when the zoom change is constant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a006eb6e0c373f27e3879612af0533137}{Exponential\+Zoom}} (float zoom\+Change)
+\begin{DoxyCompactList}\small\item\em Zooms the camera exponentially with the value provided towards the center of the screen. This allows for linear zoom \textquotesingle{}feel\textquotesingle{} when the zoom change is constant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a017cd662461c6f8355ccc705cc542111}{Clamped\+Zoom}} (float min, float max)
+\begin{DoxyCompactList}\small\item\em Clamps the zoom value of the camera state between a minimum and maximum value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_adbcd4122e624f7932d5b1d971c938f5e}{Clamped\+Zoom}} (Vector2 clamp)
+\begin{DoxyCompactList}\small\item\em Clamps the zoom value of the camera state between a minimum and maximum value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a1089d62657a31c1781d1fbaa2080109f}{Clamped\+Position}} (Vector2 clampX, Vector2 clampY)
+\begin{DoxyCompactList}\small\item\em Clamps the position of the camera state between a minimum and maximum value on both axes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a3395e428adec58ed7304db9b8ef3e641}{Clamped\+PositionX}} (Vector2 clamp)
+\begin{DoxyCompactList}\small\item\em Clamps the position of the camera state between a minimum and maximum value on the X axis. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_ab3d7fa05e96e264502286d898a22d0a9}{Clamped\+PositionY}} (Vector2 clamp)
+\begin{DoxyCompactList}\small\item\em Clamps the position of the camera state between a minimum and maximum value on the X axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_aa9ec937213d2097c85287aa1d09b0b17}{From\+Camera}} (Camera camera, bool local=false)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} from the given Camera. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_ab28442f5371b5cc1a0b7aff9f49890ff}{Empty}} ()
+\begin{DoxyCompactList}\small\item\em Creates an empty \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with no position, zoom, or rotation values. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_af6e0784cfefbf8dacc3816149b9a640d}{Covering\+Bounds}} (Bounds bounds, float aspect\+Ratio)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that covers the given bounds with the specified aspect ratio. The bounds will be centered in the camera. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a4f80d4dbbea0d26d06cb6674e270bba3}{Covering\+Bounds}} (Bounds bounds, float aspect\+Ratio, Vector2 pivot)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that covers the given bounds with the specified aspect ratio and pivot. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_a1cbbb61cee5c833f1c296bd9440272d2}{Containing\+Bounds}} (Bounds bounds, float aspect\+Ratio)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that contains the given bounds with the specified aspect ratio. The camera will be centered in the bounds. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state_ac35fd14cf53f8271c22c4f446559e41b}{Containing\+Bounds}} (Bounds bounds, float aspect\+Ratio, Vector2 pivot)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that contains the given bounds with the specified aspect ratio and pivot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a1b983d2292e771de14c5c1525356ff42}\label{struct_camera_management2_d_1_1_camera_state_a1b983d2292e771de14c5c1525356ff42} 
+Vector2? {\bfseries position}
+\item 
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a638819b55d6d0555847e80104d5690c4}\label{struct_camera_management2_d_1_1_camera_state_a638819b55d6d0555847e80104d5690c4} 
+float? {\bfseries zoom}
+\item 
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a02d50d4bd1c75a3cc0d8e31f1202b69d}\label{struct_camera_management2_d_1_1_camera_state_a02d50d4bd1c75a3cc0d8e31f1202b69d} 
+float? {\bfseries rotation}
+\item 
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_ac1421615648b7b257f9d96a2dbc0c642}\label{struct_camera_management2_d_1_1_camera_state_ac1421615648b7b257f9d96a2dbc0c642} 
+bool {\bfseries local}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_ab0181b4b40eeacb132f7aa24700231da}\label{struct_camera_management2_d_1_1_camera_state_ab0181b4b40eeacb132f7aa24700231da} 
+Vector2 {\bfseries Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the position of the camera. If the position is null, logs an error and returns Vector2.\+zero. \end{DoxyCompactList}\item 
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_ae5214be366353d9800b4a88d9b57f441}\label{struct_camera_management2_d_1_1_camera_state_ae5214be366353d9800b4a88d9b57f441} 
+float {\bfseries Zoom}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the zoom level of the camera. If the zoom is null, logs an error and returns 1.\+0f. \end{DoxyCompactList}\item 
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a0e226fbe6d35fb5db6c86e29d269099f}\label{struct_camera_management2_d_1_1_camera_state_a0e226fbe6d35fb5db6c86e29d269099f} 
+float {\bfseries Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the rotation of the camera. If the rotation is null, logs an error and returns 0.\+0f. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates the state of a 2D camera, including its position, zoom level, and rotation. It provides functionality to manage, modify, and apply camera states in a flexible manner. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a3614bec923c162ec1b6b71fefe1355d8}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!CameraState@{CameraState}}
+\index{CameraState@{CameraState}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{CameraState()}{CameraState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a3614bec923c162ec1b6b71fefe1355d8} 
+Camera\+Management2\+D.\+Camera\+State.\+Camera\+State (\begin{DoxyParamCaption}\item[{Vector2}]{position}{, }\item[{float}]{zoom}{, }\item[{float}]{rotation}{, }\item[{bool}]{local}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} class with the specified position, zoom, rotation, and local flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the camera.\\
+\hline
+{\em zoom} & The zoom level of the camera.\\
+\hline
+{\em rotation} & The rotation of the camera.\\
+\hline
+{\em local} & Indicates whether the position and rotation are treated as local to the parent transform.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_aceafb44cc29b702d6d159e30ed1ca02f}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!CameraState@{CameraState}}
+\index{CameraState@{CameraState}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{CameraState()}{CameraState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_aceafb44cc29b702d6d159e30ed1ca02f} 
+Camera\+Management2\+D.\+Camera\+State.\+Camera\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} class by copying another \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to copy.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a2edc0b4a4df4e68387ebc705a15f05e1}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!ApplyTo@{ApplyTo}}
+\index{ApplyTo@{ApplyTo}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{ApplyTo()}{ApplyTo()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a2edc0b4a4df4e68387ebc705a15f05e1} 
+void Camera\+Management2\+D.\+Camera\+State.\+Apply\+To (\begin{DoxyParamCaption}\item[{Camera}]{camera}{}\end{DoxyParamCaption})}
+
+
+
+Applies the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to a given Camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The Camera to which the state will be applied.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a36a75245618bead9eeb41d74f9980f49}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!AsLocal@{AsLocal}}
+\index{AsLocal@{AsLocal}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{AsLocal()}{AsLocal()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a36a75245618bead9eeb41d74f9980f49} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+As\+Local (\begin{DoxyParamCaption}\item[{bool}]{local}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified local value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em local} & Determines whether the position and rotation will treated as local to the parent transform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the updated local value.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a1089d62657a31c1781d1fbaa2080109f}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!ClampedPosition@{ClampedPosition}}
+\index{ClampedPosition@{ClampedPosition}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{ClampedPosition()}{ClampedPosition()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a1089d62657a31c1781d1fbaa2080109f} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Clamped\+Position (\begin{DoxyParamCaption}\item[{Vector2}]{clampX}{, }\item[{Vector2}]{clampY}{}\end{DoxyParamCaption})}
+
+
+
+Clamps the position of the camera state between a minimum and maximum value on both axes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clampX} & A vector2 with the minimum and maximum values for the clamp on the X axis\\
+\hline
+{\em clampY} & A vector2 with the minimum and maximum values for the clamp on the y axis\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A clone of the state with modified position
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a3395e428adec58ed7304db9b8ef3e641}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!ClampedPositionX@{ClampedPositionX}}
+\index{ClampedPositionX@{ClampedPositionX}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{ClampedPositionX()}{ClampedPositionX()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a3395e428adec58ed7304db9b8ef3e641} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Clamped\+PositionX (\begin{DoxyParamCaption}\item[{Vector2}]{clamp}{}\end{DoxyParamCaption})}
+
+
+
+Clamps the position of the camera state between a minimum and maximum value on the X axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clamp} & A vector2 with the minimum and maximum values for the clamp on the X axis\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A clone of the state with modified position
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_ab3d7fa05e96e264502286d898a22d0a9}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!ClampedPositionY@{ClampedPositionY}}
+\index{ClampedPositionY@{ClampedPositionY}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{ClampedPositionY()}{ClampedPositionY()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_ab3d7fa05e96e264502286d898a22d0a9} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Clamped\+PositionY (\begin{DoxyParamCaption}\item[{Vector2}]{clamp}{}\end{DoxyParamCaption})}
+
+
+
+Clamps the position of the camera state between a minimum and maximum value on the X axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clamp} & A vector2 with the minimum and maximum values for the clamp on the Y axis\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A clone of the state with modified position
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a017cd662461c6f8355ccc705cc542111}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!ClampedZoom@{ClampedZoom}}
+\index{ClampedZoom@{ClampedZoom}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{ClampedZoom()}{ClampedZoom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a017cd662461c6f8355ccc705cc542111} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Clamped\+Zoom (\begin{DoxyParamCaption}\item[{float}]{min}{, }\item[{float}]{max}{}\end{DoxyParamCaption})}
+
+
+
+Clamps the zoom value of the camera state between a minimum and maximum value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The lower bound for the clamp\\
+\hline
+{\em max} & The upped bound for the clamp\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A clone of the state with modified zoom
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_adbcd4122e624f7932d5b1d971c938f5e}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!ClampedZoom@{ClampedZoom}}
+\index{ClampedZoom@{ClampedZoom}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{ClampedZoom()}{ClampedZoom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_adbcd4122e624f7932d5b1d971c938f5e} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Clamped\+Zoom (\begin{DoxyParamCaption}\item[{Vector2}]{clamp}{}\end{DoxyParamCaption})}
+
+
+
+Clamps the zoom value of the camera state between a minimum and maximum value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clamp} & A vector2 with the minimum and maximum values for the clamp\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A clone of the state with modified zoom
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a0aaf851d256523c133b5a82f29541e81}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!Clone@{Clone}}
+\index{Clone@{Clone}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a0aaf851d256523c133b5a82f29541e81} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that is a copy of the current instance. 
+
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that is a copy of the current instance.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a1cbbb61cee5c833f1c296bd9440272d2}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!ContainingBounds@{ContainingBounds}}
+\index{ContainingBounds@{ContainingBounds}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{ContainingBounds()}{ContainingBounds()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a1cbbb61cee5c833f1c296bd9440272d2} 
+static \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Containing\+Bounds (\begin{DoxyParamCaption}\item[{Bounds}]{bounds}{, }\item[{float}]{aspect\+Ratio}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that contains the given bounds with the specified aspect ratio. The camera will be centered in the bounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bounds} & The bounds that should contain the camera.\\
+\hline
+{\em aspect\+Ratio} & The aspect ratio of the camera.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that contains the given bounds.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_ac35fd14cf53f8271c22c4f446559e41b}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!ContainingBounds@{ContainingBounds}}
+\index{ContainingBounds@{ContainingBounds}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{ContainingBounds()}{ContainingBounds()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_ac35fd14cf53f8271c22c4f446559e41b} 
+static \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Containing\+Bounds (\begin{DoxyParamCaption}\item[{Bounds}]{bounds}{, }\item[{float}]{aspect\+Ratio}{, }\item[{Vector2}]{pivot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that contains the given bounds with the specified aspect ratio and pivot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bounds} & The bounds that should contain the camera.\\
+\hline
+{\em aspect\+Ratio} & The aspect ratio of the camera.\\
+\hline
+{\em pivot} & The pivot point for the camera. A value of (0.\+5, 0.\+5) will center the camera\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that contains the given bounds.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_af6e0784cfefbf8dacc3816149b9a640d}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!CoveringBounds@{CoveringBounds}}
+\index{CoveringBounds@{CoveringBounds}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{CoveringBounds()}{CoveringBounds()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_af6e0784cfefbf8dacc3816149b9a640d} 
+static \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Covering\+Bounds (\begin{DoxyParamCaption}\item[{Bounds}]{bounds}{, }\item[{float}]{aspect\+Ratio}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that covers the given bounds with the specified aspect ratio. The bounds will be centered in the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bounds} & The bounds the camera should cover.\\
+\hline
+{\em aspect\+Ratio} & The aspect ratio of the camera.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that covers the given bounds.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a4f80d4dbbea0d26d06cb6674e270bba3}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!CoveringBounds@{CoveringBounds}}
+\index{CoveringBounds@{CoveringBounds}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{CoveringBounds()}{CoveringBounds()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a4f80d4dbbea0d26d06cb6674e270bba3} 
+static \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Covering\+Bounds (\begin{DoxyParamCaption}\item[{Bounds}]{bounds}{, }\item[{float}]{aspect\+Ratio}{, }\item[{Vector2}]{pivot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that covers the given bounds with the specified aspect ratio and pivot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bounds} & The bounds the camera should cover.\\
+\hline
+{\em aspect\+Ratio} & The aspect ratio of the camera.\\
+\hline
+{\em pivot} & The pivot point for the camera. A value of (0.\+5, 0.\+5) will center the camera\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that covers the given bounds.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a2e86a2226f175c98431e75dd2297969f}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!DecayPositionTo@{DecayPositionTo}}
+\index{DecayPositionTo@{DecayPositionTo}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{DecayPositionTo()}{DecayPositionTo()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a2e86a2226f175c98431e75dd2297969f} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Decay\+Position\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}}}]{target}{, }\item[{float}]{factor}{, }\item[{float}]{delta\+Time}{ = {\ttfamily -\/1}}\end{DoxyParamCaption})}
+
+
+
+Decays the position of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to a target position over multiple calls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The target \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to decay towards.\\
+\hline
+{\em factor} & The decay factor.\\
+\hline
+{\em delta\+Time} & The delta\+Time between the calls. Defaults to Time.\+delta\+Time if not specified.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the decayed position.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a7da0621e7d5638a881d2a7732f2e2f9d}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!DecayRotationTo@{DecayRotationTo}}
+\index{DecayRotationTo@{DecayRotationTo}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{DecayRotationTo()}{DecayRotationTo()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a7da0621e7d5638a881d2a7732f2e2f9d} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Decay\+Rotation\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}}}]{target}{, }\item[{float}]{factor}{, }\item[{float}]{delta\+Time}{ = {\ttfamily -\/1}}\end{DoxyParamCaption})}
+
+
+
+Decays the rotation of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to a target position over multiple calls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The target \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to decay towards.\\
+\hline
+{\em factor} & The decay factor.\\
+\hline
+{\em delta\+Time} & The delta\+Time between the calls. Defaults to Time.\+delta\+Time if not specified.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the decayed rotation.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a511377fe27901d9e4da52050e32d0296}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!DecayZoomTo@{DecayZoomTo}}
+\index{DecayZoomTo@{DecayZoomTo}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{DecayZoomTo()}{DecayZoomTo()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a511377fe27901d9e4da52050e32d0296} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Decay\+Zoom\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}}}]{target}{, }\item[{float}]{factor}{, }\item[{float}]{delta\+Time}{ = {\ttfamily -\/1}}\end{DoxyParamCaption})}
+
+
+
+Decays the zoom of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to a target position over multiple calls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The target \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to decay towards.\\
+\hline
+{\em factor} & The decay factor.\\
+\hline
+{\em delta\+Time} & The delta\+Time between the calls. Defaults to Time.\+delta\+Time if not specified.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the decayed zoom.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_ab28442f5371b5cc1a0b7aff9f49890ff}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!Empty@{Empty}}
+\index{Empty@{Empty}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_ab28442f5371b5cc1a0b7aff9f49890ff} 
+static \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates an empty \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with no position, zoom, or rotation values. 
+
+\begin{DoxyReturn}{Returns}
+An empty \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a006eb6e0c373f27e3879612af0533137}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!ExponentialZoom@{ExponentialZoom}}
+\index{ExponentialZoom@{ExponentialZoom}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{ExponentialZoom()}{ExponentialZoom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a006eb6e0c373f27e3879612af0533137} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Exponential\+Zoom (\begin{DoxyParamCaption}\item[{float}]{zoom\+Change}{}\end{DoxyParamCaption})}
+
+
+
+Zooms the camera exponentially with the value provided towards the center of the screen. This allows for linear zoom \textquotesingle{}feel\textquotesingle{} when the zoom change is constant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zoom\+Change} & A value that dictates the direction and magnitude of zoom\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A clone of the state with modified zoom
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a040169ca79a2a961d447cb21eb9a14b6}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!ExponentialZoom@{ExponentialZoom}}
+\index{ExponentialZoom@{ExponentialZoom}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{ExponentialZoom()}{ExponentialZoom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a040169ca79a2a961d447cb21eb9a14b6} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Exponential\+Zoom (\begin{DoxyParamCaption}\item[{float}]{zoom\+Change}{, }\item[{Vector2}]{target}{}\end{DoxyParamCaption})}
+
+
+
+Zooms the camera exponentially with the value provided towards a target position. This allows for linear zoom \textquotesingle{}feel\textquotesingle{} when the zoom change is constant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zoom\+Change} & A value that dictates the direction and magnitude of zoom\\
+\hline
+{\em target} & The position in the space as the camera position to zoom towards\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A clone of the state with modified position and zoom
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_aa9ec937213d2097c85287aa1d09b0b17}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!FromCamera@{FromCamera}}
+\index{FromCamera@{FromCamera}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{FromCamera()}{FromCamera()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_aa9ec937213d2097c85287aa1d09b0b17} 
+static \mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+From\+Camera (\begin{DoxyParamCaption}\item[{Camera}]{camera}{, }\item[{bool}]{local}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} from the given Camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The Camera to create the state from.\\
+\hline
+{\em local} & Indicates whether the position and rotation are local to the parent transform.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} representing the state of the given Camera.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a75a3ae565182cc8dac15d4352fba1d86}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!GetBounds@{GetBounds}}
+\index{GetBounds@{GetBounds}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{GetBounds()}{GetBounds()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a75a3ae565182cc8dac15d4352fba1d86} 
+Bounds Camera\+Management2\+D.\+Camera\+State.\+Get\+Bounds (\begin{DoxyParamCaption}\item[{float}]{aspect\+Ratio}{}\end{DoxyParamCaption})}
+
+
+
+Gets the bounds of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} based on the specified aspect ratio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aspect\+Ratio} & The aspect ratio of the camera.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Bounds object representing the bounds of the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_ad4e2adc381eb71196db39cd0b6ac194f}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{IsEmpty()}{IsEmpty()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_ad4e2adc381eb71196db39cd0b6ac194f} 
+bool Camera\+Management2\+D.\+Camera\+State.\+Is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} is empty (i.\+e., no position, zoom, or rotation values). 
+
+\begin{DoxyReturn}{Returns}
+True if the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} is empty, otherwise false.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a0e08827c27541ba607f9cba4535bb936}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!RepresentsPosition@{RepresentsPosition}}
+\index{RepresentsPosition@{RepresentsPosition}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{RepresentsPosition()}{RepresentsPosition()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a0e08827c27541ba607f9cba4535bb936} 
+bool Camera\+Management2\+D.\+Camera\+State.\+Represents\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} represents a position value. 
+
+\begin{DoxyReturn}{Returns}
+True if the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} represents a position value, otherwise false.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a6495a7e55cb217764a9fb5f8d94934c8}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!RepresentsRotation@{RepresentsRotation}}
+\index{RepresentsRotation@{RepresentsRotation}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{RepresentsRotation()}{RepresentsRotation()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a6495a7e55cb217764a9fb5f8d94934c8} 
+bool Camera\+Management2\+D.\+Camera\+State.\+Represents\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} represents a rotation value. 
+
+\begin{DoxyReturn}{Returns}
+True if the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} represents a rotation value, otherwise false.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a0fef011fb4419eba1fb4ed5663048ca4}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!RepresentsZoom@{RepresentsZoom}}
+\index{RepresentsZoom@{RepresentsZoom}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{RepresentsZoom()}{RepresentsZoom()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a0fef011fb4419eba1fb4ed5663048ca4} 
+bool Camera\+Management2\+D.\+Camera\+State.\+Represents\+Zoom (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} represents a zoom value. 
+
+\begin{DoxyReturn}{Returns}
+True if the \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} represents a zoom value, otherwise false.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a60925d7517bb95f9da5a813437309b96}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!WithoutPosition@{WithoutPosition}}
+\index{WithoutPosition@{WithoutPosition}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{WithoutPosition()}{WithoutPosition()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a60925d7517bb95f9da5a813437309b96} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Without\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} without a position value. 
+
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that doesn\textquotesingle{}t represent a position
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a1bd1ea0bae9f7f943f4f31ec2f38c14e}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!WithoutRotation@{WithoutRotation}}
+\index{WithoutRotation@{WithoutRotation}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{WithoutRotation()}{WithoutRotation()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a1bd1ea0bae9f7f943f4f31ec2f38c14e} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Without\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} without a rotation value. 
+
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that doesn\textquotesingle{}t represent a rotation
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_ab42b77f2330c8272a2b197caaf0a3941}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!WithoutZoom@{WithoutZoom}}
+\index{WithoutZoom@{WithoutZoom}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{WithoutZoom()}{WithoutZoom()}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_ab42b77f2330c8272a2b197caaf0a3941} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Without\+Zoom (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} without a zoom value. 
+
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} that doesn\textquotesingle{}t represent a zoom
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a1c0efb74f1d4c4c19f8991a1899d0630}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!WithPosition@{WithPosition}}
+\index{WithPosition@{WithPosition}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{WithPosition()}{WithPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a1c0efb74f1d4c4c19f8991a1899d0630} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+With\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the position value from another \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to copy the position value from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the updated position value.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a7462724e0f7e4dd1d62d6c38d93c4ccd}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!WithPosition@{WithPosition}}
+\index{WithPosition@{WithPosition}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{WithPosition()}{WithPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a7462724e0f7e4dd1d62d6c38d93c4ccd} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+With\+Position (\begin{DoxyParamCaption}\item[{Vector2}]{position}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified position value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position value to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the updated position value.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_af79051b52ddbecd55f87493c4e7e710b}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!WithPosition@{WithPosition}}
+\index{WithPosition@{WithPosition}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{WithPosition()}{WithPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_af79051b52ddbecd55f87493c4e7e710b} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+With\+Position (\begin{DoxyParamCaption}\item[{Vector2?}]{position}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified position value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position value to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the updated position value.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_ae1a47e60bfbaa0ad89a8ff590c7678e2}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!WithRotation@{WithRotation}}
+\index{WithRotation@{WithRotation}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{WithRotation()}{WithRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_ae1a47e60bfbaa0ad89a8ff590c7678e2} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+With\+Rotation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the rotation value from another \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to copy the rotation value from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the updated rotation value.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_ad48a4ddc770eacdbbdf717680bdcedc9}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!WithRotation@{WithRotation}}
+\index{WithRotation@{WithRotation}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{WithRotation()}{WithRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_ad48a4ddc770eacdbbdf717680bdcedc9} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+With\+Rotation (\begin{DoxyParamCaption}\item[{float}]{rotation}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified rotation value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & The rotation value to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the updated rotation value.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_aff08ba9b25452e54b1ab1e3ed10cfd22}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!WithRotation@{WithRotation}}
+\index{WithRotation@{WithRotation}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{WithRotation()}{WithRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_aff08ba9b25452e54b1ab1e3ed10cfd22} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+With\+Rotation (\begin{DoxyParamCaption}\item[{float?}]{rotation}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified rotation value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & The rotation value to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the updated rotation value.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_aef93ca3e261a7a82f5af35181a22ab56}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!WithZoom@{WithZoom}}
+\index{WithZoom@{WithZoom}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{WithZoom()}{WithZoom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_aef93ca3e261a7a82f5af35181a22ab56} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+With\+Zoom (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the zoom value from another \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} to copy the zoom value from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the updated zoom value.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_aeece113bb1415e572e3aee5c2bff73ad}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!WithZoom@{WithZoom}}
+\index{WithZoom@{WithZoom}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{WithZoom()}{WithZoom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_aeece113bb1415e572e3aee5c2bff73ad} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+With\+Zoom (\begin{DoxyParamCaption}\item[{float}]{zoom}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified zoom value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zoom} & The zoom value to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the updated zoom value.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_ad9c31f90a7a7c95b732b292007f8a824}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!WithZoom@{WithZoom}}
+\index{WithZoom@{WithZoom}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{WithZoom()}{WithZoom()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_ad9c31f90a7a7c95b732b292007f8a824} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+With\+Zoom (\begin{DoxyParamCaption}\item[{float?}]{zoom}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the specified zoom value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zoom} & The zoom value to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{struct_camera_management2_d_1_1_camera_state}{Camera\+State} with the updated zoom value.
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_a07a484f428817d2edd68ac6d05e18fd2}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!ZoomTowards@{ZoomTowards}}
+\index{ZoomTowards@{ZoomTowards}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{ZoomTowards()}{ZoomTowards()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_a07a484f428817d2edd68ac6d05e18fd2} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Zoom\+Towards (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}}}]{other}{, }\item[{Vector2}]{target}{}\end{DoxyParamCaption})}
+
+
+
+Zooms the camera state to a target zoom towards a target position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The state that contains the target zoom value\\
+\hline
+{\em target} & The position in the space as the camera position to zoom towards\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A clone of the state with modified position and zoom
+\end{DoxyReturn}
+\Hypertarget{struct_camera_management2_d_1_1_camera_state_adf7ca0f9500a694dd3f099e6d5ec499f}\index{CameraManagement2D.CameraState@{CameraManagement2D.CameraState}!ZoomTowards@{ZoomTowards}}
+\index{ZoomTowards@{ZoomTowards}!CameraManagement2D.CameraState@{CameraManagement2D.CameraState}}
+\doxysubsubsection{\texorpdfstring{ZoomTowards()}{ZoomTowards()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_camera_management2_d_1_1_camera_state_adf7ca0f9500a694dd3f099e6d5ec499f} 
+\mbox{\hyperlink{struct_camera_management2_d_1_1_camera_state}{Camera\+State}} Camera\+Management2\+D.\+Camera\+State.\+Zoom\+Towards (\begin{DoxyParamCaption}\item[{float}]{target\+Zoom}{, }\item[{Vector2}]{target}{}\end{DoxyParamCaption})}
+
+
+
+Zooms the camera state to a target zoom towards a target position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Zoom} & The target zoom value\\
+\hline
+{\em target} & The position in the space as the camera position to zoom towards\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A clone of the state with modified position and zoom
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Runtime/Camera\+State.\+cs\end{DoxyCompactItemize}
