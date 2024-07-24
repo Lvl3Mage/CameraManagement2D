@@ -30,6 +30,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Doxygen Action
         uses: mattnotmitt/doxygen-action@1.9.8
+        with:
+          working-directory: 'docs/'
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
