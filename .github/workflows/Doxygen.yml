@@ -11,8 +11,29 @@ jobs:
         uses: mattnotmitt/doxygen-action@1.9.8
         with:
           working-directory: 'docs/'
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+  build:
+    runs-on: ubuntu-latest
+    needs: run-doxygen
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
         with:
-          folder: docs/html
+          source: ./docs
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
           
