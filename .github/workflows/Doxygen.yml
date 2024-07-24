@@ -9,7 +9,7 @@ jobs:
       - name: Doxygen Action
         uses: mattnotmitt/doxygen-action@1.9.8
         with:
-          working-directory: 'docs/'
+          working-directory: './Docs'
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
