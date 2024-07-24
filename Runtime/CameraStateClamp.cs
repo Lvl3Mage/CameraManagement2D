@@ -17,7 +17,13 @@ namespace CameraManagement2D
 		/// </summary>
 		enum ClampMode
 		{
+			/// <summary>
+			/// Clamps the camera state based on the center position.
+			/// </summary>
 			ClampPosition,
+			/// <summary>
+			/// Clamps the camera state based on the camera bounds.
+			/// </summary>
 			ClampBounds
 		}
 		/// <summary>
