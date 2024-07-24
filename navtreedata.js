@@ -32,10 +32,10 @@ var NAVTREE =
       [ "Documentation", "index.html#autotoc_md6", null ],
       [ "Author", "index.html#autotoc_md7", null ]
     ] ],
-    [ "[1.0.0] - 2024-07-16", "md__c_h_a_n_g_e_l_o_g.html", [
-      [ "[1.0.1] - 2024-07-24", "md__c_h_a_n_g_e_l_o_g.html#autotoc_md1", null ]
+    [ "[1.0.0] - 2024-07-16", "a00113.html", [
+      [ "[1.0.1] - 2024-07-24", "a00113.html#autotoc_md1", null ]
     ] ],
-    [ "LICENSE", "md__l_i_c_e_n_s_e.html", null ],
+    [ "LICENSE", "a00114.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -54,17 +54,13 @@ var NAVTREE =
         [ "Enumerations", "functions_enum.html", null ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
-    ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_camera_controller_8cs_source.html",
-"struct_camera_management2_d_1_1_camera_state.html#aeece113bb1415e572e3aee5c2bff73ad"
+"a00032.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

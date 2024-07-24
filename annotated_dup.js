@@ -1,13 +1,13 @@
 var annotated_dup =
 [
-    [ "CameraManagement2D", "namespace_camera_management2_d.html", [
-      [ "CameraController", "class_camera_management2_d_1_1_camera_controller.html", "class_camera_management2_d_1_1_camera_controller" ],
-      [ "CameraModuleManager", "class_camera_management2_d_1_1_camera_module_manager.html", "class_camera_management2_d_1_1_camera_module_manager" ],
-      [ "CameraPanModule", "class_camera_management2_d_1_1_camera_pan_module.html", "class_camera_management2_d_1_1_camera_pan_module" ],
-      [ "CameraSmoothingModule", "class_camera_management2_d_1_1_camera_smoothing_module.html", "class_camera_management2_d_1_1_camera_smoothing_module" ],
-      [ "CameraState", "struct_camera_management2_d_1_1_camera_state.html", "struct_camera_management2_d_1_1_camera_state" ],
-      [ "CameraStateClamp", "class_camera_management2_d_1_1_camera_state_clamp.html", "class_camera_management2_d_1_1_camera_state_clamp" ],
-      [ "TrackedObject", "class_camera_management2_d_1_1_tracked_object.html", "class_camera_management2_d_1_1_tracked_object" ],
-      [ "TrackerCameraModule", "class_camera_management2_d_1_1_tracker_camera_module.html", "class_camera_management2_d_1_1_tracker_camera_module" ]
+    [ "CameraManagement2D", "a00032.html", [
+      [ "CameraController", "a00044.html", "a00044" ],
+      [ "CameraModuleManager", "a00048.html", "a00048" ],
+      [ "CameraPanModule", "a00052.html", "a00052" ],
+      [ "CameraSmoothingModule", "a00056.html", "a00056" ],
+      [ "CameraState", "a00060.html", "a00060" ],
+      [ "CameraStateClamp", "a00064.html", "a00064" ],
+      [ "TrackedObject", "a00072.html", "a00072" ],
+      [ "TrackerCameraModule", "a00068.html", "a00068" ]
     ] ]
 ];
