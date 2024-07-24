@@ -11,7 +11,7 @@ This package provides a flexible and extendable camera management system for Uni
 - Interpolation package
 
 ## Installation
-Add the package to your Unity project by importing the `com.Lvl3Mage.cameramanagement` package.
+Add the package to your Unity project by importing the `com.lvl3Mage.cameramanagement` package.
 
 [//]: # (## Usage)
 
