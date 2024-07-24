@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="CameraManagement" />
+<!-- <meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" /> -->
+<meta property="og:description" content="A drop-in 2D camera management library for Unity" />
+<meta property="og:url" content="https://github.com/Lvl3Mage/CameraManagement" />
+<!-- END opengraph metadata -->
+<title>Camera Management: CameraSmoothingModule.cs Source File</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+ <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/Lvl3Mage/CameraManagement" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Camera Management
+   </div>
+   <div id="projectbrief">A drop-in 2D camera management library for Unity</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_camera_smoothing_module_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CameraSmoothingModule.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>MyBox;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_camera_management2_d.html">CameraManagement2D</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_camera_management2_d_1_1_camera_smoothing_module.html">   12</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_camera_management2_d_1_1_camera_smoothing_module.html">CameraSmoothingModule</a> : <a class="code hl_class" href="class_camera_management2_d_1_1_camera_controller.html">CameraController</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a818218f54375fcc56733c5bceb5b92b6">   18</a></span>        [SerializeField] <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a818218f54375fcc56733c5bceb5b92b6">interpolatePosition</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_camera_management2_d_1_1_camera_smoothing_module.html#af6bded01fbe6df99c3e22d2f52635496">   23</a></span>        [ConditionalField(<span class="stringliteral">&quot;interpolatePosition&quot;</span>)][SerializeField] <span class="keywordtype">float</span> <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#af6bded01fbe6df99c3e22d2f52635496">panSpeed</a> = 20f;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_camera_management2_d_1_1_camera_smoothing_module.html#abcae20a159e5a50cc9c75e5f00c2c290">   28</a></span>        [SerializeField] <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#abcae20a159e5a50cc9c75e5f00c2c290">interpolateZoom</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a3452b0fd0d2f5fd5938b4649490ee9dc">   33</a></span>        [ConditionalField(<span class="stringliteral">&quot;interpolateZoom&quot;</span>)][SerializeField] <span class="keywordtype">float</span> <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a3452b0fd0d2f5fd5938b4649490ee9dc">zoomSpeed</a> = 20f;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_camera_management2_d_1_1_camera_smoothing_module.html#aede22b38d68807b0faec5d87e89b0c88">   38</a></span>        [SerializeField] <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#aede22b38d68807b0faec5d87e89b0c88">interpolateRotation</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a051a9707560774f18097125ee6a9caa4">   43</a></span>        [ConditionalField(<span class="stringliteral">&quot;interpolateRotation&quot;</span>)][SerializeField] <span class="keywordtype">float</span> <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a051a9707560774f18097125ee6a9caa4">rotationSpeed</a> = 20f;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a4f63856af3739415a9005f2d651c6ed3">   48</a></span>        [SerializeField] <a class="code hl_class" href="class_camera_management2_d_1_1_camera_controller.html">CameraController</a> <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a4f63856af3739415a9005f2d651c6ed3">targetController</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_camera_management2_d_1_1_camera_smoothing_module.html#aba64c0c92b5c8272147351030daea537">   49</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_camera_management2_d_1_1_camera_smoothing_module.html#aba64c0c92b5c8272147351030daea537">OnUserInputChange</a>(<span class="keywordtype">bool</span> value)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a4f63856af3739415a9005f2d651c6ed3">targetController</a>.<a class="code hl_function" href="class_camera_management2_d_1_1_camera_controller.html#a23a73d4798da68734f83d679c5439379">UseUserInput</a>(value);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_struct" href="struct_camera_management2_d_1_1_camera_state.html">CameraState</a> interpolatedState;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a155db87f6c4423a78d26cc791112b5d6">   54</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a155db87f6c4423a78d26cc791112b5d6">InitializeCameraController</a>()</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            interpolatedState = <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a4f63856af3739415a9005f2d651c6ed3">targetController</a>.<a class="code hl_function" href="class_camera_management2_d_1_1_camera_controller.html#a5e905934e4898b44271cc9b2f72cb99f">GetCameraState</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_camera_management2_d_1_1_camera_smoothing_module.html#acbd69775e1613ffc4e18651fc20699dc">   58</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <a class="code hl_struct" href="struct_camera_management2_d_1_1_camera_state.html">CameraState</a> <a class="code hl_function" href="class_camera_management2_d_1_1_camera_smoothing_module.html#acbd69775e1613ffc4e18651fc20699dc">ComputeCameraState</a>()</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <a class="code hl_struct" href="struct_camera_management2_d_1_1_camera_state.html">CameraState</a> state = <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a4f63856af3739415a9005f2d651c6ed3">targetController</a>.<a class="code hl_function" href="class_camera_management2_d_1_1_camera_controller.html#a5e905934e4898b44271cc9b2f72cb99f">GetCameraState</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a818218f54375fcc56733c5bceb5b92b6">interpolatePosition</a>){</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                state = state.<a class="code hl_function" href="struct_camera_management2_d_1_1_camera_state.html#af79051b52ddbecd55f87493c4e7e710b">WithPosition</a>(interpolatedState);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#abcae20a159e5a50cc9c75e5f00c2c290">interpolateZoom</a>){</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                state = state.<a class="code hl_function" href="struct_camera_management2_d_1_1_camera_state.html#aeece113bb1415e572e3aee5c2bff73ad">WithZoom</a>(interpolatedState);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#aede22b38d68807b0faec5d87e89b0c88">interpolateRotation</a>){</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                state = state.<a class="code hl_function" href="struct_camera_management2_d_1_1_camera_state.html#ad48a4ddc770eacdbbdf717680bdcedc9">WithRotation</a>(interpolatedState);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">return</span> state;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordtype">void</span> FixedUpdate()</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">if</span>(!<a class="code hl_variable" href="class_camera_management2_d_1_1_camera_controller.html#a2c21150c565fe73897fa08a62be0bae2">active</a>){<span class="keywordflow">return</span>;}</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            interpolatedState = Decay(interpolatedState, <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a4f63856af3739415a9005f2d651c6ed3">targetController</a>.<a class="code hl_function" href="class_camera_management2_d_1_1_camera_controller.html#a5e905934e4898b44271cc9b2f72cb99f">GetCameraState</a>(), Time.fixedDeltaTime);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        CameraState Decay(CameraState from, CameraState to, <span class="keywordtype">float</span> deltaTime)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            from = from.DecayPositionTo(to, <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#af6bded01fbe6df99c3e22d2f52635496">panSpeed</a>, deltaTime);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            from = from.DecayZoomTo(to, <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a3452b0fd0d2f5fd5938b4649490ee9dc">zoomSpeed</a>, deltaTime);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            from = from.DecayRotationTo(to, <a class="code hl_variable" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a051a9707560774f18097125ee6a9caa4">rotationSpeed</a>, deltaTime);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">return</span> from;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_controller_html"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_controller.html">CameraManagement2D.CameraController</a></div><div class="ttdoc">An abstract base class for camera controllers.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_controller_8cs_source.html#l00010">CameraController.cs:11</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_controller_html_a23a73d4798da68734f83d679c5439379"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_controller.html#a23a73d4798da68734f83d679c5439379">CameraManagement2D.CameraController.UseUserInput</a></div><div class="ttdeci">void UseUserInput(bool value)</div><div class="ttdoc">Enables or disables user input for the camera controller.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_controller_8cs_source.html#l00043">CameraController.cs:43</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_controller_html_a2c21150c565fe73897fa08a62be0bae2"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_controller.html#a2c21150c565fe73897fa08a62be0bae2">CameraManagement2D.CameraController.active</a></div><div class="ttdeci">bool active</div><div class="ttdoc">Indicates whether the camera controller is active.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_controller_8cs_source.html#l00023">CameraController.cs:23</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_controller_html_a5e905934e4898b44271cc9b2f72cb99f"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_controller.html#a5e905934e4898b44271cc9b2f72cb99f">CameraManagement2D.CameraController.GetCameraState</a></div><div class="ttdeci">CameraState GetCameraState()</div><div class="ttdoc">Gets the current state of the camera.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_controller_8cs_source.html#l00065">CameraController.cs:65</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_smoothing_module_html"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_smoothing_module.html">CameraManagement2D.CameraSmoothingModule</a></div><div class="ttdoc">A module for smoothing camera movement, including position, zoom, and rotation. This class extends th...</div><div class="ttdef"><b>Definition:</b> <a href="_camera_smoothing_module_8cs_source.html#l00012">CameraSmoothingModule.cs:13</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_smoothing_module_html_a051a9707560774f18097125ee6a9caa4"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_smoothing_module.html#a051a9707560774f18097125ee6a9caa4">CameraManagement2D.CameraSmoothingModule.rotationSpeed</a></div><div class="ttdeci">float rotationSpeed</div><div class="ttdoc">The speed at which the camera's rotation interpolates. Only used if interpolateRotation is true.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_smoothing_module_8cs_source.html#l00043">CameraSmoothingModule.cs:43</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_smoothing_module_html_a155db87f6c4423a78d26cc791112b5d6"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_smoothing_module.html#a155db87f6c4423a78d26cc791112b5d6">CameraManagement2D.CameraSmoothingModule.InitializeCameraController</a></div><div class="ttdeci">override void InitializeCameraController()</div><div class="ttdoc">Called before the first ComputeCameraState or Update call. Override to initialize the camera controll...</div><div class="ttdef"><b>Definition:</b> <a href="_camera_smoothing_module_8cs_source.html#l00054">CameraSmoothingModule.cs:54</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_smoothing_module_html_a3452b0fd0d2f5fd5938b4649490ee9dc"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_smoothing_module.html#a3452b0fd0d2f5fd5938b4649490ee9dc">CameraManagement2D.CameraSmoothingModule.zoomSpeed</a></div><div class="ttdeci">float zoomSpeed</div><div class="ttdoc">The speed at which the camera's zoom interpolates. Only used if interpolateZoom is true.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_smoothing_module_8cs_source.html#l00033">CameraSmoothingModule.cs:33</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_smoothing_module_html_a4f63856af3739415a9005f2d651c6ed3"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_smoothing_module.html#a4f63856af3739415a9005f2d651c6ed3">CameraManagement2D.CameraSmoothingModule.targetController</a></div><div class="ttdeci">CameraController targetController</div><div class="ttdoc">The target camera controller towards which the state will be interpolated.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_smoothing_module_8cs_source.html#l00048">CameraSmoothingModule.cs:48</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_smoothing_module_html_a818218f54375fcc56733c5bceb5b92b6"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_smoothing_module.html#a818218f54375fcc56733c5bceb5b92b6">CameraManagement2D.CameraSmoothingModule.interpolatePosition</a></div><div class="ttdeci">bool interpolatePosition</div><div class="ttdoc">Determines whether to interpolate the camera's position.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_smoothing_module_8cs_source.html#l00018">CameraSmoothingModule.cs:18</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_smoothing_module_html_aba64c0c92b5c8272147351030daea537"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_smoothing_module.html#aba64c0c92b5c8272147351030daea537">CameraManagement2D.CameraSmoothingModule.OnUserInputChange</a></div><div class="ttdeci">override void OnUserInputChange(bool value)</div><div class="ttdoc">Called when the user input state changes. Override to propagate user input changes to derived classes...</div><div class="ttdef"><b>Definition:</b> <a href="_camera_smoothing_module_8cs_source.html#l00049">CameraSmoothingModule.cs:49</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_smoothing_module_html_abcae20a159e5a50cc9c75e5f00c2c290"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_smoothing_module.html#abcae20a159e5a50cc9c75e5f00c2c290">CameraManagement2D.CameraSmoothingModule.interpolateZoom</a></div><div class="ttdeci">bool interpolateZoom</div><div class="ttdoc">Determines whether to interpolate the camera's zoom.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_smoothing_module_8cs_source.html#l00028">CameraSmoothingModule.cs:28</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_smoothing_module_html_acbd69775e1613ffc4e18651fc20699dc"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_smoothing_module.html#acbd69775e1613ffc4e18651fc20699dc">CameraManagement2D.CameraSmoothingModule.ComputeCameraState</a></div><div class="ttdeci">override CameraState ComputeCameraState()</div><div class="ttdoc">Computes the camera state based on the available data. Must not have any side effects.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_smoothing_module_8cs_source.html#l00058">CameraSmoothingModule.cs:58</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_smoothing_module_html_aede22b38d68807b0faec5d87e89b0c88"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_smoothing_module.html#aede22b38d68807b0faec5d87e89b0c88">CameraManagement2D.CameraSmoothingModule.interpolateRotation</a></div><div class="ttdeci">bool interpolateRotation</div><div class="ttdoc">Determines whether to interpolate the camera's rotation.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_smoothing_module_8cs_source.html#l00038">CameraSmoothingModule.cs:38</a></div></div>
+<div class="ttc" id="aclass_camera_management2_d_1_1_camera_smoothing_module_html_af6bded01fbe6df99c3e22d2f52635496"><div class="ttname"><a href="class_camera_management2_d_1_1_camera_smoothing_module.html#af6bded01fbe6df99c3e22d2f52635496">CameraManagement2D.CameraSmoothingModule.panSpeed</a></div><div class="ttdeci">float panSpeed</div><div class="ttdoc">The speed at which the camera's position interpolates. Only used if interpolatePosition is true.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_smoothing_module_8cs_source.html#l00023">CameraSmoothingModule.cs:23</a></div></div>
+<div class="ttc" id="anamespace_camera_management2_d_html"><div class="ttname"><a href="namespace_camera_management2_d.html">CameraManagement2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_camera_controller_8cs_source.html#l00004">CameraController.cs:5</a></div></div>
+<div class="ttc" id="astruct_camera_management2_d_1_1_camera_state_html"><div class="ttname"><a href="struct_camera_management2_d_1_1_camera_state.html">CameraManagement2D.CameraState</a></div><div class="ttdoc">Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....</div><div class="ttdef"><b>Definition:</b> <a href="_camera_state_8cs_source.html#l00009">CameraState.cs:10</a></div></div>
+<div class="ttc" id="astruct_camera_management2_d_1_1_camera_state_html_ad48a4ddc770eacdbbdf717680bdcedc9"><div class="ttname"><a href="struct_camera_management2_d_1_1_camera_state.html#ad48a4ddc770eacdbbdf717680bdcedc9">CameraManagement2D.CameraState.WithRotation</a></div><div class="ttdeci">CameraState WithRotation(float rotation)</div><div class="ttdoc">Creates a new CameraState with the specified rotation value.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_state_8cs_source.html#l00300">CameraState.cs:300</a></div></div>
+<div class="ttc" id="astruct_camera_management2_d_1_1_camera_state_html_aeece113bb1415e572e3aee5c2bff73ad"><div class="ttname"><a href="struct_camera_management2_d_1_1_camera_state.html#aeece113bb1415e572e3aee5c2bff73ad">CameraManagement2D.CameraState.WithZoom</a></div><div class="ttdeci">CameraState WithZoom(float zoom)</div><div class="ttdoc">Creates a new CameraState with the specified zoom value.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_state_8cs_source.html#l00254">CameraState.cs:254</a></div></div>
+<div class="ttc" id="astruct_camera_management2_d_1_1_camera_state_html_af79051b52ddbecd55f87493c4e7e710b"><div class="ttname"><a href="struct_camera_management2_d_1_1_camera_state.html#af79051b52ddbecd55f87493c4e7e710b">CameraManagement2D.CameraState.WithPosition</a></div><div class="ttdeci">CameraState WithPosition(Vector2? position)</div><div class="ttdoc">Creates a new CameraState with the specified position value.</div><div class="ttdef"><b>Definition:</b> <a href="_camera_state_8cs_source.html#l00207">CameraState.cs:207</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4f6666a8f2ab10bc970eb7559668f031.html">Runtime</a></li><li class="navelem"><b>CameraSmoothingModule.cs</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

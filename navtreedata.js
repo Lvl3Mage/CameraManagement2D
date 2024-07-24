@@ -54,13 +54,17 @@ var NAVTREE =
         [ "Enumerations", "functions_enum.html", null ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"_camera_controller_8cs_source.html",
+"struct_camera_management2_d_1_1_camera_state.html#aeece113bb1415e572e3aee5c2bff73ad"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
