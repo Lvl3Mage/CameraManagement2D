@@ -54,7 +54,7 @@ namespace CameraManagement2D
 		/// <summary>
         /// Sets the objects to be tracked by the camera.
         /// </summary>
-        /// <param name="objects">The game objects to track.</param>
+        /// <param name="objects">The gameobjects to track.</param>
         /// <param name="boundsType">The type of bounds to use for tracking.</param>
 		public void SetTrackedObjects(GameObject[] objects, TrackedObject.BoundsType boundsType = TrackedObject.BoundsType.None)
 		{
@@ -67,7 +67,7 @@ namespace CameraManagement2D
 		/// <summary>
 		/// Adds a new object to be tracked by the camera.
 		/// </summary>
-		/// <param name="obj">The game object to track.</param>
+		/// <param name="obj">The gameobject to track.</param>
 		/// <param name="boundsType">The type of bounds to use for tracking.</param>
 		public void AddTrackedObject(GameObject obj, TrackedObject.BoundsType boundsType = TrackedObject.BoundsType.None)
 		{
@@ -81,7 +81,7 @@ namespace CameraManagement2D
 		/// <summary>
 		/// Removes an object from being tracked by the camera.
 		/// </summary>
-		/// <param name="obj">The game object to stop tracking.</param>
+		/// <param name="obj">The gameobject to stop tracking.</param>
 		public void RemoveTrackedObject(GameObject obj)
 		{
 			int objectIndex = trackedObjects.FindIndex((el)=>el.Tracks(obj));
