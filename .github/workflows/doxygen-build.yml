@@ -16,7 +16,7 @@ jobs:
 
 
     - name: Doxygen
-      uses: mattnotmitt/doxygen-action@edge
+      uses: mattnotmitt/doxygen-action@v1.9.4
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
