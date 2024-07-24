@@ -1,3 +1,10 @@
 ﻿## [1.0.0] - 2024-07-16
-### First Release
 - Initial release of CameraManagement
+## [1.0.1] - 2024-07-24
+- Reworked the CameraState class
+- Added the TrackerCameraModule class
+- Reworked Camera Clamping to be a serializable class for usage as a field
+- Added directional zooming to the CameraPanModule
+- Reworked the CameraSmoothingModule to avoid latency
+- Added documentation for the CameraManagement package
+

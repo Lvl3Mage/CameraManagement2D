@@ -3,19 +3,32 @@ using UnityEngine;
 
 namespace CameraManagement2D
 {
+	/// <summary>
+	/// An abstract base class for camera controllers.
+	/// </summary>
 	[RequireComponent(typeof(Camera))]
 	public abstract class CameraController : MonoBehaviour
 	{
+		/// <summary>
+		/// Indicates whether user input is used to control the camera.
+		/// </summary>
 		protected bool useUserInput = true;
+		/// <summary>
+		/// The camera that this controller is managing.
+		/// </summary>
 		protected Camera controllerCamera;
+		/// <summary>
+		/// Indicates whether the camera controller is active.
+		/// </summary>
 		[SerializeField] protected bool active = true;
-		bool initialized = false;
+		bool initialized;
 
+		/// <remarks>Make sure to call the base if overloading</remarks>
 		protected void Awake()
 		{
 			controllerCamera = gameObject.GetComponent<Camera>();
 		}
-
+		/// <remarks>Make sure to call the base if overloading</remarks>
 		protected void Start()
 		{
 			if(!initialized){
@@ -23,18 +36,32 @@ namespace CameraManagement2D
 				initialized = true;
 			}
 		}
-
+		/// <summary>
+		/// Enables or disables user input for the camera controller.
+		/// </summary>
+		/// <param name="value">True to enable user input, false to disable.</param>
 		public void UseUserInput(bool value)
 		{
 			useUserInput = value;
 			OnUserInputChange(value);
 		}
-
-		protected virtual void OnUserInputChange(bool value){ } //Use to propagate user input changes to children controllers
+		/// <summary>
+		/// Called when the user input state changes. Override to propagate user input changes to derived classes.
+		/// </summary>
+		/// <param name="value">The new user input state.</param>
+		protected virtual void OnUserInputChange(bool value){ }
+		/// <summary>
+		/// Sets the active state of the camera controller.
+		/// </summary>
+		/// <param name="value">True to activate the controller, false to deactivate.</param>
 		public void SetActive(bool value)
 		{
 			active = !value;
 		}
+		/// <summary>
+		/// Gets the current state of the camera.
+		/// </summary>
+		/// <returns>The current CameraState.</returns>
 		public CameraState GetCameraState()
 		{
 			if (active){
@@ -56,14 +83,14 @@ namespace CameraManagement2D
 			ComputeCameraState().ApplyTo(controllerCamera);
 		}
 		/// <summary>
-		/// Called before the first ComputeCameraState call
+		/// Called before the first ComputeCameraState or Update call. Override to initialize the camera controller.
 		/// </summary>
 		protected virtual void InitializeCameraController(){}
 		
 		/// <summary>
-		/// Must not have any side effects. Should calculate the camera state based on the available data
+		/// Computes the camera state based on the available data. Must not have any side effects.
 		/// </summary>
-		/// <returns>A camera state calculated from the available data</returns>
+		/// <returns>A CameraState calculated from the available data.</returns>
 		protected abstract CameraState ComputeCameraState();
 	}
 

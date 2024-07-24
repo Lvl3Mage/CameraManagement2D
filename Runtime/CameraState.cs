@@ -3,9 +3,15 @@ using Interpolation;
 
 namespace CameraManagement2D
 {
+	/// <summary>
+	/// Encapsulates the state of a 2D camera, including its position, zoom level, and rotation. It provides functionality to manage, modify, and apply camera states in a flexible manner.
+	/// </summary>
 	public struct CameraState
 	{
-		Vector2? position;
+		private Vector2? position;
+		/// <summary>
+		/// Gets the position of the camera. If the position is null, logs an error and returns Vector2.zero.
+		/// </summary>
 		public Vector2 Position
 		{
 			get
@@ -17,7 +23,10 @@ namespace CameraManagement2D
 				return position.Value;
 			}
 		}
-		float? zoom;
+		private float? zoom;
+		/// <summary>
+		/// Gets the zoom level of the camera. If the zoom is null, logs an error and returns 1.0f.
+		/// </summary>
 		public float Zoom
 		{
 			get
@@ -29,7 +38,10 @@ namespace CameraManagement2D
 				return zoom.Value;
 			}
 		}
-		float? rotation;
+		private float? rotation;
+		/// <summary>
+		/// Gets the rotation of the camera. If the rotation is null, logs an error and returns 0.0f.
+		/// </summary>
 		public float Rotation
 		{
 			get
@@ -41,7 +53,14 @@ namespace CameraManagement2D
 				return rotation.Value;
 			}
 		}
-		bool local;
+		private bool local;
+		/// <summary>
+		/// Initializes a new instance of the CameraState class with the specified position, zoom, rotation, and local flag.
+		/// </summary>
+		/// <param name="position">The position of the camera.</param>
+		/// <param name="zoom">The zoom level of the camera.</param>
+		/// <param name="rotation">The rotation of the camera.</param>
+		/// <param name="local">Indicates whether the position and rotation are treated as local to the parent transform.</param>
 		public CameraState(Vector2 position, float zoom, float rotation, bool local = false)
 		{
 			this.position = position;
@@ -49,6 +68,10 @@ namespace CameraManagement2D
 			this.rotation = rotation;
 			this.local = local;
 		}
+		/// <summary>
+		/// Initializes a new instance of the CameraState class by copying another CameraState.
+		/// </summary>
+		/// <param name="other">The CameraState to copy.</param>
 		public CameraState(CameraState other)
 		{
 			position = other.position;
@@ -56,10 +79,20 @@ namespace CameraManagement2D
 			rotation = other.rotation;
 			local = other.local;
 		}
+		/// <summary>
+		/// Creates a new CameraState that is a copy of the current instance.
+		/// </summary>
+		/// <returns>A new CameraState that is a copy of the current instance.</returns>
 		public CameraState Clone()
 		{
 			return new CameraState(this);
 		}
+		/// <summary>
+		/// Creates a new CameraState from the given Camera.
+		/// </summary>
+		/// <param name="camera">The Camera to create the state from.</param>
+		/// <param name="local">Indicates whether the position and rotation are local to the parent transform.</param>
+		/// <returns>A new CameraState representing the state of the given Camera.</returns>
 		public static CameraState FromCamera(Camera camera, bool local = false)
 		{
 			Vector2 pos = camera.transform.position;
@@ -72,14 +105,32 @@ namespace CameraManagement2D
 			}
 			return new CameraState(pos, camera.orthographicSize, rot);
 		}
+		/// <summary>
+		/// Creates an empty CameraState with no position, zoom, or rotation values.
+		/// </summary>
+		/// <returns>An empty CameraState.</returns>
 		public static CameraState Empty()
 		{
 			return new CameraState();
 		}
+		
+		/// <summary>
+		/// Creates a CameraState that covers the given bounds with the specified aspect ratio. The bounds will be centered in the camera.
+		/// </summary>
+		/// <param name="bounds">The bounds the camera should cover.</param>
+		/// <param name="aspectRatio">The aspect ratio of the camera.</param>
+		/// <returns>A new CameraState that covers the given bounds.</returns>
 		public static CameraState CoveringBounds(Bounds bounds, float aspectRatio)
 		{
 			return CoveringBounds(bounds, aspectRatio, new Vector2(0.5f, 0.5f));
 		}
+		/// <summary>
+		/// Creates a CameraState that covers the given bounds with the specified aspect ratio and pivot.
+		/// </summary>
+		/// <param name="bounds">The bounds the camera should cover.</param>
+		/// <param name="aspectRatio">The aspect ratio of the camera.</param>
+		/// <param name="pivot">The pivot point for the camera. A value of (0.5, 0.5) will center the camera</param>
+		/// <returns>A new CameraState that covers the given bounds.</returns>
 		public static CameraState CoveringBounds(Bounds bounds, float aspectRatio, Vector2 pivot)
 		{
 			Vector2 pos = bounds.center;
@@ -96,10 +147,24 @@ namespace CameraManagement2D
 			pos += offset;
 			return Empty().WithPosition(pos).WithZoom(size*0.5f);
 		}
+		
+		/// <summary>
+		/// Creates a CameraState that contains the given bounds with the specified aspect ratio. The camera will be centered in the bounds.
+		/// </summary>
+		/// <param name="bounds">The bounds that should contain the camera.</param>
+		/// <param name="aspectRatio">The aspect ratio of the camera.</param>
+		/// <returns>A new CameraState that contains the given bounds.</returns>
 		public static CameraState ContainingBounds(Bounds bounds, float aspectRatio)
 		{
 			return ContainingBounds(bounds, aspectRatio, new Vector2(0.5f, 0.5f));
 		}
+		/// <summary>
+		/// Creates a CameraState that contains the given bounds with the specified aspect ratio and pivot.
+		/// </summary>
+		/// <param name="bounds">The bounds that should contain the camera.</param>
+		/// <param name="aspectRatio">The aspect ratio of the camera.</param>
+		/// <param name="pivot">The pivot point for the camera. A value of (0.5, 0.5) will center the camera</param>
+		/// <returns>A new CameraState that contains the given bounds.</returns>
 		public static CameraState ContainingBounds(Bounds bounds, float aspectRatio, Vector2 pivot)
 		{
 			Vector2 pos = bounds.center;
@@ -116,6 +181,11 @@ namespace CameraManagement2D
 			pos += offset;
 			return Empty().WithPosition(pos).WithZoom(size*0.5f);
 		}
+		/// <summary>
+		/// Gets the bounds of the CameraState based on the specified aspect ratio.
+		/// </summary>
+		/// <param name="aspectRatio">The aspect ratio of the camera.</param>
+		/// <returns>A Bounds object representing the bounds of the CameraState.</returns>
 		public Bounds GetBounds(float aspectRatio)
 		{
 			Bounds bounds = new Bounds(Vector3.zero, Vector3.zero);
@@ -125,11 +195,15 @@ namespace CameraManagement2D
 			if(zoom != null){
 				bounds.size = new Vector3(zoom.Value * aspectRatio * 2, zoom.Value * 2, 0);
 			}
-			//Todo implement axis aligned bounds when rotation is present
+			//\todo implement axis aligned bounds when rotation is present
 			return bounds;
 		}
 		
-		
+		/// <summary>
+		/// Creates a new CameraState with the specified position value.
+		/// </summary>
+		/// <param name="position">The position value to set.</param>
+		/// <returns>A new CameraState with the updated position value.</returns>
 		public CameraState WithPosition(Vector2? position)
 		{
 			
@@ -138,6 +212,11 @@ namespace CameraManagement2D
 			};
 			return newState;
 		}
+		/// <summary>
+		/// Creates a new CameraState with the specified position value.
+		/// </summary>
+		/// <param name="position">The position value to set.</param>
+		/// <returns>A new CameraState with the updated position value.</returns>
 		public CameraState WithPosition(Vector2 position)
 		{
 			CameraState newState = new(this){
@@ -145,11 +224,19 @@ namespace CameraManagement2D
 			};
 			return newState;
 		}
-		
+		/// <summary>
+		/// Creates a new CameraState with the position value from another CameraState.
+		/// </summary>
+		/// <param name="other">The CameraState to copy the position value from.</param>
+		/// <returns>A new CameraState with the updated position value.</returns>
 		public CameraState WithPosition(CameraState other)
 		{
 			return WithPosition(other.position);
 		}
+		/// <summary>
+		/// Creates a new CameraState without a position value.
+		/// </summary>
+		/// <returns>A new CameraState that doesn't represent a position</returns>
 		public CameraState WithoutPosition()
 		{
 			CameraState newState = new(this){
@@ -159,6 +246,11 @@ namespace CameraManagement2D
 		}
 		
 		
+		/// <summary>
+		/// Creates a new CameraState with the specified zoom value.
+		/// </summary>
+		/// <param name="zoom">The zoom value to set.</param>
+		/// <returns>A new CameraState with the updated zoom value.</returns>
 		public CameraState WithZoom(float zoom)
 		{
 			CameraState newState = new(this){
@@ -166,6 +258,11 @@ namespace CameraManagement2D
 			};
 			return newState;
 		}
+		/// <summary>
+		/// Creates a new CameraState with the specified zoom value.
+		/// </summary>
+		/// <param name="zoom">The zoom value to set.</param>
+		/// <returns>A new CameraState with the updated zoom value.</returns>
 		public CameraState WithZoom(float? zoom)
 		{
 			CameraState newState = new(this){
@@ -173,10 +270,19 @@ namespace CameraManagement2D
 			};
 			return newState;
 		}
+		/// <summary>
+		/// Creates a new CameraState with the zoom value from another CameraState.
+		/// </summary>
+		/// <param name="other">The CameraState to copy the zoom value from.</param>
+		/// <returns>A new CameraState with the updated zoom value.</returns>
 		public CameraState WithZoom(CameraState other)
 		{
 			return WithZoom(other.zoom);
 		}
+		/// <summary>
+		/// Creates a new CameraState without a zoom value.
+		/// </summary>
+		/// <returns>A new CameraState that doesn't represent a zoom</returns>
 		public CameraState WithoutZoom()
 		{
 			CameraState newState = new(this){
@@ -186,6 +292,11 @@ namespace CameraManagement2D
 		}
 		
 		
+		/// <summary>
+		/// Creates a new CameraState with the specified rotation value.
+		/// </summary>
+		/// <param name="rotation">The rotation value to set.</param>
+		/// <returns>A new CameraState with the updated rotation value.</returns>
 		public CameraState WithRotation(float rotation)
 		{
 			CameraState newState = new(this){
@@ -193,6 +304,11 @@ namespace CameraManagement2D
 			};
 			return newState;
 		}
+		/// <summary>
+		/// Creates a new CameraState with the specified rotation value.
+		/// </summary>
+		/// <param name="rotation">The rotation value to set.</param>
+		/// <returns>A new CameraState with the updated rotation value.</returns>
 		public CameraState WithRotation(float? rotation)
 		{
 			CameraState newState = new(this){
@@ -200,10 +316,20 @@ namespace CameraManagement2D
 			};
 			return newState;
 		}
+		/// <summary>
+		/// Creates a new CameraState with the rotation value from another CameraState.
+		/// </summary>
+		/// <param name="other">The CameraState to copy the rotation value from.</param>
+		/// <returns>A new CameraState with the updated rotation value.</returns>
 		public CameraState WithRotation(CameraState other)
 		{
 			return WithRotation(other.rotation);
 		}
+		
+		/// <summary>
+		/// Creates a new CameraState without a rotation value.
+		/// </summary>
+		/// <returns>A new CameraState that doesn't represent a rotation</returns>
 		public CameraState WithoutRotation()
 		{
 			CameraState newState = new(this){
@@ -211,7 +337,11 @@ namespace CameraManagement2D
 			};
 			return newState;
 		}
-
+		/// <summary>
+		/// Creates a new CameraState with the specified local value.
+		/// </summary>
+		/// <param name="local">Determines whether the position and rotation will treated as local to the parent transform.</param>
+		/// <returns>A new CameraState with the updated local value.</returns>
 		public CameraState AsLocal(bool local = true)
 		{
 			CameraState newState = new(this){
@@ -219,7 +349,10 @@ namespace CameraManagement2D
 			};
 			return newState;
 		}
-		
+		/// <summary>
+		/// Applies the CameraState to a given Camera.
+		/// </summary>
+		/// <param name="camera">The Camera to which the state will be applied.</param>
 		public void ApplyTo(Camera camera)
 		{
 			if (position != null){
@@ -248,26 +381,45 @@ namespace CameraManagement2D
 				camera.orthographicSize = zoom.Value;
 			}
 		}
+		/// <summary>
+		/// Checks if the CameraState represents a zoom value.
+		/// </summary>
+		/// <returns>True if the CameraState represents a zoom value, otherwise false.</returns>
 		public bool RepresentsZoom()
 		{
 			return zoom != null;
 		}
+		/// <summary>
+		/// Checks if the CameraState represents a rotation value.
+		/// </summary>
+		/// <returns>True if the CameraState represents a rotation value, otherwise false.</returns>
 		public bool RepresentsRotation()
 		{
 			return rotation != null;
 		}
+		/// <summary>
+		/// Checks if the CameraState represents a position value.
+		/// </summary>
+		/// <returns>True if the CameraState represents a position value, otherwise false.</returns>
 		public bool RepresentsPosition()
 		{
 			return position != null;
 		}
+		/// <summary>
+		/// Checks if the CameraState is empty (i.e., no position, zoom, or rotation values).
+		/// </summary>
+		/// <returns>True if the CameraState is empty, otherwise false.</returns>
 		public bool IsEmpty()
 		{
 			return position == null && zoom == null && rotation == null;
 		}
 		/// <summary>
-		/// Decay the position of the camera to a target position
+		/// Decays the position of the CameraState to a target position over multiple calls.
 		/// </summary>
-		/// <returns>A clone of the state with modified position</returns>
+		/// <param name="target">The target CameraState to decay towards.</param>
+		/// <param name="factor">The decay factor.</param>
+		/// <param name="deltaTime">The deltaTime between the calls. Defaults to Time.deltaTime if not specified.</param>
+		/// <returns>A new CameraState with the decayed position.</returns>
 		public CameraState DecayPositionTo(CameraState target, float factor, float deltaTime = -1)
 		{
 			if(deltaTime < 0){
@@ -283,9 +435,12 @@ namespace CameraManagement2D
 		}
 		
 		/// <summary>
-		/// Decay the zoom of the camera to a target zoom
+		/// Decays the zoom of the CameraState to a target position over multiple calls.
 		/// </summary>
-		/// <returns>A clone of the state with modified zoom</returns>
+		/// <param name="target">The target CameraState to decay towards.</param>
+		/// <param name="factor">The decay factor.</param>
+		/// <param name="deltaTime">The deltaTime between the calls. Defaults to Time.deltaTime if not specified.</param>
+		/// <returns>A new CameraState with the decayed zoom.</returns>
 		public CameraState DecayZoomTo(CameraState target, float factor, float deltaTime = -1)
 		{
 			if(deltaTime < 0){
@@ -300,9 +455,12 @@ namespace CameraManagement2D
 			return WithZoom(Decay.ToZoom(zoom.Value, target.zoom.Value, factor, deltaTime));
 		}
 		/// <summary>
-		/// Decay the rotation of the camera to a target rotation
+		/// Decays the rotation of the CameraState to a target position over multiple calls.
 		/// </summary>
-		/// <returns>A clone of the state with modified rotation</returns>
+		/// <param name="target">The target CameraState to decay towards.</param>
+		/// <param name="factor">The decay factor.</param>
+		/// <param name="deltaTime">The deltaTime between the calls. Defaults to Time.deltaTime if not specified.</param>
+		/// <returns>A new CameraState with the decayed rotation.</returns>
 		public CameraState DecayRotationTo(CameraState target, float factor, float deltaTime = -1)
 		{
 			if(deltaTime < 0){
@@ -317,7 +475,13 @@ namespace CameraManagement2D
 			return WithRotation(Decay.ToAngle(rotation.Value, target.rotation.Value, factor, deltaTime));
 		}
 
-		public CameraState ZoomTowards(float newZoom, Vector2 target)
+		/// <summary>
+		/// Zooms the camera state to a target zoom towards a target position 
+		/// </summary>
+		/// <param name="targetZoom">The target zoom value</param>
+		/// <param name="target">The position in the space as the camera position to zoom towards</param>
+		/// <returns>A clone of the state with modified position and zoom</returns>
+		public CameraState ZoomTowards(float targetZoom, Vector2 target)
 		{
 			if (zoom == null){
 				return Clone();
@@ -326,14 +490,19 @@ namespace CameraManagement2D
 			
 			if(position != null){
 				Vector2 offset = target - position.Value;
-				Vector2 newOffset = offset * (newZoom / newState.zoom.Value);
+				Vector2 newOffset = offset * (targetZoom / newState.zoom.Value);
 				
 				newState.position += offset - newOffset;
 			}
-			newState.zoom = newZoom;
+			newState.zoom = targetZoom;
 			return newState;
 		}
-		
+		/// <summary>
+		/// Zooms the camera state to a target zoom towards a target position 
+		/// </summary>
+		/// <param name="other">The state that contains the target zoom value</param>
+		/// <param name="target">The position in the space as the camera position to zoom towards</param>
+		/// <returns>A clone of the state with modified position and zoom</returns>
 		public CameraState ZoomTowards(CameraState other, Vector2 target)
 		{
 			if (zoom == null){
@@ -342,32 +511,40 @@ namespace CameraManagement2D
 			if(other.zoom == null){
 				return Clone();
 			}
-			CameraState newState = Clone();
-			
-			if(position != null){
-				Vector2 offset = target - position.Value;
-				Vector2 newOffset = offset * (other.zoom.Value / newState.zoom.Value);
-				
-				newState.position += offset - newOffset;
-			}
-			newState.zoom = other.zoom.Value;
-			return newState;
+			return ZoomTowards(other.zoom.Value, target);
 		}
-		public CameraState ExponentialZoom(float value, Vector2 target)
+		/// <summary>
+		/// Zooms the camera exponentially with the value provided towards a target position. This allows for linear zoom 'feel' when the zoom change is constant.
+		/// </summary>
+		/// <param name="zoomChange">A value that dictates the direction and magnitude of zoom</param>
+		/// <param name="target">The position in the space as the camera position to zoom towards</param>
+		/// <returns>A clone of the state with modified position and zoom</returns>
+		public CameraState ExponentialZoom(float zoomChange, Vector2 target)
 		{
 			if (zoom == null){
 				return Clone();
 			}
-			float newZoom = Mathf.Exp(Mathf.Log(zoom.Value) + value);
+			float newZoom = Mathf.Exp(Mathf.Log(zoom.Value) + zoomChange);
 			return ZoomTowards(newZoom, target);
 		}
-		public CameraState ExponentialZoom(float value)
+		/// <summary>
+		/// Zooms the camera exponentially with the value provided towards the center of the screen. This allows for linear zoom 'feel' when the zoom change is constant.
+		/// </summary>
+		/// <param name="zoomChange">A value that dictates the direction and magnitude of zoom</param>
+		/// <returns>A clone of the state with modified zoom</returns>
+		public CameraState ExponentialZoom(float zoomChange)
 		{
 			if (zoom == null){
 				return Clone();
 			}
-			return WithZoom(Mathf.Exp(Mathf.Log(zoom.Value) + value));
+			return WithZoom(Mathf.Exp(Mathf.Log(zoom.Value) + zoomChange));
 		}
+		/// <summary>
+		/// Clamps the zoom value of the camera state between a minimum and maximum value
+		/// </summary>
+		/// <param name="min">The lower bound for the clamp</param>
+		/// <param name="max">The upped bound for the clamp</param>
+		/// <returns>A clone of the state with modified zoom</returns>
 		public CameraState ClampedZoom(float min, float max)
 		{
 			if (zoom == null){
@@ -375,10 +552,22 @@ namespace CameraManagement2D
 			}
 			return WithZoom(Mathf.Clamp(zoom.Value, min, max));
 		}
+		
+		/// <summary>
+		/// Clamps the zoom value of the camera state between a minimum and maximum value
+		/// </summary>
+		/// <param name="clamp">A vector2 with the minimum and maximum values for the clamp</param>
+		/// <returns>A clone of the state with modified zoom</returns>
 		public CameraState ClampedZoom(Vector2 clamp)
 		{
 			return ClampedZoom(clamp.x, clamp.y);
 		}
+		/// <summary>
+		/// Clamps the position of the camera state between a minimum and maximum value on both axes
+		/// </summary>
+		/// <param name="clampX">A vector2 with the minimum and maximum values for the clamp on the X axis</param>
+		/// <param name="clampY">A vector2 with the minimum and maximum values for the clamp on the y axis</param>
+		/// <returns>A clone of the state with modified position</returns>
 		public CameraState ClampedPosition(Vector2 clampX, Vector2 clampY)
 		{
 			if (position == null){
@@ -389,6 +578,11 @@ namespace CameraManagement2D
 				Mathf.Clamp(position.Value.y, clampY.x, clampY.y)
 			));
 		}
+		/// <summary>
+		/// Clamps the position of the camera state between a minimum and maximum value on the X axis
+		/// </summary>
+		/// <param name="clamp">A vector2 with the minimum and maximum values for the clamp on the X axis</param>
+		/// <returns>A clone of the state with modified position</returns>
 		public CameraState ClampedPositionX(Vector2 clamp)
 		{
 			if (position == null){
@@ -399,6 +593,11 @@ namespace CameraManagement2D
 				position.Value.y
 			));
 		}
+		/// <summary>
+		/// Clamps the position of the camera state between a minimum and maximum value on the X axis
+		/// </summary>
+		/// <param name="clamp">A vector2 with the minimum and maximum values for the clamp on the Y axis</param>
+		/// <returns>A clone of the state with modified position</returns>
 		public CameraState ClampedPositionY(Vector2 clamp)
 		{
 			if (position == null){
