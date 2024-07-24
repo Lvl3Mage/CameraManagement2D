@@ -135,6 +135,7 @@ $(function(){initNavTree('class_camera_management2_d_1_1_camera_controller.html'
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_camera_management2_d_1_1_camera_controller-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">CameraManagement2D.CameraController Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
@@ -167,8 +168,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a74a3fd0dbaa19afc36f8c39771404478" id="r_a74a3fd0dbaa19afc36f8c39771404478"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74a3fd0dbaa19afc36f8c39771404478">OnUserInputChange</a> (bool value)</td></tr>
 <tr class="memdesc:a74a3fd0dbaa19afc36f8c39771404478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user input state changes. Override to propagate user input changes to derived classes.  <br /></td></tr>
 <tr class="separator:a74a3fd0dbaa19afc36f8c39771404478"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe10960725f546c147f21dae96b06ac3" id="r_afe10960725f546c147f21dae96b06ac3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe10960725f546c147f21dae96b06ac3">InitializeCameraController</a> ()</td></tr>
-<tr class="memdesc:afe10960725f546c147f21dae96b06ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the first ComputeCameraState or Update call. Override to initialize the camera controller.  <br /></td></tr>
+<tr class="memitem:afe10960725f546c147f21dae96b06ac3" id="r_afe10960725f546c147f21dae96b06ac3"><td class="memItemLeft" align="right" valign="top"><a id="afe10960725f546c147f21dae96b06ac3" name="afe10960725f546c147f21dae96b06ac3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeCameraController</b> ()</td></tr>
+<tr class="memdesc:afe10960725f546c147f21dae96b06ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the first ComputeCameraState or Update call. Override to initialize the camera controller. <br /></td></tr>
 <tr class="separator:afe10960725f546c147f21dae96b06ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15cbd4657818cd25f8d15b93cb800491" id="r_a15cbd4657818cd25f8d15b93cb800491"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_camera_management2_d_1_1_camera_state.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15cbd4657818cd25f8d15b93cb800491">ComputeCameraState</a> ()</td></tr>
 <tr class="memdesc:a15cbd4657818cd25f8d15b93cb800491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the camera state based on the available data. Must not have any side effects.  <br /></td></tr>
@@ -176,15 +178,23 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a69909d5226af787d4c13c73f4ceafc2b" id="r_a69909d5226af787d4c13c73f4ceafc2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69909d5226af787d4c13c73f4ceafc2b">useUserInput</a> = true</td></tr>
-<tr class="memdesc:a69909d5226af787d4c13c73f4ceafc2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether user input is used to control the camera.  <br /></td></tr>
+<tr class="memitem:a69909d5226af787d4c13c73f4ceafc2b" id="r_a69909d5226af787d4c13c73f4ceafc2b"><td class="memItemLeft" align="right" valign="top"><a id="a69909d5226af787d4c13c73f4ceafc2b" name="a69909d5226af787d4c13c73f4ceafc2b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>useUserInput</b> = true</td></tr>
+<tr class="memdesc:a69909d5226af787d4c13c73f4ceafc2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether user input is used to control the camera. <br /></td></tr>
 <tr class="separator:a69909d5226af787d4c13c73f4ceafc2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31b55dec25ecdb10c58cd499784a4f60" id="r_a31b55dec25ecdb10c58cd499784a4f60"><td class="memItemLeft" align="right" valign="top">Camera&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31b55dec25ecdb10c58cd499784a4f60">controllerCamera</a></td></tr>
-<tr class="memdesc:a31b55dec25ecdb10c58cd499784a4f60"><td class="mdescLeft">&#160;</td><td class="mdescRight">The camera that this controller is managing.  <br /></td></tr>
+<tr class="memitem:a31b55dec25ecdb10c58cd499784a4f60" id="r_a31b55dec25ecdb10c58cd499784a4f60"><td class="memItemLeft" align="right" valign="top"><a id="a31b55dec25ecdb10c58cd499784a4f60" name="a31b55dec25ecdb10c58cd499784a4f60"></a>
+Camera&#160;</td><td class="memItemRight" valign="bottom"><b>controllerCamera</b></td></tr>
+<tr class="memdesc:a31b55dec25ecdb10c58cd499784a4f60"><td class="mdescLeft">&#160;</td><td class="mdescRight">The camera that this controller is managing. <br /></td></tr>
 <tr class="separator:a31b55dec25ecdb10c58cd499784a4f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c21150c565fe73897fa08a62be0bae2" id="r_a2c21150c565fe73897fa08a62be0bae2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c21150c565fe73897fa08a62be0bae2">active</a> = true</td></tr>
-<tr class="memdesc:a2c21150c565fe73897fa08a62be0bae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the camera controller is active.  <br /></td></tr>
+<tr class="memitem:a2c21150c565fe73897fa08a62be0bae2" id="r_a2c21150c565fe73897fa08a62be0bae2"><td class="memItemLeft" align="right" valign="top"><a id="a2c21150c565fe73897fa08a62be0bae2" name="a2c21150c565fe73897fa08a62be0bae2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = true</td></tr>
+<tr class="memdesc:a2c21150c565fe73897fa08a62be0bae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the camera controller is active. <br /></td></tr>
 <tr class="separator:a2c21150c565fe73897fa08a62be0bae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a8181c491fd9a30d4bf8a49e15550ee48" id="r_a8181c491fd9a30d4bf8a49e15550ee48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8181c491fd9a30d4bf8a49e15550ee48">Start</a> ()</td></tr>
+<tr class="separator:a8181c491fd9a30d4bf8a49e15550ee48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An abstract base class for camera controllers. </p>
@@ -271,35 +281,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afe10960725f546c147f21dae96b06ac3" name="afe10960725f546c147f21dae96b06ac3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe10960725f546c147f21dae96b06ac3">&#9670;&#160;</a></span>InitializeCameraController()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void CameraManagement2D.CameraController.InitializeCameraController </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Called before the first ComputeCameraState or Update call. Override to initialize the camera controller. </p>
-
-<p>Reimplemented in <a class="el" href="class_camera_management2_d_1_1_camera_pan_module.html#a80ca01914fcc4839fada75b1f6452adc">CameraManagement2D.CameraPanModule</a>, <a class="el" href="class_camera_management2_d_1_1_camera_smoothing_module.html#a155db87f6c4423a78d26cc791112b5d6">CameraManagement2D.CameraSmoothingModule</a>, and <a class="el" href="class_camera_management2_d_1_1_tracker_camera_module.html#a96b557ac0dcdccfbbb8170d33b644787">CameraManagement2D.TrackerCameraModule</a>.</p>
-
-</div>
-</div>
 <a id="a74a3fd0dbaa19afc36f8c39771404478" name="a74a3fd0dbaa19afc36f8c39771404478"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a74a3fd0dbaa19afc36f8c39771404478">&#9670;&#160;</a></span>OnUserInputChange()</h2>
 
@@ -368,6 +349,32 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8181c491fd9a30d4bf8a49e15550ee48" name="a8181c491fd9a30d4bf8a49e15550ee48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8181c491fd9a30d4bf8a49e15550ee48">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraManagement2D.CameraController.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Do not redefine. Use <a class="el" href="#afe10960725f546c147f21dae96b06ac3" title="Called before the first ComputeCameraState or Update call. Override to initialize the camera controll...">InitializeCameraController</a> to initialize the component instead</p>
+
+</div>
+</div>
 <a id="a23a73d4798da68734f83d679c5439379" name="a23a73d4798da68734f83d679c5439379"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a23a73d4798da68734f83d679c5439379">&#9670;&#160;</a></span>UseUserInput()</h2>
 
@@ -398,79 +405,6 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a2c21150c565fe73897fa08a62be0bae2" name="a2c21150c565fe73897fa08a62be0bae2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c21150c565fe73897fa08a62be0bae2">&#9670;&#160;</a></span>active</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool CameraManagement2D.CameraController.active = true</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether the camera controller is active. </p>
-
-</div>
-</div>
-<a id="a31b55dec25ecdb10c58cd499784a4f60" name="a31b55dec25ecdb10c58cd499784a4f60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31b55dec25ecdb10c58cd499784a4f60">&#9670;&#160;</a></span>controllerCamera</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Camera CameraManagement2D.CameraController.controllerCamera</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The camera that this controller is managing. </p>
-
-</div>
-</div>
-<a id="a69909d5226af787d4c13c73f4ceafc2b" name="a69909d5226af787d4c13c73f4ceafc2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69909d5226af787d4c13c73f4ceafc2b">&#9670;&#160;</a></span>useUserInput</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool CameraManagement2D.CameraController.useUserInput = true</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Indicates whether user input is used to control the camera. </p>
 
 </div>
 </div>

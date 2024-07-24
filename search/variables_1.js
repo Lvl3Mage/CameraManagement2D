@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['controllercamera_0',['controllerCamera',['../class_camera_management2_d_1_1_camera_controller.html#a31b55dec25ecdb10c58cd499784a4f60',1,'CameraManagement2D::CameraController']]]
+  ['boundspadding_0',['boundsPadding',['../class_camera_management2_d_1_1_tracked_object.html#ad67b13762ae6d68a8d6b805e12028f5d',1,'CameraManagement2D::TrackedObject']]],
+  ['boundssource_1',['boundsSource',['../class_camera_management2_d_1_1_tracked_object.html#a4d925ceb7f501ec6dfc0299079e62da9',1,'CameraManagement2D::TrackedObject']]]
 ];
