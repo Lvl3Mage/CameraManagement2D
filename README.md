@@ -1,6 +1,6 @@
 ﻿# Camera Management Package
 
-This package provides a flexible and extendable camera management system for Unity projects.
+This package provides a flexible and extendable 2D camera management system for Unity projects.
 
 ## Features
 - Extendable camera controller system
