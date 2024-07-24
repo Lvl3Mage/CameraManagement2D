@@ -1,0 +1,5 @@
+<map id="CameraManagement2D.CameraPanModule" name="CameraManagement2D.CameraPanModule">
+<area shape="rect" id="node1" title="A camera controller module that allows for panning and zooming of the camera based on user input." alt="" coords="5,152,212,192"/>
+<area shape="rect" id="node2" href="$class_camera_management2_d_1_1_camera_controller.html" title="An abstract base class for camera controllers." alt="" coords="47,79,170,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="53,5,165,31"/>
+</map>
