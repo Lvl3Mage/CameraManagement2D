@@ -116,8 +116,8 @@ $(document).ready(function(){initNavTree('a00064.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="a00061.html">List of all members</a>  </div>
@@ -128,6 +128,14 @@ $(document).ready(function(){initNavTree('a00064.html',''); initResizable(); });
 <p>Provides functionality to clamp the camera state, including position, bounds, and zoom.  
  <a href="a00064.html#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:adc4f1d34092919ea095fd5d941396326"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326">ClampMode</a> { <a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326a672dff3c7d0fee10731c2e95b61ff60e">ClampPosition</a>
+, <a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326a8d087806ae39ac2a68cec914bd52b61f">ClampBounds</a>
+ }</td></tr>
+<tr class="memdesc:adc4f1d34092919ea095fd5d941396326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modes for clamping the camera state.  <a href="a00064.html#adc4f1d34092919ea095fd5d941396326">More...</a><br /></td></tr>
+<tr class="separator:adc4f1d34092919ea095fd5d941396326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab05fc682782c3fcd93624ab49c540d17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00060.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00064.html#ab05fc682782c3fcd93624ab49c540d17">ClampState</a> (<a class="el" href="a00060.html">CameraState</a> state, float cameraAspect)</td></tr>
@@ -136,14 +144,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a451ae68b17a5e53e3cc6e7139e6501d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00064.html#a451ae68b17a5e53e3cc6e7139e6501d3">DrawGizmos</a> (Camera camera, Vector3 reference=new())</td></tr>
 <tr class="memdesc:a451ae68b17a5e53e3cc6e7139e6501d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws gizmos to visualize the clamping bounds and the camera frame.  <a href="a00064.html#a451ae68b17a5e53e3cc6e7139e6501d3">More...</a><br /></td></tr>
 <tr class="separator:a451ae68b17a5e53e3cc6e7139e6501d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
-Private Types</h2></td></tr>
-<tr class="memitem:adc4f1d34092919ea095fd5d941396326"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326">ClampMode</a> { <a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326a672dff3c7d0fee10731c2e95b61ff60e">ClampPosition</a>
-, <a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326a8d087806ae39ac2a68cec914bd52b61f">ClampBounds</a>
- }</td></tr>
-<tr class="memdesc:adc4f1d34092919ea095fd5d941396326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modes for clamping the camera state.  <a href="a00064.html#adc4f1d34092919ea095fd5d941396326">More...</a><br /></td></tr>
-<tr class="separator:adc4f1d34092919ea095fd5d941396326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -198,19 +198,11 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">enum <a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326">CameraManagement2D.CameraStateClamp.ClampMode</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Modes for clamping the camera state. </p>
