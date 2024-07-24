@@ -1,6 +1,9 @@
 var a00064 =
 [
-    [ "ClampMode", "a00064.html#adc4f1d34092919ea095fd5d941396326", null ],
+    [ "ClampMode", "a00064.html#adc4f1d34092919ea095fd5d941396326", [
+      [ "ClampPosition", "a00064.html#adc4f1d34092919ea095fd5d941396326a672dff3c7d0fee10731c2e95b61ff60e", null ],
+      [ "ClampBounds", "a00064.html#adc4f1d34092919ea095fd5d941396326a8d087806ae39ac2a68cec914bd52b61f", null ]
+    ] ],
     [ "ClampBounds", "a00064.html#afd184a157abf1c593190e2cf138926c5", null ],
     [ "ClampPosition", "a00064.html#a6f63adca83829a87e875e9e5e5d7093b", null ],
     [ "ClampState", "a00064.html#ab05fc682782c3fcd93624ab49c540d17", null ],

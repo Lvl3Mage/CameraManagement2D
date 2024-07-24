@@ -139,8 +139,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:adc4f1d34092919ea095fd5d941396326"><td class="memItemLeft" align="right" valign="top"><a id="adc4f1d34092919ea095fd5d941396326" name="adc4f1d34092919ea095fd5d941396326"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326">ClampMode</a> </td></tr>
-<tr class="memdesc:adc4f1d34092919ea095fd5d941396326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modes for clamping the camera state. <br /></td></tr>
+<tr class="memitem:adc4f1d34092919ea095fd5d941396326"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326">ClampMode</a> { <a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326a672dff3c7d0fee10731c2e95b61ff60e">ClampPosition</a>
+, <a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326a8d087806ae39ac2a68cec914bd52b61f">ClampBounds</a>
+ }</td></tr>
+<tr class="memdesc:adc4f1d34092919ea095fd5d941396326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modes for clamping the camera state.  <a href="a00064.html#adc4f1d34092919ea095fd5d941396326">More...</a><br /></td></tr>
 <tr class="separator:adc4f1d34092919ea095fd5d941396326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
@@ -158,7 +160,7 @@ Private Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab6e048a839e0fdc9be1cda80d32b6fd3"><td class="memItemLeft" align="right" valign="top"><a id="ab6e048a839e0fdc9be1cda80d32b6fd3" name="ab6e048a839e0fdc9be1cda80d32b6fd3"></a>
-<a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326">ClampMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clampMode</b> = ClampMode.ClampPosition</td></tr>
+<a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326">ClampMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clampMode</b> = <a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326a672dff3c7d0fee10731c2e95b61ff60e">ClampMode.ClampPosition</a></td></tr>
 <tr class="memdesc:ab6e048a839e0fdc9be1cda80d32b6fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mode for clamping the camera state. <br /></td></tr>
 <tr class="separator:ab6e048a839e0fdc9be1cda80d32b6fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed143a3f1b38320085e72cb28c392892"><td class="memItemLeft" align="right" valign="top"><a id="aed143a3f1b38320085e72cb28c392892" name="aed143a3f1b38320085e72cb28c392892"></a>
@@ -190,7 +192,40 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
 <div class="textblock"><p >Provides functionality to clamp the camera state, including position, bounds, and zoom. </p>
 
 <p class="definition">Definition at line <a class="el" href="a00008_source.html#l00013">13</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="adc4f1d34092919ea095fd5d941396326" name="adc4f1d34092919ea095fd5d941396326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc4f1d34092919ea095fd5d941396326">&#9670;&nbsp;</a></span>ClampMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="a00064.html#adc4f1d34092919ea095fd5d941396326">CameraManagement2D.CameraStateClamp.ClampMode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Modes for clamping the camera state. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adc4f1d34092919ea095fd5d941396326a672dff3c7d0fee10731c2e95b61ff60e" name="adc4f1d34092919ea095fd5d941396326a672dff3c7d0fee10731c2e95b61ff60e"></a>ClampPosition&#160;</td><td class="fielddoc"><p >Clamps the camera state based on the center position. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adc4f1d34092919ea095fd5d941396326a8d087806ae39ac2a68cec914bd52b61f" name="adc4f1d34092919ea095fd5d941396326a8d087806ae39ac2a68cec914bd52b61f"></a>ClampBounds&#160;</td><td class="fielddoc"><p >Clamps the camera state based on the camera bounds. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00018">18</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="afd184a157abf1c593190e2cf138926c5" name="afd184a157abf1c593190e2cf138926c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd184a157abf1c593190e2cf138926c5">&#9670;&nbsp;</a></span>ClampBounds()</h2>
 
@@ -235,7 +270,7 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The clamped camera state.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00098">98</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00104">104</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
 
 </div>
 </div>
@@ -272,7 +307,7 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The clamped camera state.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00080">80</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00086">86</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
 
 </div>
 </div>
@@ -320,7 +355,7 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The clamped camera state.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00060">60</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00066">66</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
 
 </div>
 </div>
@@ -367,7 +402,7 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00145">145</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00151">151</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
 
 </div>
 </div>
@@ -429,7 +464,7 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The correction value.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00129">129</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00135">135</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
 
 </div>
 </div>
