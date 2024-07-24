@@ -1,18 +1,27 @@
-name: Doxygen GitHub Pages Deploy Action
-
+name: Build Doxygen
+permissions:
+  contents: write
 on:
   push:
-    branches:
-      - main
-  workflow_dispatch:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: DenverCoder1/doxygen-github-pages-action@v1.3.1
-        with:
-          github_token: ${{ secrets.github-deploy-token }}
-          branch: gh-pages
-          folder: docs/html
-          config_file: docs/Doxyfile
+    - uses: actions/checkout@v3
+
+
+    - name: Doxygen
+      uses: mattnotmitt/doxygen-action@v1.9.5
+      with:
+        working-directory: ''
+        doxyfile-path: 'docs/Doxygen'
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: docs/html
