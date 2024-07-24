@@ -14,5 +14,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          publish_dir: ./docs/html
+          folder: ./docs/html
           
