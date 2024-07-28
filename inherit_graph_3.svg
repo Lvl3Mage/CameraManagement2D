@@ -13,15 +13,15 @@
 <g id="node1" class="node">
 <title>Node0</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="0,-79 0,-98 84,-98 84,-79 0,-79"/>
-<text text-anchor="middle" x="42" y="-86" font-family="Helvetica,sans-Serif" font-size="10.00">MonoBehaviour</text>
+<polygon fill="white" stroke="#bfbfbf" points="0,-54 0,-73 84,-73 84,-54 0,-54"/>
+<text text-anchor="middle" x="42" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00">MonoBehaviour</text>
 </a>
 </g>
 </g>
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="a00044.html" target="_top" xlink:title="An abstract base class for camera controllers.">
+<g id="a_node2"><a xlink:href="a00047.html" target="_top" xlink:title="An abstract base class for camera controllers.">
 <polygon fill="white" stroke="black" points="120,-73.5 120,-103.5 275,-103.5 275,-73.5 120,-73.5"/>
 <text text-anchor="start" x="128" y="-91.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraManagement2D.Camera</text>
 <text text-anchor="middle" x="197.5" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">Controller</text>
@@ -31,13 +31,29 @@
 <!-- Node0&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
 <title>Node0&#45;&gt;Node1</title>
-<path fill="none" stroke="midnightblue" d="M94.33,-88.5C102.58,-88.5 111.29,-88.5 119.98,-88.5"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="94.14,-85 84.14,-88.5 94.14,-92 94.14,-85"/>
+<path fill="none" stroke="midnightblue" d="M94.05,-71.81C102.39,-73.17 111.19,-74.61 119.98,-76.04"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="94.57,-68.35 84.14,-70.2 93.44,-75.26 94.57,-68.35"/>
+</g>
+<!-- Node6 -->
+<g id="node7" class="node">
+<title>Node6</title>
+<g id="a_node7"><a xlink:href="a00071.html" target="_top" xlink:title="A class that provides easy access to the scene camera, and allows for easy activation/deactivation of...">
+<polygon fill="white" stroke="black" points="123,-24.5 123,-54.5 272,-54.5 272,-24.5 123,-24.5"/>
+<text text-anchor="start" x="131" y="-42.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraManagement2D.Scene</text>
+<text text-anchor="middle" x="197.5" y="-31.5" font-family="Helvetica,sans-Serif" font-size="10.00">Camera</text>
+</a>
+</g>
+</g>
+<!-- Node0&#45;&gt;Node6 -->
+<g id="edge6" class="edge">
+<title>Node0&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M94.27,-55.48C103.49,-54.04 113.25,-52.52 122.95,-51"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="93.47,-52.07 84.14,-57.07 94.56,-58.98 93.47,-52.07"/>
 </g>
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="a00048.html" target="_top" xlink:title="Manages multiple camera controllers, allowing switching between them.">
+<g id="a_node3"><a xlink:href="a00051.html" target="_top" xlink:title="Manages multiple camera controllers, allowing switching between them.">
 <polygon fill="white" stroke="black" points="311,-147.5 311,-177.5 466,-177.5 466,-147.5 311,-147.5"/>
 <text text-anchor="start" x="319" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraManagement2D.Camera</text>
 <text text-anchor="middle" x="388.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">ModuleManager</text>
@@ -53,7 +69,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="a00052.html" target="_top" xlink:title="A camera controller module that allows for panning and zooming of the camera based on user input.">
+<g id="a_node4"><a xlink:href="a00055.html" target="_top" xlink:title="A camera controller module that allows for panning and zooming of the camera based on user input.">
 <polygon fill="white" stroke="black" points="311,-98.5 311,-128.5 466,-128.5 466,-98.5 311,-98.5"/>
 <text text-anchor="start" x="319" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraManagement2D.Camera</text>
 <text text-anchor="middle" x="388.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">PanModule</text>
@@ -69,7 +85,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="a00056.html" target="_top" xlink:title="A module for smoothing camera movement, including position, zoom, and rotation. This class extends th...">
+<g id="a_node5"><a xlink:href="a00059.html" target="_top" xlink:title="A module for smoothing camera movement, including position, zoom, and rotation. This class extends th...">
 <polygon fill="white" stroke="black" points="311,-49.5 311,-79.5 466,-79.5 466,-49.5 311,-49.5"/>
 <text text-anchor="start" x="319" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraManagement2D.Camera</text>
 <text text-anchor="middle" x="388.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">SmoothingModule</text>
@@ -85,7 +101,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="a00068.html" target="_top" xlink:title="A camera module that tracks multiple objects and adjusts the camera&#39;s state to ensure all tracked obj...">
+<g id="a_node6"><a xlink:href="a00075.html" target="_top" xlink:title="A camera module that tracks multiple objects and adjusts the camera&#39;s state to ensure all tracked obj...">
 <polygon fill="white" stroke="black" points="311.5,-0.5 311.5,-30.5 465.5,-30.5 465.5,-0.5 311.5,-0.5"/>
 <text text-anchor="start" x="319.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraManagement2D.Tracker</text>
 <text text-anchor="middle" x="388.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">CameraModule</text>
@@ -95,8 +111,8 @@
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M240.91,-69.36C261.84,-60.19 287.56,-49.31 311,-40.5 320.02,-37.11 329.74,-33.73 339.12,-30.6"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="239.4,-66.21 231.66,-73.45 242.23,-72.61 239.4,-66.21"/>
+<path fill="none" stroke="midnightblue" d="M262.56,-69.91C266.83,-68.21 271.01,-66.41 275,-64.5 292.35,-56.21 293.7,-48.9 311,-40.5 318.54,-36.84 326.75,-33.52 334.9,-30.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="261.28,-66.66 253.15,-73.45 263.74,-73.21 261.28,-66.66"/>
 </g>
 </g>
 </svg>

@@ -6,5 +6,6 @@ var dir_4f6666a8f2ab10bc970eb7559668f031 =
     [ "CameraSmoothingModule.cs", "a00023_source.html", null ],
     [ "CameraState.cs", "a00014_source.html", null ],
     [ "CameraStateClamp.cs", "a00008_source.html", null ],
+    [ "SceneCamera.cs", "a00029_source.html", null ],
     [ "TrackerCameraModule.cs", "a00011_source.html", null ]
 ];

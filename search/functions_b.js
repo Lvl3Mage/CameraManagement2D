@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['update_0',['Update',['../a00072.html#a2c2c5ab658bc73832794261774bb663a',1,'CameraManagement2D::TrackedObject']]],
-  ['useuserinput_1',['UseUserInput',['../a00044.html#a23a73d4798da68734f83d679c5439379',1,'CameraManagement2D::CameraController']]]
+  ['trackedobject_0',['TrackedObject',['../a00079.html#a3800205c95417aae5b40ec61bada083a',1,'CameraManagement2D::TrackedObject']]],
+  ['tracks_1',['Tracks',['../a00079.html#a5aaac69301ca7ccdcedaeb1682a3fab0',1,'CameraManagement2D::TrackedObject']]]
 ];

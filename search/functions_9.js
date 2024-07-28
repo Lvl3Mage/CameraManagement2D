@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['setactive_0',['SetActive',['../a00044.html#a789f8ca371ddb52182ecfc743c723fe6',1,'CameraManagement2D::CameraController']]],
-  ['settrackedobjects_1',['SetTrackedObjects',['../a00068.html#a66372ce314f8048fec5a23bcdd658050',1,'CameraManagement2D::TrackerCameraModule']]],
-  ['start_2',['Start',['../a00044.html#a8181c491fd9a30d4bf8a49e15550ee48',1,'CameraManagement2D::CameraController']]],
-  ['switchtocontroller_3',['SwitchToController',['../a00048.html#aaecb91c21bc5be9db3a7b1c10b4d4f21',1,'CameraManagement2D::CameraModuleManager']]]
+  ['removetrackedobject_0',['RemoveTrackedObject',['../a00075.html#a5c55884b7c8942a647be4ee2f2083299',1,'CameraManagement2D::TrackerCameraModule']]],
+  ['representsposition_1',['RepresentsPosition',['../a00063.html#a0e08827c27541ba607f9cba4535bb936',1,'CameraManagement2D::CameraState']]],
+  ['representsrotation_2',['RepresentsRotation',['../a00063.html#a6495a7e55cb217764a9fb5f8d94934c8',1,'CameraManagement2D::CameraState']]],
+  ['representszoom_3',['RepresentsZoom',['../a00063.html#a0fef011fb4419eba1fb4ed5663048ca4',1,'CameraManagement2D::CameraState']]]
 ];
