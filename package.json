@@ -1,5 +1,5 @@
 {
-  "name": "com.lvl3mage.cameramanagement",
+  "name": "com.lvl3mage.camera-management",
   "version": "1.0.2",
   "displayName": "Camera Management",
   "description": "A package that provides an extendable camera management system.",
@@ -9,16 +9,14 @@
     "com.domybest.mybox": "1.8.0"
   },
   "author": "Lvl3Mage (https://github.com/Lvl3Mage)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lvl3Mage/CameraManagement.git"
   },
   "keywords": [
-    "camera"
+    "camera",
+    "utility",
+    "unity"
   ],
   "license": "MIT",
   "bugs": {
