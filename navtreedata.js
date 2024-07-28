@@ -26,15 +26,16 @@ var NAVTREE =
 [
   [ "Camera Management", "index.html", [
     [ "Camera Management Package", "index.html", [
-      [ "Features", "index.html#autotoc_md4", null ],
-      [ "Requirements", "index.html#autotoc_md5", null ],
-      [ "Installation", "index.html#autotoc_md6", null ],
-      [ "Documentation", "index.html#autotoc_md7", null ],
-      [ "Author", "index.html#autotoc_md8", null ]
+      [ "Features", "index.html#autotoc_md5", null ],
+      [ "Requirements", "index.html#autotoc_md6", null ],
+      [ "Installation", "index.html#autotoc_md7", null ],
+      [ "Documentation", "index.html#autotoc_md8", null ],
+      [ "Author", "index.html#autotoc_md9", null ]
     ] ],
     [ "[1.0.0] - 2024-07-16", "a00120.html", [
       [ "[1.0.1] - 2024-07-24", "a00120.html#autotoc_md1", null ],
-      [ "[1.0.2] - 2024-07-24", "a00120.html#autotoc_md2", null ]
+      [ "[1.0.2] - 2024-07-24", "a00120.html#autotoc_md2", null ],
+      [ "[1.0.3] - 2024-07-29", "a00120.html#autotoc_md3", null ]
     ] ],
     [ "LICENSE", "a00121.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -65,7 +66,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00008_source.html",
-"functions.html"
+"files.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
