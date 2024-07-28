@@ -1,6 +1,6 @@
 {
   "name": "com.lvl3mage.camera-management",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "Camera Management",
   "description": "A package that provides an extendable camera management system.",
   "unity": "2021.3",

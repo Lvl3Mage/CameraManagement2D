@@ -8,4 +8,6 @@
 - Reworked the CameraSmoothingModule to avoid latency
 ## [1.0.2] - 2024-07-24
 - Documentation updates
+## [1.0.3] - 2024-07-29
+- Added the SceneCamera class for easy camera access
 
