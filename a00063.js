@@ -1,9 +1,8 @@
 var a00063 =
 [
-    [ "CameraState", "a00063.html#a3614bec923c162ec1b6b71fefe1355d8", null ],
+    [ "CameraState", "a00063.html#a8eda3cf19f12f1684e9c0a626585464f", null ],
     [ "CameraState", "a00063.html#aceafb44cc29b702d6d159e30ed1ca02f", null ],
-    [ "ApplyTo", "a00063.html#a2edc0b4a4df4e68387ebc705a15f05e1", null ],
-    [ "AsLocal", "a00063.html#a36a75245618bead9eeb41d74f9980f49", null ],
+    [ "ApplyTo", "a00063.html#acb4998bc1f92d353f0b6cb12cf64f88c", null ],
     [ "ClampedPosition", "a00063.html#a1089d62657a31c1781d1fbaa2080109f", null ],
     [ "ClampedPositionX", "a00063.html#a3395e428adec58ed7304db9b8ef3e641", null ],
     [ "ClampedPositionY", "a00063.html#ab3d7fa05e96e264502286d898a22d0a9", null ],

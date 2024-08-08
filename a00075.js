@@ -7,6 +7,7 @@ var a00075 =
     [ "SetTrackedObjects", "a00075.html#a66372ce314f8048fec5a23bcdd658050", null ],
     [ "cameraPadding", "a00075.html#a1e999eeeaf2eb964ac3b6d85f5d2e32a", null ],
     [ "clamp", "a00075.html#a97890d204e740f69699edf53f6ba33f3", null ],
+    [ "drawGizmos", "a00075.html#a9e9eb489c7db16eb049d139ae56a81d4", null ],
     [ "enforceCurrentBounds", "a00075.html#a6f2429f1d7ed970fdc4564d58ac3741f", null ],
     [ "predictionTime", "a00075.html#a75bfd872c80823676b90500d66fe383f", null ],
     [ "predictMovement", "a00075.html#a727f9ed0544070c65d956203866e1558", null ],

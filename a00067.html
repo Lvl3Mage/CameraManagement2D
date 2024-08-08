@@ -141,9 +141,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab05fc682782c3fcd93624ab49c540d17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00063.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#ab05fc682782c3fcd93624ab49c540d17">ClampState</a> (<a class="el" href="a00063.html">CameraState</a> state, float cameraAspect)</td></tr>
 <tr class="memdesc:ab05fc682782c3fcd93624ab49c540d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps the camera state based on the configured clamp settings.  <a href="a00067.html#ab05fc682782c3fcd93624ab49c540d17">More...</a><br /></td></tr>
 <tr class="separator:ab05fc682782c3fcd93624ab49c540d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a451ae68b17a5e53e3cc6e7139e6501d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a451ae68b17a5e53e3cc6e7139e6501d3">DrawGizmos</a> (Camera camera, Vector3 reference=new())</td></tr>
-<tr class="memdesc:a451ae68b17a5e53e3cc6e7139e6501d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws gizmos to visualize the clamping bounds and the camera frame.  <a href="a00067.html#a451ae68b17a5e53e3cc6e7139e6501d3">More...</a><br /></td></tr>
-<tr class="separator:a451ae68b17a5e53e3cc6e7139e6501d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3410b68064b5855bc990a1304185f6d4"><td class="memItemLeft" align="right" valign="top"><a id="a3410b68064b5855bc990a1304185f6d4" name="a3410b68064b5855bc990a1304185f6d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawGizmos</b> (Color? color=null)</td></tr>
+<tr class="memdesc:a3410b68064b5855bc990a1304185f6d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the clamp bounds in the editor using gizmos. <br /></td></tr>
+<tr class="separator:a3410b68064b5855bc990a1304185f6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -191,7 +192,7 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Provides functionality to clamp the camera state, including position, bounds, and zoom. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00013">13</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00014_source.html#l00013">13</a> of file <a class="el" href="a00014_source.html">CameraStateClamp.cs</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="adc4f1d34092919ea095fd5d941396326" name="adc4f1d34092919ea095fd5d941396326"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc4f1d34092919ea095fd5d941396326">&#9670;&nbsp;</a></span>ClampMode</h2>
@@ -213,7 +214,7 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00018">18</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00014_source.html#l00018">18</a> of file <a class="el" href="a00014_source.html">CameraStateClamp.cs</a>.</p>
 
 </div>
 </div>
@@ -262,7 +263,7 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The clamped camera state.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00104">104</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00014_source.html#l00105">105</a> of file <a class="el" href="a00014_source.html">CameraStateClamp.cs</a>.</p>
 
 </div>
 </div>
@@ -299,7 +300,7 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The clamped camera state.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00086">86</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00014_source.html#l00087">87</a> of file <a class="el" href="a00014_source.html">CameraStateClamp.cs</a>.</p>
 
 </div>
 </div>
@@ -347,54 +348,7 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The clamped camera state.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00066">66</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
-
-</div>
-</div>
-<a id="a451ae68b17a5e53e3cc6e7139e6501d3" name="a451ae68b17a5e53e3cc6e7139e6501d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a451ae68b17a5e53e3cc6e7139e6501d3">&#9670;&nbsp;</a></span>DrawGizmos()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CameraManagement2D.CameraStateClamp.DrawGizmos </td>
-          <td>(</td>
-          <td class="paramtype">Camera&#160;</td>
-          <td class="paramname"><em>camera</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>reference</em> = <code>new()</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Draws gizmos to visualize the clamping bounds and the camera frame. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">camera</td><td>The camera whose bounds are to be visualized.</td></tr>
-    <tr><td class="paramname">reference</td><td>The reference point for drawing gizmos.</td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00151">151</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00014_source.html#l00067">67</a> of file <a class="el" href="a00014_source.html">CameraStateClamp.cs</a>.</p>
 
 </div>
 </div>
@@ -456,12 +410,12 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = ne
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The correction value.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="a00008_source.html#l00135">135</a> of file <a class="el" href="a00008_source.html">CameraStateClamp.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00014_source.html#l00139">139</a> of file <a class="el" href="a00014_source.html">CameraStateClamp.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00008_source.html">CameraStateClamp.cs</a></li>
+<li><a class="el" href="a00014_source.html">CameraStateClamp.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
