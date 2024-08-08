@@ -43,7 +43,6 @@ namespace CameraManagement2D
 			return targetState;
 		}
 		//Todo implement cursor relative zoom
-
 		void Update()
 		{
 			Vector2 cursorPosition = controllerCamera.ScreenToWorldPoint(Input.mousePosition);
@@ -74,7 +73,6 @@ namespace CameraManagement2D
 
 #if UNITY_EDITOR
 		Camera gizmoCamera;
-
 		void OnDrawGizmos()
 		{
 			if (!drawGizmos) return;
@@ -83,7 +81,8 @@ namespace CameraManagement2D
 				if (!gizmoCamera) return;
 			}
 
-			clamp.DrawGizmos(gizmoCamera);
+			clamp.DrawGizmos();
+			clamp.ClampState(CameraState.FromCamera(controllerCamera, useLocalPosition).WithoutRotation(), gizmoCamera.aspect).DrawGizmos(gizmoCamera.aspect);
 		}
 
 #endif

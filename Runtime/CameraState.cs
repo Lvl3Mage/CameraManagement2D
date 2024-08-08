@@ -53,20 +53,17 @@ namespace CameraManagement2D
 				return rotation.Value;
 			}
 		}
-		private bool local;
 		/// <summary>
-		/// Initializes a new instance of the CameraState class with the specified position, zoom, rotation, and local flag.
+		/// Initializes a new instance of the CameraState class with the specified position, zoom, rotation
 		/// </summary>
 		/// <param name="position">The position of the camera.</param>
 		/// <param name="zoom">The zoom level of the camera.</param>
 		/// <param name="rotation">The rotation of the camera.</param>
-		/// <param name="local">Indicates whether the position and rotation are treated as local to the parent transform.</param>
-		public CameraState(Vector2 position, float zoom, float rotation, bool local = false)
+		public CameraState(Vector2 position, float zoom, float rotation)
 		{
 			this.position = position;
 			this.zoom = zoom;
 			this.rotation = rotation;
-			this.local = local;
 		}
 		/// <summary>
 		/// Initializes a new instance of the CameraState class by copying another CameraState.
@@ -77,7 +74,6 @@ namespace CameraManagement2D
 			position = other.position;
 			zoom = other.zoom;
 			rotation = other.rotation;
-			local = other.local;
 		}
 		/// <summary>
 		/// Creates a new CameraState that is a copy of the current instance.
@@ -149,23 +145,25 @@ namespace CameraManagement2D
 		}
 		
 		/// <summary>
-		/// Creates a CameraState that contains the given bounds with the specified aspect ratio. The camera will be centered in the bounds.
+		/// Creates a CameraState that is contained the given bounds with the specified aspect ratio. The camera will be centered in the bounds.
 		/// </summary>
 		/// <param name="bounds">The bounds that should contain the camera.</param>
 		/// <param name="aspectRatio">The aspect ratio of the camera.</param>
-		/// <returns>A new CameraState that contains the given bounds.</returns>
-		public static CameraState ContainingBounds(Bounds bounds, float aspectRatio)
+		/// <returns>A new CameraState that is contained the given bounds.</returns>
+		public static CameraState ContainedInBounds(Bounds bounds, float aspectRatio)
 		{
-			return ContainingBounds(bounds, aspectRatio, new Vector2(0.5f, 0.5f));
+			return ContainedInBounds(bounds, aspectRatio, new Vector2(0.5f, 0.5f));
 		}
+		
+		//Todo implement Contained in bounds but with a rotation instead of pivot (as well as coveringBounds with rotation)
 		/// <summary>
-		/// Creates a CameraState that contains the given bounds with the specified aspect ratio and pivot.
+		/// Creates a CameraState that is contained the given bounds with the specified aspect ratio and pivot.
 		/// </summary>
 		/// <param name="bounds">The bounds that should contain the camera.</param>
 		/// <param name="aspectRatio">The aspect ratio of the camera.</param>
 		/// <param name="pivot">The pivot point for the camera. A value of (0.5, 0.5) will center the camera</param>
-		/// <returns>A new CameraState that contains the given bounds.</returns>
-		public static CameraState ContainingBounds(Bounds bounds, float aspectRatio, Vector2 pivot)
+		/// <returns>A new CameraState that is contained the given bounds.</returns>
+		public static CameraState ContainedInBounds(Bounds bounds, float aspectRatio, Vector2 pivot)
 		{
 			Vector2 pos = bounds.center;
 			Vector2 offset = Vector2.zero;
@@ -182,10 +180,11 @@ namespace CameraManagement2D
 			return Empty().WithPosition(pos).WithZoom(size*0.5f);
 		}
 		/// <summary>
-		/// Gets the bounds of the CameraState based on the specified aspect ratio.
+		/// Gets the bounds of the CameraState with a specified aspect ratio.
+		/// Currently does not take rotation into account.
 		/// </summary>
-		/// <param name="aspectRatio">The aspect ratio of the camera.</param>
-		/// <returns>A Bounds object representing the bounds of the CameraState.</returns>
+		/// <param name="aspectRatio">The aspect ratio of the bounds.</param>
+		/// <returns>A Bounds object that encompasses the camera state</returns>
 		public Bounds GetBounds(float aspectRatio)
 		{
 			Bounds bounds = new Bounds(Vector3.zero, Vector3.zero);
@@ -337,23 +336,13 @@ namespace CameraManagement2D
 			};
 			return newState;
 		}
-		/// <summary>
-		/// Creates a new CameraState with the specified local value.
-		/// </summary>
-		/// <param name="local">Determines whether the position and rotation will treated as local to the parent transform.</param>
-		/// <returns>A new CameraState with the updated local value.</returns>
-		public CameraState AsLocal(bool local = true)
-		{
-			CameraState newState = new(this){
-				local = local
-			};
-			return newState;
-		}
+
 		/// <summary>
 		/// Applies the CameraState to a given Camera.
 		/// </summary>
 		/// <param name="camera">The Camera to which the state will be applied.</param>
-		public void ApplyTo(Camera camera)
+		/// <param name="local">Whether the position and rotation should be applied as local values. Defaults to false.</param>
+		public void ApplyTo(Camera camera, bool local = false)
 		{
 			if (position != null){
 				Vector3 pos = new(position.Value.x, position.Value.y, camera.transform.position.z);
@@ -607,6 +596,27 @@ namespace CameraManagement2D
 				position.Value.x,
 				Mathf.Clamp(position.Value.y, clamp.x, clamp.y)
 			));
+		}
+
+
+		public void DrawGizmos(float aspect, Color? color = null)
+		{
+			Bounds bounds = GetBounds(aspect);
+			Vector3[] cameraFrame ={
+				bounds.min,
+				new Vector3(bounds.min.x, bounds.max.y, 0),
+				bounds.max,
+				new Vector3(bounds.max.x, bounds.min.y, 0)
+			};
+			Gizmos.color = color ?? Color.yellow;
+			DrawGizmosPath(cameraFrame);
+
+		}
+		void DrawGizmosPath(Vector3[] points)
+		{
+			for (int i = 0; i < points.Length; i++){
+				Gizmos.DrawLine(points[i], points[(i + 1) % points.Length]);
+			}
 		}
 	}
 }

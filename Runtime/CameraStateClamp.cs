@@ -57,6 +57,7 @@ namespace CameraManagement2D
 		/// </summary>
 		[ConditionalField("clampZoom")] [SerializeField]
 		Vector2 zoomClamp = new Vector2(0.1f, 15);
+		
 		/// <summary>
 		/// Clamps the camera state based on the configured clamp settings.
 		/// </summary>
@@ -116,13 +117,16 @@ namespace CameraManagement2D
 			}
 
 			bounds.center += correction;
+			if(!clampXAxis || !clampYAxis){
+				return CameraState.ContainedInBounds(bounds, cameraAspect);
+			}
 			bounds.max = Vector3.Min(bounds.max, new Vector3(xClamp.y, yClamp.y, 0));
 			bounds.min = Vector3.Max(bounds.min, new Vector3(xClamp.x, yClamp.x, 0));
 			Vector2 correctionSign = new Vector2(correction.x == 0 ? 0 : Mathf.Sign(correction.x),
 				correction.y == 0 ? 0 : Mathf.Sign(correction.y));
 			Vector2 pivot = new Vector2(0.5f, 0.5f) - correctionSign * 0.5f;
 
-			return CameraState.ContainingBounds(bounds, cameraAspect, pivot);
+			return CameraState.ContainedInBounds(bounds, cameraAspect, pivot);
 		}
 		/// <summary>
 		/// Calculates the correction needed to keep the bounds within the specified clamp range.
@@ -143,38 +147,25 @@ namespace CameraManagement2D
 			//Selecting the biggest correction
 			return (minCorrection > -maxCorrection) ? minCorrection : maxCorrection;
 		}
+
 		/// <summary>
-		/// Draws gizmos to visualize the clamping bounds and the camera frame.
+		/// Draws the clamp bounds in the editor using gizmos.
 		/// </summary>
-		/// <param name="camera">The camera whose bounds are to be visualized.</param>
-		/// <param name="reference">The reference point for drawing gizmos.</param>
-		public void DrawGizmos(Camera camera, Vector3 reference = new())
+		public void DrawGizmos(Color? color = null) 
 		{
-			float cameraAspect = camera.aspect;
 			Vector2 clampX = clampXAxis ? xClamp : Vector2.zero;
 			Vector2 clampY = clampYAxis ? yClamp : Vector2.zero;
 			Vector3[] corners ={
-				reference + new Vector3(clampX.x, clampY.x, 0),
-				reference + new Vector3(clampX.x, clampY.y, 0),
-				reference + new Vector3(clampX.y, clampY.y, 0),
-				reference + new Vector3(clampX.y, clampY.x, 0)
+				new Vector3(clampX.x, clampY.x, 0),
+				new Vector3(clampX.x, clampY.y, 0),
+				new Vector3(clampX.y, clampY.y, 0),
+				new Vector3(clampX.y, clampY.x, 0)
 			};
-			CameraState state = CameraState.FromCamera(camera);
-			CameraState clampedState = ClampState(state, cameraAspect);
-			Bounds clampedBounds = clampedState.GetBounds(cameraAspect);
-			Vector3[] cameraFrame ={
-				reference + clampedBounds.min,
-				reference + new Vector3(clampedBounds.min.x, clampedBounds.max.y, 0),
-				reference + clampedBounds.max,
-				reference + new Vector3(clampedBounds.max.x, clampedBounds.min.y, 0)
-			};
-			Gizmos.color = Color.yellow;
-			DrawPoly(cameraFrame);
-			Gizmos.color = Color.red;
-			DrawPoly(corners);
+			Gizmos.color = color ?? Color.red;
+			DrawGizmosPath(corners);
 		}
 
-		void DrawPoly(Vector3[] points)
+		void DrawGizmosPath(Vector3[] points)
 		{
 			for (int i = 0; i < points.Length; i++){
 				Gizmos.DrawLine(points[i], points[(i + 1) % points.Length]);

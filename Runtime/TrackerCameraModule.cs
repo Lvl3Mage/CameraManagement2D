@@ -47,10 +47,19 @@ namespace CameraManagement2D
 		/// The component used to clamp the camera's state to certain bounds.
 		/// </summary>
 		[SerializeField] CameraStateClamp clamp;
+		/// <summary>
+		/// Whether to draw gizmos in the editor for visualizing clamping bounds.
+		/// </summary>
+		[SerializeField] bool drawGizmos = true;
 		protected override void InitializeCameraController()
 		{
 			trackedObjects.ForEach((el)=>el.Initialize());
 		}
+		
+		void OnValidate()
+	    {
+			trackedObjects.ForEach((el)=>el.Initialize());
+	    }
 		/// <summary>
         /// Sets the objects to be tracked by the camera.
         /// </summary>
@@ -132,6 +141,24 @@ namespace CameraManagement2D
 		{
 			trackedObjects.ForEach((el)=>el.Update(Time.fixedDeltaTime));
 		}
+#if UNITY_EDITOR
+		Camera gizmoCamera;
+
+		void OnDrawGizmos()
+		{
+			if (!drawGizmos) return;
+			if (!gizmoCamera){
+				gizmoCamera = !controllerCamera ? GetComponent<Camera>() : controllerCamera;
+				if (!gizmoCamera) return;
+			}
+
+			clamp.DrawGizmos();
+			CameraState state = CameraState.FromCamera(gizmoCamera).WithoutRotation();
+			state = clamp.ClampState(state, gizmoCamera.aspect);
+			state.DrawGizmos(gizmoCamera.aspect);
+		}
+
+#endif
 	}
 	/// <summary>
 	/// Enumeration for the types of bounds that can be used for tracking.
@@ -150,10 +177,7 @@ namespace CameraManagement2D
 		/// The object's collider bounds are used for tracking.
 		/// </summary>
 		Collider,
-		/// <summary>
-		/// Both the renderer and collider bounds are used for tracking.
-		/// </summary>
-		All,
+		RectTransform
 	}
 	/// <summary>
 	/// Represents an object being tracked by the camera, including its bounds and prediction capabilities.
@@ -179,6 +203,8 @@ namespace CameraManagement2D
 		float updateDeltaTime;
 		Renderer renderer;
 		Collider2D collider;
+		RectTransform rectTransform;
+		
 		
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TrackedObject"/> class.
@@ -200,21 +226,31 @@ namespace CameraManagement2D
 		{
 			
 			if (!gameObject){
-				Debug.LogError("GameObject is null on deserialization!", gameObject);
+				Debug.LogError("GameObject is null on initialization!", gameObject);
 			}
 			transform = gameObject.transform;
 			pastPosition = transform.position;
-			
 			renderer = gameObject.GetComponent<Renderer>();
-			if (!renderer && boundsSource is BoundsSource.Renderer){
-				Debug.LogWarning("Renderer not found on object", gameObject);
-				
-			}
 			collider = gameObject.GetComponent<Collider2D>();
-			
-			if (!collider && boundsSource is BoundsSource.Collider){
-				Debug.LogWarning("Collider2D not found on object", gameObject);
-				
+			rectTransform = gameObject.GetComponent<RectTransform>();
+			switch (boundsSource){
+				case BoundsSource.None:
+					break;
+				case BoundsSource.Renderer:
+					if (!renderer){
+						Debug.LogWarning("Renderer not found on object", gameObject);
+					}
+					break;
+				case BoundsSource.Collider:
+					if (!collider){
+						Debug.LogWarning("Collider2D not found on object", gameObject);
+					}
+					break;
+				case BoundsSource.RectTransform:
+					if (!rectTransform){
+						Debug.LogWarning("RectTransform not found on object", gameObject);
+					}
+					break;
 			}
 		}
 		/// <summary>
@@ -242,13 +278,25 @@ namespace CameraManagement2D
 		public Bounds GetBounds()
 		{
 			Bounds bounds = new Bounds(transform.position, Vector3.zero);
-			if(renderer && boundsSource is BoundsSource.Renderer or BoundsSource.All)
+			switch(boundsSource)
 			{
-				bounds.Encapsulate(renderer.bounds);
-			}
-			if(collider && boundsSource is BoundsSource.Collider or BoundsSource.All)
-			{
-				bounds.Encapsulate(collider.bounds);
+				case BoundsSource.Renderer:
+					if(renderer){
+						bounds = renderer.bounds;
+					}
+					break;
+				case BoundsSource.Collider:
+					if(collider){
+						bounds = collider.bounds;
+					}
+					break;
+				case BoundsSource.RectTransform:
+					if(rectTransform){
+						bounds = new Bounds(transform.position, rectTransform.rect.size);
+					}
+					break;
+				case BoundsSource.None:
+					break;
 			}
 			bounds.Expand(boundsPadding);
 			return bounds;
