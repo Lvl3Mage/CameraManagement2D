@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['active_0',['active',['../a00047.html#a2c21150c565fe73897fa08a62be0bae2',1,'CameraManagement2D::CameraController']]]
+  ['active_0',['active',['../a00048.html#a630ca9a710751b83a628fc5d44bc0a3f',1,'Lvl3Mage::CameraManagement2D::CameraController']]]
 ];

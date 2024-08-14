@@ -1,0 +1,5 @@
+<map id="Lvl3Mage.CameraManagement2D.CameraSmoothingModule" name="Lvl3Mage.CameraManagement2D.CameraSmoothingModule">
+<area shape="rect" id="node1" title="A module for smoothing camera movement, including position, zoom, and rotation. This class extends th..." alt="" coords="5,155,215,196"/>
+<area shape="rect" id="node2" href="$a00048.html" title="An abstract base class for camera controllers." alt="" coords="49,80,171,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="54,5,166,32"/>
+</map>

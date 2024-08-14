@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['gameobject_0',['gameObject',['../a00079.html#ac53de77b0f4639349bff613c85e62156',1,'CameraManagement2D::TrackedObject']]],
-  ['getbounds_1',['GetBounds',['../a00063.html#a75a3ae565182cc8dac15d4352fba1d86',1,'CameraManagement2D.CameraState.GetBounds()'],['../a00079.html#a55471ce98c306467c7347d2dd4bb2c58',1,'CameraManagement2D.TrackedObject.GetBounds()']]],
-  ['getcamera_2',['GetCamera',['../a00071.html#a8bc21fa9c044a3330a715848d060a7f9',1,'CameraManagement2D::SceneCamera']]],
-  ['getcamerastate_3',['GetCameraState',['../a00047.html#a5e905934e4898b44271cc9b2f72cb99f',1,'CameraManagement2D::CameraController']]],
-  ['getcorrection_4',['GetCorrection',['../a00067.html#aa94fdcbe73c9c163229ba6deff219db0',1,'CameraManagement2D::CameraStateClamp']]],
-  ['getpredictedbounds_5',['GetPredictedBounds',['../a00079.html#a267ee5107a0115d42ec61513d91fe495',1,'CameraManagement2D::TrackedObject']]],
-  ['getworldmouseposition_6',['GetWorldMousePosition',['../a00071.html#ab84045bd6e299d453ceddfa731519e78',1,'CameraManagement2D::SceneCamera']]]
+  ['gameobject_0',['gameObject',['../a00080.html#aaca6663b392b2ba00d4664363de0a891',1,'Lvl3Mage::CameraManagement2D::TrackerCameraModule::TrackedObject']]],
+  ['getbounds_1',['GetBounds',['../a00064.html#a5611f2e8af47fa16a817440a4b92908d',1,'Lvl3Mage.CameraManagement2D.CameraState.GetBounds()'],['../a00080.html#ae738e5327d70a5dcc591f05d6752dbbe',1,'Lvl3Mage.CameraManagement2D.TrackerCameraModule.TrackedObject.GetBounds()']]],
+  ['getcamera_2',['GetCamera',['../a00072.html#a982cfa79038613e74b918927d07a48ef',1,'Lvl3Mage::CameraManagement2D::SceneCamera']]],
+  ['getcamerastate_3',['GetCameraState',['../a00048.html#a06f386d9ecb838830521aabc719ab535',1,'Lvl3Mage::CameraManagement2D::CameraController']]],
+  ['getcorrection_4',['GetCorrection',['../a00068.html#a22f7ea965eef0b30acff405d5089a03c',1,'Lvl3Mage::CameraManagement2D::CameraStateClamp']]],
+  ['getpredictedbounds_5',['GetPredictedBounds',['../a00080.html#a7b2b9fcc161d7f2d40c77f07dfc5ed04',1,'Lvl3Mage::CameraManagement2D::TrackerCameraModule::TrackedObject']]],
+  ['getworldmouseposition_6',['GetWorldMousePosition',['../a00072.html#aaf4742e2956bea025c4f1d0d537d9838',1,'Lvl3Mage.CameraManagement2D.SceneCamera.GetWorldMousePosition()'],['../a00072.html#a2477756defa204528e344b6f2c4f8921',1,'Lvl3Mage.CameraManagement2D.SceneCamera.GetWorldMousePosition(float depth)']]]
 ];

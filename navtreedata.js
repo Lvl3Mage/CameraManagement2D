@@ -24,27 +24,22 @@
 */
 var NAVTREE =
 [
-  [ "Camera Management", "index.html", [
-    [ "Camera Management Package", "index.html", [
-      [ "Features", "index.html#autotoc_md6", null ],
-      [ "Requirements", "index.html#autotoc_md7", null ],
-      [ "Installation", "index.html#autotoc_md8", null ],
-      [ "Documentation", "index.html#autotoc_md9", null ],
-      [ "Author", "index.html#autotoc_md10", null ]
+  [ "Camera Management 2D", "index.html", [
+    [ "Camera Management 2D", "index.html#autotoc_md5", [
+      [ "Requirements", "index.html#autotoc_md6", null ],
+      [ "Installation", "index.html#autotoc_md7", null ],
+      [ "Documentation", "index.html#autotoc_md8", null ],
+      [ "Author", "index.html#autotoc_md9", null ]
     ] ],
-    [ "[1.0.0] - 2024-07-16", "a00120.html", [
-      [ "[1.0.1] - 2024-07-24", "a00120.html#autotoc_md1", null ],
-      [ "[1.0.2] - 2024-07-24", "a00120.html#autotoc_md2", null ],
-      [ "[1.0.3] - 2024-07-29", "a00120.html#autotoc_md3", null ],
-      [ "[1.0.4] - 2024-08-01", "a00120.html#autotoc_md4", null ]
+    [ "[1.0.0] - 2024-07-16", "a00121.html", [
+      [ "[1.0.1] - 2024-07-24", "a00121.html#autotoc_md1", null ],
+      [ "[1.0.2] - 2024-07-24", "a00121.html#autotoc_md2", null ],
+      [ "[1.0.3] - 2024-07-29", "a00121.html#autotoc_md3", null ],
+      [ "[1.0.4] - 2024-08-01", "a00121.html#autotoc_md4", null ]
     ] ],
-    [ "LICENSE", "a00121.html", null ],
+    [ "LICENSE", "a00122.html", null ],
     [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ]
-      ] ]
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -57,17 +52,14 @@ var NAVTREE =
         [ "Enumerations", "functions_enum.html", null ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
-    ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"a00005_source.html",
-"files.html"
+"a00035.html",
+"a00080.html#aab010affddc4b9fb12c43373cfc52d2f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

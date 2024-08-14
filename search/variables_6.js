@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['interpolateposition_0',['interpolatePosition',['../a00059.html#a818218f54375fcc56733c5bceb5b92b6',1,'CameraManagement2D::CameraSmoothingModule']]],
-  ['interpolaterotation_1',['interpolateRotation',['../a00059.html#aede22b38d68807b0faec5d87e89b0c88',1,'CameraManagement2D::CameraSmoothingModule']]],
-  ['interpolatezoom_2',['interpolateZoom',['../a00059.html#abcae20a159e5a50cc9c75e5f00c2c290',1,'CameraManagement2D::CameraSmoothingModule']]]
+  ['interpolateposition_0',['interpolatePosition',['../a00060.html#adf3c997e3e4eaa7d87358c6341c59e33',1,'Lvl3Mage::CameraManagement2D::CameraSmoothingModule']]],
+  ['interpolaterotation_1',['interpolateRotation',['../a00060.html#a7167d748a5f67e5ed7b169a3fecbda34',1,'Lvl3Mage::CameraManagement2D::CameraSmoothingModule']]],
+  ['interpolatezoom_2',['interpolateZoom',['../a00060.html#a6f92db2eb1cd4e1930ce2789117bc237',1,'Lvl3Mage::CameraManagement2D::CameraSmoothingModule']]]
 ];

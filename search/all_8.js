@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['initialize_0',['Initialize',['../a00079.html#ae371fd0a1b3c6839265b0576e11d29d8',1,'CameraManagement2D::TrackedObject']]],
-  ['initializecameracontroller_1',['InitializeCameraController',['../a00047.html#afe10960725f546c147f21dae96b06ac3',1,'CameraManagement2D.CameraController.InitializeCameraController()'],['../a00055.html#a80ca01914fcc4839fada75b1f6452adc',1,'CameraManagement2D.CameraPanModule.InitializeCameraController()'],['../a00059.html#a155db87f6c4423a78d26cc791112b5d6',1,'CameraManagement2D.CameraSmoothingModule.InitializeCameraController()'],['../a00075.html#a96b557ac0dcdccfbbb8170d33b644787',1,'CameraManagement2D.TrackerCameraModule.InitializeCameraController()']]],
-  ['interpolateposition_2',['interpolatePosition',['../a00059.html#a818218f54375fcc56733c5bceb5b92b6',1,'CameraManagement2D::CameraSmoothingModule']]],
-  ['interpolaterotation_3',['interpolateRotation',['../a00059.html#aede22b38d68807b0faec5d87e89b0c88',1,'CameraManagement2D::CameraSmoothingModule']]],
-  ['interpolatezoom_4',['interpolateZoom',['../a00059.html#abcae20a159e5a50cc9c75e5f00c2c290',1,'CameraManagement2D::CameraSmoothingModule']]],
-  ['isempty_5',['IsEmpty',['../a00063.html#ad4e2adc381eb71196db39cd0b6ac194f',1,'CameraManagement2D::CameraState']]]
+  ['initialize_0',['Initialize',['../a00080.html#a150148f25673e9d663ba50e803689a75',1,'Lvl3Mage::CameraManagement2D::TrackerCameraModule::TrackedObject']]],
+  ['initializecameracontroller_1',['InitializeCameraController',['../a00048.html#a4328444469110eea63775fccc192459c',1,'Lvl3Mage.CameraManagement2D.CameraController.InitializeCameraController()'],['../a00056.html#aa0096a0ac4b10f93558039333e4885b1',1,'Lvl3Mage.CameraManagement2D.CameraPanModule.InitializeCameraController()'],['../a00060.html#a816845511792ccf0de5d622cb1df256d',1,'Lvl3Mage.CameraManagement2D.CameraSmoothingModule.InitializeCameraController()'],['../a00076.html#aaca4912536fc54753a519854b3b72f2f',1,'Lvl3Mage.CameraManagement2D.TrackerCameraModule.InitializeCameraController()']]],
+  ['interpolateposition_2',['interpolatePosition',['../a00060.html#adf3c997e3e4eaa7d87358c6341c59e33',1,'Lvl3Mage::CameraManagement2D::CameraSmoothingModule']]],
+  ['interpolaterotation_3',['interpolateRotation',['../a00060.html#a7167d748a5f67e5ed7b169a3fecbda34',1,'Lvl3Mage::CameraManagement2D::CameraSmoothingModule']]],
+  ['interpolatezoom_4',['interpolateZoom',['../a00060.html#a6f92db2eb1cd4e1930ce2789117bc237',1,'Lvl3Mage::CameraManagement2D::CameraSmoothingModule']]],
+  ['isempty_5',['IsEmpty',['../a00064.html#af3358f92c5ddb994955c0629a1f460af',1,'Lvl3Mage::CameraManagement2D::CameraState']]]
 ];

@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['cameracontroller_0',['CameraController',['../a00047.html',1,'CameraManagement2D']]],
-  ['cameramodulemanager_1',['CameraModuleManager',['../a00051.html',1,'CameraManagement2D']]],
-  ['camerapanmodule_2',['CameraPanModule',['../a00055.html',1,'CameraManagement2D']]],
-  ['camerasmoothingmodule_3',['CameraSmoothingModule',['../a00059.html',1,'CameraManagement2D']]],
-  ['camerastate_4',['CameraState',['../a00063.html',1,'CameraManagement2D']]],
-  ['camerastateclamp_5',['CameraStateClamp',['../a00067.html',1,'CameraManagement2D']]]
+  ['cameracontroller_0',['CameraController',['../a00048.html',1,'Lvl3Mage::CameraManagement2D']]],
+  ['cameramodulemanager_1',['CameraModuleManager',['../a00052.html',1,'Lvl3Mage::CameraManagement2D']]],
+  ['camerapanmodule_2',['CameraPanModule',['../a00056.html',1,'Lvl3Mage::CameraManagement2D']]],
+  ['camerasmoothingmodule_3',['CameraSmoothingModule',['../a00060.html',1,'Lvl3Mage::CameraManagement2D']]],
+  ['camerastate_4',['CameraState',['../a00064.html',1,'Lvl3Mage::CameraManagement2D']]],
+  ['camerastateclamp_5',['CameraStateClamp',['../a00068.html',1,'Lvl3Mage::CameraManagement2D']]]
 ];

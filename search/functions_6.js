@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['initialize_0',['Initialize',['../a00079.html#ae371fd0a1b3c6839265b0576e11d29d8',1,'CameraManagement2D::TrackedObject']]],
-  ['initializecameracontroller_1',['InitializeCameraController',['../a00047.html#afe10960725f546c147f21dae96b06ac3',1,'CameraManagement2D.CameraController.InitializeCameraController()'],['../a00055.html#a80ca01914fcc4839fada75b1f6452adc',1,'CameraManagement2D.CameraPanModule.InitializeCameraController()'],['../a00059.html#a155db87f6c4423a78d26cc791112b5d6',1,'CameraManagement2D.CameraSmoothingModule.InitializeCameraController()'],['../a00075.html#a96b557ac0dcdccfbbb8170d33b644787',1,'CameraManagement2D.TrackerCameraModule.InitializeCameraController()']]],
-  ['isempty_2',['IsEmpty',['../a00063.html#ad4e2adc381eb71196db39cd0b6ac194f',1,'CameraManagement2D::CameraState']]]
+  ['initialize_0',['Initialize',['../a00080.html#a150148f25673e9d663ba50e803689a75',1,'Lvl3Mage::CameraManagement2D::TrackerCameraModule::TrackedObject']]],
+  ['initializecameracontroller_1',['InitializeCameraController',['../a00048.html#a4328444469110eea63775fccc192459c',1,'Lvl3Mage.CameraManagement2D.CameraController.InitializeCameraController()'],['../a00056.html#aa0096a0ac4b10f93558039333e4885b1',1,'Lvl3Mage.CameraManagement2D.CameraPanModule.InitializeCameraController()'],['../a00060.html#a816845511792ccf0de5d622cb1df256d',1,'Lvl3Mage.CameraManagement2D.CameraSmoothingModule.InitializeCameraController()'],['../a00076.html#aaca4912536fc54753a519854b3b72f2f',1,'Lvl3Mage.CameraManagement2D.TrackerCameraModule.InitializeCameraController()']]],
+  ['isempty_2',['IsEmpty',['../a00064.html#af3358f92c5ddb994955c0629a1f460af',1,'Lvl3Mage::CameraManagement2D::CameraState']]]
 ];

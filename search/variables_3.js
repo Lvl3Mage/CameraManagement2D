@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['drawgizmos_0',['drawGizmos',['../a00055.html#a2df2f6df8204b5d4eeba0f6a6881f302',1,'CameraManagement2D.CameraPanModule.drawGizmos()'],['../a00075.html#a9e9eb489c7db16eb049d139ae56a81d4',1,'CameraManagement2D.TrackerCameraModule.drawGizmos()']]]
+  ['drawgizmos_0',['drawGizmos',['../a00056.html#a15c29e04df84f75e69bd287cc2602d79',1,'Lvl3Mage.CameraManagement2D.CameraPanModule.drawGizmos()'],['../a00076.html#a3b9c6fd017c287968721167d25c0ca52',1,'Lvl3Mage.CameraManagement2D.TrackerCameraModule.drawGizmos()']]]
 ];

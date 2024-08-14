@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['boundspadding_0',['boundsPadding',['../a00079.html#ad67b13762ae6d68a8d6b805e12028f5d',1,'CameraManagement2D::TrackedObject']]],
-  ['boundssource_1',['boundsSource',['../a00079.html#a4d925ceb7f501ec6dfc0299079e62da9',1,'CameraManagement2D::TrackedObject']]]
+  ['boundspadding_0',['boundsPadding',['../a00080.html#af99510296c0687faee474064b54937a0',1,'Lvl3Mage::CameraManagement2D::TrackerCameraModule::TrackedObject']]],
+  ['boundssource_1',['boundsSource',['../a00080.html#a2d88073d1fa32049b27a416842acfaf2',1,'Lvl3Mage::CameraManagement2D::TrackerCameraModule::TrackedObject']]]
 ];

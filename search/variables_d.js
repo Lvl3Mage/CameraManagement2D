@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['zoomclamp_0',['zoomClamp',['../a00067.html#aa6b18507a3f14e4c81273b0317c6a6e1',1,'CameraManagement2D::CameraStateClamp']]],
-  ['zoomfactor_1',['zoomFactor',['../a00055.html#ae02c295c5a10166f05f9602669506872',1,'CameraManagement2D::CameraPanModule']]],
-  ['zoomspeed_2',['zoomSpeed',['../a00059.html#a3452b0fd0d2f5fd5938b4649490ee9dc',1,'CameraManagement2D::CameraSmoothingModule']]]
+  ['zoomclamp_0',['zoomClamp',['../a00068.html#a4bff826ebf8e44b3000d47cf3dd5655f',1,'Lvl3Mage::CameraManagement2D::CameraStateClamp']]],
+  ['zoomfactor_1',['zoomFactor',['../a00056.html#a46a23386211e21d1ff215b1fcf4b7153',1,'Lvl3Mage::CameraManagement2D::CameraPanModule']]],
+  ['zoomspeed_2',['zoomSpeed',['../a00060.html#a996f0d1c21206d744c8d75099985668f',1,'Lvl3Mage::CameraManagement2D::CameraSmoothingModule']]]
 ];

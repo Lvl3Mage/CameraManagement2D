@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yclamp_0',['yClamp',['../a00067.html#ac34130ae9159df53a79f919b8daf16db',1,'CameraManagement2D::CameraStateClamp']]]
+  ['yclamp_0',['yClamp',['../a00068.html#a49c724b9688ba1e19e2d0f481aff8de6',1,'Lvl3Mage::CameraManagement2D::CameraStateClamp']]]
 ];

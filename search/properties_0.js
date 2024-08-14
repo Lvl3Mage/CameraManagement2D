@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['position_0',['Position',['../a00063.html#ab0181b4b40eeacb132f7aa24700231da',1,'CameraManagement2D::CameraState']]]
+  ['position_0',['Position',['../a00064.html#addf125cb40cfe420251e6fcdf7610436',1,'Lvl3Mage::CameraManagement2D::CameraState']]]
 ];

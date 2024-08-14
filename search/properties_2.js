@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zoom_0',['Zoom',['../a00063.html#ae5214be366353d9800b4a88d9b57f441',1,'CameraManagement2D::CameraState']]]
+  ['zoom_0',['Zoom',['../a00064.html#abc1c4b657d482219f52a595ab44f8ab3',1,'Lvl3Mage::CameraManagement2D::CameraState']]]
 ];

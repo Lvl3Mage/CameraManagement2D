@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['camera_20management_20package_0',['Camera Management Package',['../index.html',1,'']]]
+  ['camera_20management_202d_0',['Camera Management 2D',['../index.html',1,'']]]
 ];

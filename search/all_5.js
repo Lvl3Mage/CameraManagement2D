@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['empty_0',['Empty',['../a00063.html#ab28442f5371b5cc1a0b7aff9f49890ff',1,'CameraManagement2D::CameraState']]],
-  ['enforcecurrentbounds_1',['enforceCurrentBounds',['../a00075.html#a6f2429f1d7ed970fdc4564d58ac3741f',1,'CameraManagement2D::TrackerCameraModule']]],
-  ['exponentialzoom_2',['ExponentialZoom',['../a00063.html#a040169ca79a2a961d447cb21eb9a14b6',1,'CameraManagement2D.CameraState.ExponentialZoom(float zoomChange, Vector2 target)'],['../a00063.html#a006eb6e0c373f27e3879612af0533137',1,'CameraManagement2D.CameraState.ExponentialZoom(float zoomChange)']]]
+  ['empty_0',['Empty',['../a00064.html#ab4efced970921083f14c55d72ce670df',1,'Lvl3Mage::CameraManagement2D::CameraState']]],
+  ['enforcecurrentbounds_1',['enforceCurrentBounds',['../a00076.html#acfe1a1096c4fcef86794742377f517f1',1,'Lvl3Mage::CameraManagement2D::TrackerCameraModule']]],
+  ['exponentialzoom_2',['ExponentialZoom',['../a00064.html#a8583c7e573ec6fc3b0ab8961255189e3',1,'Lvl3Mage.CameraManagement2D.CameraState.ExponentialZoom(float zoomChange, Vector2 target)'],['../a00064.html#ace38bc2118dd3e45be93d9d78d3df315',1,'Lvl3Mage.CameraManagement2D.CameraState.ExponentialZoom(float zoomChange)']]]
 ];

@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['removetrackedobject_0',['RemoveTrackedObject',['../a00075.html#a5c55884b7c8942a647be4ee2f2083299',1,'CameraManagement2D::TrackerCameraModule']]],
-  ['renderer_1',['Renderer',['../a00035.html#a357009425e866bf9f64c1e08d26641dba07b20ae970048fc2002d756f27acc863',1,'CameraManagement2D']]],
-  ['representsposition_2',['RepresentsPosition',['../a00063.html#a0e08827c27541ba607f9cba4535bb936',1,'CameraManagement2D::CameraState']]],
-  ['representsrotation_3',['RepresentsRotation',['../a00063.html#a6495a7e55cb217764a9fb5f8d94934c8',1,'CameraManagement2D::CameraState']]],
-  ['representszoom_4',['RepresentsZoom',['../a00063.html#a0fef011fb4419eba1fb4ed5663048ca4',1,'CameraManagement2D::CameraState']]],
-  ['rotation_5',['Rotation',['../a00063.html#a0e226fbe6d35fb5db6c86e29d269099f',1,'CameraManagement2D::CameraState']]],
-  ['rotationspeed_6',['rotationSpeed',['../a00059.html#a051a9707560774f18097125ee6a9caa4',1,'CameraManagement2D::CameraSmoothingModule']]]
+  ['removetrackedobject_0',['RemoveTrackedObject',['../a00076.html#a86e60c171b85ffffa4ae62fc9693c871',1,'Lvl3Mage::CameraManagement2D::TrackerCameraModule']]],
+  ['renderer_1',['Renderer',['../a00076.html#a3902df004b45f6bd9cb0f4e5432d2ea9a07b20ae970048fc2002d756f27acc863',1,'Lvl3Mage::CameraManagement2D::TrackerCameraModule']]],
+  ['representsposition_2',['RepresentsPosition',['../a00064.html#ae87a84f9ad4c1d5d58588c235b9a5abf',1,'Lvl3Mage::CameraManagement2D::CameraState']]],
+  ['representsrotation_3',['RepresentsRotation',['../a00064.html#aed3835c419bb929410dc9c0778907e39',1,'Lvl3Mage::CameraManagement2D::CameraState']]],
+  ['representszoom_4',['RepresentsZoom',['../a00064.html#a60ad877ac4e57ba18c067315a3bf4ed8',1,'Lvl3Mage::CameraManagement2D::CameraState']]],
+  ['rotation_5',['Rotation',['../a00064.html#aa4bda909021a85144a59a8365a67a3df',1,'Lvl3Mage::CameraManagement2D::CameraState']]],
+  ['rotationspeed_6',['rotationSpeed',['../a00060.html#a2bf09cdb0599cc048125695b43d6c918',1,'Lvl3Mage::CameraManagement2D::CameraSmoothingModule']]]
 ];

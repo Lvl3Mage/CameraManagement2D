@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['trackedobject_0',['TrackedObject',['../a00079.html#a3800205c95417aae5b40ec61bada083a',1,'CameraManagement2D::TrackedObject']]],
-  ['tracks_1',['Tracks',['../a00079.html#a5aaac69301ca7ccdcedaeb1682a3fab0',1,'CameraManagement2D::TrackedObject']]]
+  ['trackedobject_0',['TrackedObject',['../a00080.html#a7d75daee36a48ca1e76b65f38d1d6023',1,'Lvl3Mage::CameraManagement2D::TrackerCameraModule::TrackedObject']]],
+  ['tracks_1',['Tracks',['../a00080.html#a6e99f82aea05510f0a6f40ab2154a329',1,'Lvl3Mage::CameraManagement2D::TrackerCameraModule::TrackedObject']]]
 ];
