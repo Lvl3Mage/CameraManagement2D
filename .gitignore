@@ -1,2 +1,12 @@
 /docs/html/
 /docs/html
+/docs/**/*.meta
+/_github/**/*.meta
+/.github/**/*.meta
+/Doxyfile.meta
+CHANGELOG.md.meta
+LICENSE.md.meta
+package.json.meta
+README.md.meta
+docs.meta
+_github.meta

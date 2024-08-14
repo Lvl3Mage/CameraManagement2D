@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CameraManagement2D
+namespace Lvl3Mage.CameraManagement2D
 {
 	/// <summary>
 	/// Manages multiple camera controllers, allowing switching between them.

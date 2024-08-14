@@ -1,8 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-namespace CameraManagement2D
+namespace Lvl3Mage.CameraManagement2D
 {
+	
 	/// <summary>
 	/// An abstract base class for camera controllers.
 	/// </summary>

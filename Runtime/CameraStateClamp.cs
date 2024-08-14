@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using CameraManagement2D;
+using Lvl3Mage.CameraManagement2D;
 using MyBox;
 using UnityEngine;
 
-namespace CameraManagement2D
+namespace Lvl3Mage.CameraManagement2D
 {
 	/// <summary>
 	/// Provides functionality to clamp the camera state, including position, bounds, and zoom.
@@ -61,7 +61,7 @@ namespace CameraManagement2D
 		/// <summary>
 		/// Clamps the camera state based on the configured clamp settings.
 		/// </summary>
-		/// <param name="state">The camera state to clamp.</param>
+		/// <param name="state2D">The camera state to clamp.</param>
 		/// <param name="cameraAspect">The aspect ratio of the camera.</param>
 		/// <returns>The clamped camera state.</returns>
 		public CameraState ClampState(CameraState state, float cameraAspect)
@@ -82,7 +82,7 @@ namespace CameraManagement2D
 		/// <summary>
 		/// Clamps the position of the camera state based on the configured X and Y clamps.
 		/// </summary>
-		/// <param name="state">The camera state to clamp.</param>
+		/// <param name="state2D">The camera state to clamp.</param>
 		/// <returns>The clamped camera state.</returns>
 		CameraState ClampPosition(CameraState state)
 		{
@@ -99,7 +99,7 @@ namespace CameraManagement2D
 		/// <summary>
 		/// Clamps the bounds of the camera state based on the configured X and Y clamps.
 		/// </summary>
-		/// <param name="state">The camera state to clamp.</param>
+		/// <param name="state2D">The camera state to clamp.</param>
 		/// <param name="cameraAspect">The aspect ratio of the camera.</param>
 		/// <returns>The clamped camera state.</returns>
 		CameraState ClampBounds(CameraState state, float cameraAspect)

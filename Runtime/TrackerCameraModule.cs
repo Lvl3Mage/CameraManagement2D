@@ -6,7 +6,7 @@ using MyBox;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace CameraManagement2D
+namespace Lvl3Mage.CameraManagement2D
 {
 	/// <summary>
 	/// A camera module that tracks multiple objects and adjusts the camera's state to ensure all tracked objects
@@ -46,7 +46,7 @@ namespace CameraManagement2D
 		/// <summary>
 		/// The component used to clamp the camera's state to certain bounds.
 		/// </summary>
-		[SerializeField] CameraStateClamp clamp;
+		[SerializeField] CameraStateClamp clamp = new();
 		/// <summary>
 		/// Whether to draw gizmos in the editor for visualizing clamping bounds.
 		/// </summary>
@@ -141,6 +141,162 @@ namespace CameraManagement2D
 		{
 			trackedObjects.ForEach((el)=>el.Update(Time.fixedDeltaTime));
 		}
+		/// <summary>
+		/// Enumeration for the types of bounds that can be used for tracking.
+		/// </summary>
+		public enum BoundsSource
+		{
+			/// <summary>
+			/// No bounds are used for tracking. Only the object's transform is considered.
+			/// </summary>
+			None,
+			/// <summary>
+			/// The object's renderer bounds are used for tracking.
+			/// </summary>
+			Renderer,
+			/// <summary>
+			/// The object's collider bounds are used for tracking.
+			/// </summary>
+			Collider,
+			RectTransform
+		}
+		/// <summary>
+		/// Represents an object being tracked by the camera, including its bounds and prediction capabilities.
+		/// </summary>
+		[Serializable]
+		public class TrackedObject
+		{
+			
+			/// <summary>
+			/// The game object being tracked.
+			/// </summary>
+			[SerializeField] GameObject gameObject;
+			/// <summary>
+			/// The type of bounds to use for tracking the object.
+			/// </summary>
+			[SerializeField] BoundsSource boundsSource;
+			/// <summary>
+			/// Padding to add around the object's bounds.
+			/// </summary>
+			[SerializeField]float boundsPadding = 0f;
+			Transform transform;
+			Vector2 pastPosition;
+			float updateDeltaTime;
+			Renderer renderer;
+			Collider2D collider;
+			RectTransform rectTransform;
+			
+			
+			/// <summary>
+			/// Initializes a new instance of the <see cref="TrackedObject"/> class.
+			/// </summary>
+			/// <param name="gameObject">The game object to track.</param>
+			/// <param name="boundsSource">The type of bounds to use for tracking.</param>
+			/// <param name="boundsPadding">The padding to add around the object's bounds.</param>
+			public TrackedObject(GameObject gameObject, BoundsSource boundsSource = BoundsSource.None, float boundsPadding = 0f)
+			{
+				this.gameObject = gameObject;
+				this.boundsSource = boundsSource;
+				this.boundsPadding = boundsPadding;
+				Initialize();
+			}
+			/// <summary>
+			/// Initializes the tracked object, including setting up the transform, renderer, and collider.
+			/// </summary>
+			public void Initialize()
+			{
+				
+				if (!gameObject){
+					Debug.LogError("GameObject is null on initialization!", gameObject);
+				}
+				transform = gameObject.transform;
+				pastPosition = transform.position;
+				renderer = gameObject.GetComponent<Renderer>();
+				collider = gameObject.GetComponent<Collider2D>();
+				rectTransform = gameObject.GetComponent<RectTransform>();
+				switch (boundsSource){
+					case BoundsSource.None:
+						break;
+					case BoundsSource.Renderer:
+						if (!renderer){
+							Debug.LogWarning("Renderer not found on object", gameObject);
+						}
+						break;
+					case BoundsSource.Collider:
+						if (!collider){
+							Debug.LogWarning("Collider2D not found on object", gameObject);
+						}
+						break;
+					case BoundsSource.RectTransform:
+						if (!rectTransform){
+							Debug.LogWarning("RectTransform not found on object", gameObject);
+						}
+						break;
+				}
+			}
+			/// <summary>
+			/// Checks if this tracked object is the same as the specified object.
+			/// </summary>
+			/// <param name="obj">The object to check.</param>
+			/// <returns>True if this object is tracking the specified object; otherwise, false.</returns>
+			public bool Tracks(GameObject obj)
+			{
+				return gameObject == obj;
+			}
+			/// <summary>
+			/// Updates the tracked object's past position and delta time.
+			/// </summary>
+			/// <param name="deltaTime">The time elapsed since the last update.</param>
+			public void Update(float deltaTime)
+			{
+				pastPosition = transform.position;
+				updateDeltaTime = deltaTime;
+			}
+			/// <summary>
+			/// Gets the bounds of the tracked object, including any specified padding.
+			/// </summary>
+			/// <returns>The bounds of the tracked object.</returns>
+			public Bounds GetBounds()
+			{
+				Bounds bounds = new Bounds(transform.position, Vector3.zero);
+				switch(boundsSource)
+				{
+					case BoundsSource.Renderer:
+						if(renderer){
+							bounds = renderer.bounds;
+						}
+						break;
+					case BoundsSource.Collider:
+						if(collider){
+							bounds = collider.bounds;
+						}
+						break;
+					case BoundsSource.RectTransform:
+						if(rectTransform){
+							bounds = new Bounds(transform.position, rectTransform.rect.size);
+						}
+						break;
+					case BoundsSource.None:
+						break;
+				}
+				bounds.Expand(boundsPadding);
+				return bounds;
+			}
+			/// <summary>
+			/// Gets the predicted bounds of the tracked object based on its velocity and the specified prediction time.
+			/// </summary>
+			/// <param name="predictionTime">The time into the future to predict the object's position.</param>
+			/// <returns>The predicted bounds of the tracked object.</returns>
+			public Bounds GetPredictedBounds(float predictionTime)
+			{
+				Bounds bounds = GetBounds();
+				Vector2 velocity = ((Vector2)transform.position - pastPosition) / updateDeltaTime;
+				bounds.center += (Vector3)velocity * predictionTime;
+				return bounds;
+			}
+		}
+		
+		
 #if UNITY_EDITOR
 		Camera gizmoCamera;
 
@@ -159,159 +315,5 @@ namespace CameraManagement2D
 		}
 
 #endif
-	}
-	/// <summary>
-	/// Enumeration for the types of bounds that can be used for tracking.
-	/// </summary>
-	public enum BoundsSource
-	{
-		/// <summary>
-		/// No bounds are used for tracking. Only the object's transform is considered.
-		/// </summary>
-		None,
-		/// <summary>
-		/// The object's renderer bounds are used for tracking.
-		/// </summary>
-		Renderer,
-		/// <summary>
-		/// The object's collider bounds are used for tracking.
-		/// </summary>
-		Collider,
-		RectTransform
-	}
-	/// <summary>
-	/// Represents an object being tracked by the camera, including its bounds and prediction capabilities.
-	/// </summary>
-	[System.Serializable]
-	public class TrackedObject
-	{
-		
-		/// <summary>
-		/// The game object being tracked.
-		/// </summary>
-		[SerializeField] GameObject gameObject;
-		/// <summary>
-		/// The type of bounds to use for tracking the object.
-		/// </summary>
-		[SerializeField] BoundsSource boundsSource;
-		/// <summary>
-		/// Padding to add around the object's bounds.
-		/// </summary>
-		[SerializeField]float boundsPadding = 0f;
-		Transform transform;
-		Vector2 pastPosition;
-		float updateDeltaTime;
-		Renderer renderer;
-		Collider2D collider;
-		RectTransform rectTransform;
-		
-		
-		/// <summary>
-		/// Initializes a new instance of the <see cref="TrackedObject"/> class.
-		/// </summary>
-		/// <param name="gameObject">The game object to track.</param>
-		/// <param name="boundsSource">The type of bounds to use for tracking.</param>
-		/// <param name="boundsPadding">The padding to add around the object's bounds.</param>
-		public TrackedObject(GameObject gameObject, BoundsSource boundsSource = BoundsSource.None, float boundsPadding = 0f)
-		{
-			this.gameObject = gameObject;
-			this.boundsSource = boundsSource;
-			this.boundsPadding = boundsPadding;
-			Initialize();
-		}
-		/// <summary>
-		/// Initializes the tracked object, including setting up the transform, renderer, and collider.
-		/// </summary>
-		public void Initialize()
-		{
-			
-			if (!gameObject){
-				Debug.LogError("GameObject is null on initialization!", gameObject);
-			}
-			transform = gameObject.transform;
-			pastPosition = transform.position;
-			renderer = gameObject.GetComponent<Renderer>();
-			collider = gameObject.GetComponent<Collider2D>();
-			rectTransform = gameObject.GetComponent<RectTransform>();
-			switch (boundsSource){
-				case BoundsSource.None:
-					break;
-				case BoundsSource.Renderer:
-					if (!renderer){
-						Debug.LogWarning("Renderer not found on object", gameObject);
-					}
-					break;
-				case BoundsSource.Collider:
-					if (!collider){
-						Debug.LogWarning("Collider2D not found on object", gameObject);
-					}
-					break;
-				case BoundsSource.RectTransform:
-					if (!rectTransform){
-						Debug.LogWarning("RectTransform not found on object", gameObject);
-					}
-					break;
-			}
-		}
-		/// <summary>
-		/// Checks if this tracked object is the same as the specified object.
-		/// </summary>
-		/// <param name="obj">The object to check.</param>
-		/// <returns>True if this object is tracking the specified object; otherwise, false.</returns>
-		public bool Tracks(GameObject obj)
-		{
-			return gameObject == obj;
-		}
-		/// <summary>
-		/// Updates the tracked object's past position and delta time.
-		/// </summary>
-		/// <param name="deltaTime">The time elapsed since the last update.</param>
-		public void Update(float deltaTime)
-		{
-			pastPosition = transform.position;
-			updateDeltaTime = deltaTime;
-		}
-		/// <summary>
-		/// Gets the bounds of the tracked object, including any specified padding.
-		/// </summary>
-		/// <returns>The bounds of the tracked object.</returns>
-		public Bounds GetBounds()
-		{
-			Bounds bounds = new Bounds(transform.position, Vector3.zero);
-			switch(boundsSource)
-			{
-				case BoundsSource.Renderer:
-					if(renderer){
-						bounds = renderer.bounds;
-					}
-					break;
-				case BoundsSource.Collider:
-					if(collider){
-						bounds = collider.bounds;
-					}
-					break;
-				case BoundsSource.RectTransform:
-					if(rectTransform){
-						bounds = new Bounds(transform.position, rectTransform.rect.size);
-					}
-					break;
-				case BoundsSource.None:
-					break;
-			}
-			bounds.Expand(boundsPadding);
-			return bounds;
-		}
-		/// <summary>
-		/// Gets the predicted bounds of the tracked object based on its velocity and the specified prediction time.
-		/// </summary>
-		/// <param name="predictionTime">The time into the future to predict the object's position.</param>
-		/// <returns>The predicted bounds of the tracked object.</returns>
-		public Bounds GetPredictedBounds(float predictionTime)
-		{
-			Bounds bounds = GetBounds();
-			Vector2 velocity = ((Vector2)transform.position - pastPosition) / updateDeltaTime;
-			bounds.center += (Vector3)velocity * predictionTime;
-			return bounds;
-		}
 	}
 }

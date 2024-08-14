@@ -1,9 +1,9 @@
 ﻿using System;
-using CameraManagement2D;
+using Lvl3Mage.CameraManagement2D;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace CameraManagement2D
+namespace Lvl3Mage.CameraManagement2D
 {
 	/// <summary>
 	/// A camera controller module that allows for panning and zooming of the camera based on user input.

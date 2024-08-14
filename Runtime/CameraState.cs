@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using Interpolation;
+using Lvl3Mage.InterpolationToolkit;
 
-namespace CameraManagement2D
+namespace Lvl3Mage.CameraManagement2D
 {
 	/// <summary>
 	/// Encapsulates the state of a 2D camera, including its position, zoom level, and rotation. It provides functionality to manage, modify, and apply camera states in a flexible manner.
@@ -336,7 +336,11 @@ namespace CameraManagement2D
 			};
 			return newState;
 		}
-
+		
+		public void ApplyTo(Camera camera)
+		{
+			ApplyTo(camera, false);
+		}
 		/// <summary>
 		/// Applies the CameraState to a given Camera.
 		/// </summary>

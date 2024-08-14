@@ -1,26 +1,19 @@
-{
-  "name": "com.lvl3mage.camera-management",
-  "version": "1.0.4",
-  "displayName": "Camera Management",
-  "description": "A package that provides an extendable camera management system.",
+﻿{
+  "name": "com.lvl3mage.com.lvl3mage.camera-management-2d",
+  "version": "1.0.0",
+  "displayName": "Camera Management 2D",
+  "description": "A package that provides an extendable 2D camera management system as well as a few built in camera controllers.",
   "unity": "2021.3",
-  "dependencies": {
-    "com.lvl3mage.interpolation": "1.0.0",
-    "com.domybest.mybox": "1.8.0"
-  },
-  "author": "Lvl3Mage (https://github.com/Lvl3Mage)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lvl3Mage/CameraManagement.git"
+    "url": "git+https://github.com/lvl3mage/CameraManagement2D.git"
   },
   "keywords": [
-    "camera",
-    "utility",
-    "unity"
   ],
+  "author": "lvl3mage",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Lvl3Mage/CameraManagement/issues"
+    "url": "https://github.com/lvl3mage/CameraManagement2D/issues"
   },
-  "homepage": "https://github.com/Lvl3Mage/CameraManagement#readme"
+  "homepage": "https://github.com/lvl3mage/CameraManagement2D#readme"
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CameraManagement2D
+namespace Lvl3Mage.CameraManagement2D
 {
 	/// <summary>
 	/// A class that provides easy access to the scene camera, and allows for easy activation/deactivation of the camera
@@ -50,7 +50,19 @@ namespace CameraManagement2D
 		/// </summary>
 		/// <returns>A Vector2 representing the cursor's world position</returns>
 		public static Vector2 GetWorldMousePosition(){
-			return instance.camera.ScreenToWorldPoint(Input.mousePosition);
+			return instance.camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1));
+		}
+		/// <summary>
+		/// Get the world position of the mouse in the active camera's view at a specified depth
+		/// </summary>
+		/// <param name="depth">
+		/// The depth at which to get the mouse position
+		/// </param>
+		/// <returns>
+		/// A Vector3 representing the cursor's world position at the specified depth
+		/// </returns>
+        public static Vector3 GetWorldMousePosition(float depth){
+			return instance.camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, depth));
 		}
 		/// <summary>
 		/// Get the camera attached to the active SceneCamera

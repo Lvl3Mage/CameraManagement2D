@@ -1,8 +1,9 @@
 ﻿using System;
 using MyBox;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace CameraManagement2D
+namespace Lvl3Mage.CameraManagement2D
 {
     /// <summary>
     /// A module for smoothing camera movement, including position, zoom, and rotation.
@@ -45,7 +46,7 @@ namespace CameraManagement2D
 		/// <summary>
 		/// The target camera controller towards which the state will be interpolated.
 		/// </summary>
-		[SerializeField] CameraController targetController;
+		[FormerlySerializedAs("targetController2D")] [SerializeField] CameraController targetController;
 		protected override void OnUserInputChange(bool value)
 		{
 			targetController.UseUserInput(value);

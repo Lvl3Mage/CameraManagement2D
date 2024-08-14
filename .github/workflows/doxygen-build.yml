@@ -1,4 +1,4 @@
-name: Build Doxygen
+﻿name: Build Doxygen
 permissions:
   contents: write
 on:
