@@ -1,5 +1,5 @@
 ﻿{
-  "name": "com.lvl3mage.com.lvl3mage.camera-management-2d",
+  "name": "com.lvl3mage.camera-management-2d",
   "version": "1.0.0",
   "displayName": "Camera Management 2D",
   "description": "A package that provides an extendable 2D camera management system as well as a few built in camera controllers.",
@@ -10,6 +10,9 @@
   },
   "keywords": [
   ],
+  "dependencies": {
+    "com.lvl3mage.interpolation-toolkit": "1.0.0"
+  },
   "author": "lvl3mage",
   "license": "MIT",
   "bugs": {
