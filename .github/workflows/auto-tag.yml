@@ -1,6 +1,5 @@
 name: AutoTag
 
-permissions: write-all
 on:
   push:
     branches:
@@ -12,3 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: Klemensas/action-autotag@stable
+      with:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+    
