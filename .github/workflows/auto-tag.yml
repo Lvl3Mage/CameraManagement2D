@@ -1,16 +1,17 @@
-name: AutoTag
+name: Auto.Tag
 
-on:
-  push:
-    branches:
-      - main
+on: 
+- push
 
 jobs:
-  build:
+  tag:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: Klemensas/action-autotag@stable
+    strategy:
+      matrix:
+        node-version: 
+        - 12
+    steps: 
+    - uses: phish108/autotag-action@v1.1.55
       with:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-    
+        github-token: ${{ secrets.GITHUB_TOKEN}}
+        with-v: "true"
