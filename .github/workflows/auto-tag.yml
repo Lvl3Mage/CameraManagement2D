@@ -1,5 +1,5 @@
 name: Auto.Tag
-
+permissions: write-all
 on: 
 - push
 
