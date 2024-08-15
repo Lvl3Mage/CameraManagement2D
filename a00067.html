@@ -1,0 +1,1791 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Camera Management 2D: Lvl3Mage.CameraManagement2D.CameraState Struct Reference" />
+<!-- <meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" /> -->
+<meta property="og:description" content="A package that provides an extendable 2D camera management system." />
+<meta property="og:url" content="https://lvl3mage.github.io/CameraManagement2D" />
+<!-- END opengraph metadata -->
+<title>Camera Management 2D: Lvl3Mage.CameraManagement2D.CameraState Struct Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+ <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/lvl3mage/CameraManagement2D" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Camera Management 2D
+   </div>
+   <div id="projectbrief">A package that provides an extendable 2D camera management system.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('a00067.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="a00064.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Lvl3Mage.CameraManagement2D.CameraState Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Encapsulates the state of a 2D camera, including its position, zoom level, and rotation. It provides functionality to manage, modify, and apply camera states in a flexible manner.  
+ <a href="a00067.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:afb19de23469521b55d58795ae0f995d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#afb19de23469521b55d58795ae0f995d5">CameraState</a> (Vector2 position, float zoom, float rotation)</td></tr>
+<tr class="memdesc:afb19de23469521b55d58795ae0f995d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> class with the specified position, zoom, rotation  <a href="a00067.html#afb19de23469521b55d58795ae0f995d5">More...</a><br /></td></tr>
+<tr class="separator:afb19de23469521b55d58795ae0f995d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ba19998ce49e7c5b7229882082266a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#ad3ba19998ce49e7c5b7229882082266a">CameraState</a> (<a class="el" href="a00067.html">CameraState</a> other)</td></tr>
+<tr class="memdesc:ad3ba19998ce49e7c5b7229882082266a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> class by copying another <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a>.  <a href="a00067.html#ad3ba19998ce49e7c5b7229882082266a">More...</a><br /></td></tr>
+<tr class="separator:ad3ba19998ce49e7c5b7229882082266a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6fbba94aeecf50a805a5a7b9dcb675d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#af6fbba94aeecf50a805a5a7b9dcb675d">Clone</a> ()</td></tr>
+<tr class="memdesc:af6fbba94aeecf50a805a5a7b9dcb675d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that is a copy of the current instance.  <a href="a00067.html#af6fbba94aeecf50a805a5a7b9dcb675d">More...</a><br /></td></tr>
+<tr class="separator:af6fbba94aeecf50a805a5a7b9dcb675d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5611f2e8af47fa16a817440a4b92908d"><td class="memItemLeft" align="right" valign="top">Bounds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a5611f2e8af47fa16a817440a4b92908d">GetBounds</a> (float aspectRatio)</td></tr>
+<tr class="memdesc:a5611f2e8af47fa16a817440a4b92908d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the bounds of the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with a specified aspect ratio. Currently does not take rotation into account.  <a href="a00067.html#a5611f2e8af47fa16a817440a4b92908d">More...</a><br /></td></tr>
+<tr class="separator:a5611f2e8af47fa16a817440a4b92908d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87eb44c79ccd0c6008486f3e7e709e41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a87eb44c79ccd0c6008486f3e7e709e41">WithPosition</a> (Vector2? position)</td></tr>
+<tr class="memdesc:a87eb44c79ccd0c6008486f3e7e709e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the specified position value.  <a href="a00067.html#a87eb44c79ccd0c6008486f3e7e709e41">More...</a><br /></td></tr>
+<tr class="separator:a87eb44c79ccd0c6008486f3e7e709e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa381178c41b665288e740909997783b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#aaa381178c41b665288e740909997783b">WithPosition</a> (Vector2 position)</td></tr>
+<tr class="memdesc:aaa381178c41b665288e740909997783b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the specified position value.  <a href="a00067.html#aaa381178c41b665288e740909997783b">More...</a><br /></td></tr>
+<tr class="separator:aaa381178c41b665288e740909997783b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba742bab86f218181cae05cb2dff2ac9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#aba742bab86f218181cae05cb2dff2ac9">WithPosition</a> (<a class="el" href="a00067.html">CameraState</a> other)</td></tr>
+<tr class="memdesc:aba742bab86f218181cae05cb2dff2ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the position value from another <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a>.  <a href="a00067.html#aba742bab86f218181cae05cb2dff2ac9">More...</a><br /></td></tr>
+<tr class="separator:aba742bab86f218181cae05cb2dff2ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a628458684f85b55d2e0e93c40b7c275e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a628458684f85b55d2e0e93c40b7c275e">WithoutPosition</a> ()</td></tr>
+<tr class="memdesc:a628458684f85b55d2e0e93c40b7c275e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> without a position value.  <a href="a00067.html#a628458684f85b55d2e0e93c40b7c275e">More...</a><br /></td></tr>
+<tr class="separator:a628458684f85b55d2e0e93c40b7c275e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a659feb808afce0e45e7ad09cb2fcd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a1a659feb808afce0e45e7ad09cb2fcd6">WithZoom</a> (float zoom)</td></tr>
+<tr class="memdesc:a1a659feb808afce0e45e7ad09cb2fcd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the specified zoom value.  <a href="a00067.html#a1a659feb808afce0e45e7ad09cb2fcd6">More...</a><br /></td></tr>
+<tr class="separator:a1a659feb808afce0e45e7ad09cb2fcd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb4e06b19817c54672b92200f27cf237"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#adb4e06b19817c54672b92200f27cf237">WithZoom</a> (float? zoom)</td></tr>
+<tr class="memdesc:adb4e06b19817c54672b92200f27cf237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the specified zoom value.  <a href="a00067.html#adb4e06b19817c54672b92200f27cf237">More...</a><br /></td></tr>
+<tr class="separator:adb4e06b19817c54672b92200f27cf237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4d1a0cbdedd099bcc5d363c3554e7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#abd4d1a0cbdedd099bcc5d363c3554e7f">WithZoom</a> (<a class="el" href="a00067.html">CameraState</a> other)</td></tr>
+<tr class="memdesc:abd4d1a0cbdedd099bcc5d363c3554e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the zoom value from another <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a>.  <a href="a00067.html#abd4d1a0cbdedd099bcc5d363c3554e7f">More...</a><br /></td></tr>
+<tr class="separator:abd4d1a0cbdedd099bcc5d363c3554e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3620b04c4b424df78aa64dc3a4412b5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a3620b04c4b424df78aa64dc3a4412b5e">WithoutZoom</a> ()</td></tr>
+<tr class="memdesc:a3620b04c4b424df78aa64dc3a4412b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> without a zoom value.  <a href="a00067.html#a3620b04c4b424df78aa64dc3a4412b5e">More...</a><br /></td></tr>
+<tr class="separator:a3620b04c4b424df78aa64dc3a4412b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa938a3f43c8d2ef731156d15a3dad354"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#aa938a3f43c8d2ef731156d15a3dad354">WithRotation</a> (float rotation)</td></tr>
+<tr class="memdesc:aa938a3f43c8d2ef731156d15a3dad354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the specified rotation value.  <a href="a00067.html#aa938a3f43c8d2ef731156d15a3dad354">More...</a><br /></td></tr>
+<tr class="separator:aa938a3f43c8d2ef731156d15a3dad354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f99d1d9fea26b4bc44f1c7ea8ef2cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#ae0f99d1d9fea26b4bc44f1c7ea8ef2cb">WithRotation</a> (float? rotation)</td></tr>
+<tr class="memdesc:ae0f99d1d9fea26b4bc44f1c7ea8ef2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the specified rotation value.  <a href="a00067.html#ae0f99d1d9fea26b4bc44f1c7ea8ef2cb">More...</a><br /></td></tr>
+<tr class="separator:ae0f99d1d9fea26b4bc44f1c7ea8ef2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1646ed1782d76c3549e21cf172d2a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a4e1646ed1782d76c3549e21cf172d2a3">WithRotation</a> (<a class="el" href="a00067.html">CameraState</a> other)</td></tr>
+<tr class="memdesc:a4e1646ed1782d76c3549e21cf172d2a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the rotation value from another <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a>.  <a href="a00067.html#a4e1646ed1782d76c3549e21cf172d2a3">More...</a><br /></td></tr>
+<tr class="separator:a4e1646ed1782d76c3549e21cf172d2a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdfdf89abbb62c490946b09803d6ebb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#afdfdf89abbb62c490946b09803d6ebb6">WithoutRotation</a> ()</td></tr>
+<tr class="memdesc:afdfdf89abbb62c490946b09803d6ebb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> without a rotation value.  <a href="a00067.html#afdfdf89abbb62c490946b09803d6ebb6">More...</a><br /></td></tr>
+<tr class="separator:afdfdf89abbb62c490946b09803d6ebb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28098138596086a9e121744cc1a0435d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a28098138596086a9e121744cc1a0435d">ApplyTo</a> (Camera camera, bool local=false)</td></tr>
+<tr class="memdesc:a28098138596086a9e121744cc1a0435d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to a given Camera.  <a href="a00067.html#a28098138596086a9e121744cc1a0435d">More...</a><br /></td></tr>
+<tr class="separator:a28098138596086a9e121744cc1a0435d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ad877ac4e57ba18c067315a3bf4ed8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a60ad877ac4e57ba18c067315a3bf4ed8">RepresentsZoom</a> ()</td></tr>
+<tr class="memdesc:a60ad877ac4e57ba18c067315a3bf4ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> represents a zoom value.  <a href="a00067.html#a60ad877ac4e57ba18c067315a3bf4ed8">More...</a><br /></td></tr>
+<tr class="separator:a60ad877ac4e57ba18c067315a3bf4ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3835c419bb929410dc9c0778907e39"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#aed3835c419bb929410dc9c0778907e39">RepresentsRotation</a> ()</td></tr>
+<tr class="memdesc:aed3835c419bb929410dc9c0778907e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> represents a rotation value.  <a href="a00067.html#aed3835c419bb929410dc9c0778907e39">More...</a><br /></td></tr>
+<tr class="separator:aed3835c419bb929410dc9c0778907e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87a84f9ad4c1d5d58588c235b9a5abf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#ae87a84f9ad4c1d5d58588c235b9a5abf">RepresentsPosition</a> ()</td></tr>
+<tr class="memdesc:ae87a84f9ad4c1d5d58588c235b9a5abf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> represents a position value.  <a href="a00067.html#ae87a84f9ad4c1d5d58588c235b9a5abf">More...</a><br /></td></tr>
+<tr class="separator:ae87a84f9ad4c1d5d58588c235b9a5abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3358f92c5ddb994955c0629a1f460af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#af3358f92c5ddb994955c0629a1f460af">IsEmpty</a> ()</td></tr>
+<tr class="memdesc:af3358f92c5ddb994955c0629a1f460af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> is empty (i.e., no position, zoom, or rotation values).  <a href="a00067.html#af3358f92c5ddb994955c0629a1f460af">More...</a><br /></td></tr>
+<tr class="separator:af3358f92c5ddb994955c0629a1f460af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf03b263ad157951a343541508a58ab3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#adf03b263ad157951a343541508a58ab3">DecayPositionTo</a> (<a class="el" href="a00067.html">CameraState</a> target, float factor, float deltaTime=-1)</td></tr>
+<tr class="memdesc:adf03b263ad157951a343541508a58ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decays the position of the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to a target position over multiple calls.  <a href="a00067.html#adf03b263ad157951a343541508a58ab3">More...</a><br /></td></tr>
+<tr class="separator:adf03b263ad157951a343541508a58ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374e2b980ec21ef480be82749b5b8a16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a374e2b980ec21ef480be82749b5b8a16">DecayZoomTo</a> (<a class="el" href="a00067.html">CameraState</a> target, float factor, float deltaTime=-1)</td></tr>
+<tr class="memdesc:a374e2b980ec21ef480be82749b5b8a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decays the zoom of the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to a target position over multiple calls.  <a href="a00067.html#a374e2b980ec21ef480be82749b5b8a16">More...</a><br /></td></tr>
+<tr class="separator:a374e2b980ec21ef480be82749b5b8a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76091e84d65c87d54f2e117eec480131"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a76091e84d65c87d54f2e117eec480131">DecayRotationTo</a> (<a class="el" href="a00067.html">CameraState</a> target, float factor, float deltaTime=-1)</td></tr>
+<tr class="memdesc:a76091e84d65c87d54f2e117eec480131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decays the rotation of the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to a target position over multiple calls.  <a href="a00067.html#a76091e84d65c87d54f2e117eec480131">More...</a><br /></td></tr>
+<tr class="separator:a76091e84d65c87d54f2e117eec480131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5810835ae9addf9b3842afa9eae5abd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a5810835ae9addf9b3842afa9eae5abd0">ZoomTowards</a> (float targetZoom, Vector2 target)</td></tr>
+<tr class="memdesc:a5810835ae9addf9b3842afa9eae5abd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zooms the camera state to a target zoom towards a target position  <a href="a00067.html#a5810835ae9addf9b3842afa9eae5abd0">More...</a><br /></td></tr>
+<tr class="separator:a5810835ae9addf9b3842afa9eae5abd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01dc692944f92a490d7b1eb73434eaf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#af01dc692944f92a490d7b1eb73434eaf">ZoomTowards</a> (<a class="el" href="a00067.html">CameraState</a> other, Vector2 target)</td></tr>
+<tr class="memdesc:af01dc692944f92a490d7b1eb73434eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zooms the camera state to a target zoom towards a target position  <a href="a00067.html#af01dc692944f92a490d7b1eb73434eaf">More...</a><br /></td></tr>
+<tr class="separator:af01dc692944f92a490d7b1eb73434eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8583c7e573ec6fc3b0ab8961255189e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a8583c7e573ec6fc3b0ab8961255189e3">ExponentialZoom</a> (float zoomChange, Vector2 target)</td></tr>
+<tr class="memdesc:a8583c7e573ec6fc3b0ab8961255189e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zooms the camera exponentially with the value provided towards a target position. This allows for linear zoom 'feel' when the zoom change is constant.  <a href="a00067.html#a8583c7e573ec6fc3b0ab8961255189e3">More...</a><br /></td></tr>
+<tr class="separator:a8583c7e573ec6fc3b0ab8961255189e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace38bc2118dd3e45be93d9d78d3df315"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#ace38bc2118dd3e45be93d9d78d3df315">ExponentialZoom</a> (float zoomChange)</td></tr>
+<tr class="memdesc:ace38bc2118dd3e45be93d9d78d3df315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zooms the camera exponentially with the value provided towards the center of the screen. This allows for linear zoom 'feel' when the zoom change is constant.  <a href="a00067.html#ace38bc2118dd3e45be93d9d78d3df315">More...</a><br /></td></tr>
+<tr class="separator:ace38bc2118dd3e45be93d9d78d3df315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd14fc3bc0255fa922a838c267c2731f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#abd14fc3bc0255fa922a838c267c2731f">ClampedZoom</a> (float min, float max)</td></tr>
+<tr class="memdesc:abd14fc3bc0255fa922a838c267c2731f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps the zoom value of the camera state between a minimum and maximum value  <a href="a00067.html#abd14fc3bc0255fa922a838c267c2731f">More...</a><br /></td></tr>
+<tr class="separator:abd14fc3bc0255fa922a838c267c2731f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eaa68b6642b380c3d399686b8aa1a0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a1eaa68b6642b380c3d399686b8aa1a0e">ClampedZoom</a> (Vector2 clamp)</td></tr>
+<tr class="memdesc:a1eaa68b6642b380c3d399686b8aa1a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps the zoom value of the camera state between a minimum and maximum value  <a href="a00067.html#a1eaa68b6642b380c3d399686b8aa1a0e">More...</a><br /></td></tr>
+<tr class="separator:a1eaa68b6642b380c3d399686b8aa1a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc6e28bfcdc0775de73eeb363fdd410"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#aecc6e28bfcdc0775de73eeb363fdd410">ClampedPosition</a> (Vector2 clampX, Vector2 clampY)</td></tr>
+<tr class="memdesc:aecc6e28bfcdc0775de73eeb363fdd410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps the position of the camera state between a minimum and maximum value on both axes  <a href="a00067.html#aecc6e28bfcdc0775de73eeb363fdd410">More...</a><br /></td></tr>
+<tr class="separator:aecc6e28bfcdc0775de73eeb363fdd410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b26c1012526b151b4fd27025efd5f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a75b26c1012526b151b4fd27025efd5f3">ClampedPositionX</a> (Vector2 clamp)</td></tr>
+<tr class="memdesc:a75b26c1012526b151b4fd27025efd5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps the position of the camera state between a minimum and maximum value on the X axis  <a href="a00067.html#a75b26c1012526b151b4fd27025efd5f3">More...</a><br /></td></tr>
+<tr class="separator:a75b26c1012526b151b4fd27025efd5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe1d3518d786f24c1b1da62dd738723e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#abe1d3518d786f24c1b1da62dd738723e">ClampedPositionY</a> (Vector2 clamp)</td></tr>
+<tr class="memdesc:abe1d3518d786f24c1b1da62dd738723e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps the position of the camera state between a minimum and maximum value on the X axis  <a href="a00067.html#abe1d3518d786f24c1b1da62dd738723e">More...</a><br /></td></tr>
+<tr class="separator:abe1d3518d786f24c1b1da62dd738723e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7f44ef925748673e0dfd758941a4c534"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a7f44ef925748673e0dfd758941a4c534">FromCamera</a> (Camera camera, bool local=false)</td></tr>
+<tr class="memdesc:a7f44ef925748673e0dfd758941a4c534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> from the given Camera.  <a href="a00067.html#a7f44ef925748673e0dfd758941a4c534">More...</a><br /></td></tr>
+<tr class="separator:a7f44ef925748673e0dfd758941a4c534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4efced970921083f14c55d72ce670df"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#ab4efced970921083f14c55d72ce670df">Empty</a> ()</td></tr>
+<tr class="memdesc:ab4efced970921083f14c55d72ce670df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with no position, zoom, or rotation values.  <a href="a00067.html#ab4efced970921083f14c55d72ce670df">More...</a><br /></td></tr>
+<tr class="separator:ab4efced970921083f14c55d72ce670df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f197dbbcc854d64f953354067238e78"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a0f197dbbcc854d64f953354067238e78">CoveringBounds</a> (Bounds bounds, float aspectRatio)</td></tr>
+<tr class="memdesc:a0f197dbbcc854d64f953354067238e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that covers the given bounds with the specified aspect ratio. The bounds will be centered in the camera.  <a href="a00067.html#a0f197dbbcc854d64f953354067238e78">More...</a><br /></td></tr>
+<tr class="separator:a0f197dbbcc854d64f953354067238e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d657ed545975268fa20bac1ab06003"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a42d657ed545975268fa20bac1ab06003">CoveringBounds</a> (Bounds bounds, float aspectRatio, Vector2 pivot)</td></tr>
+<tr class="memdesc:a42d657ed545975268fa20bac1ab06003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that covers the given bounds with the specified aspect ratio and pivot.  <a href="a00067.html#a42d657ed545975268fa20bac1ab06003">More...</a><br /></td></tr>
+<tr class="separator:a42d657ed545975268fa20bac1ab06003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b49ed5c96702ba60fd3db0fd45050e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a41b49ed5c96702ba60fd3db0fd45050e">ContainedInBounds</a> (Bounds bounds, float aspectRatio)</td></tr>
+<tr class="memdesc:a41b49ed5c96702ba60fd3db0fd45050e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that is contained the given bounds with the specified aspect ratio. The camera will be centered in the bounds.  <a href="a00067.html#a41b49ed5c96702ba60fd3db0fd45050e">More...</a><br /></td></tr>
+<tr class="separator:a41b49ed5c96702ba60fd3db0fd45050e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d0bbb8fb44799e267dcbef27d174988"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html#a7d0bbb8fb44799e267dcbef27d174988">ContainedInBounds</a> (Bounds bounds, float aspectRatio, Vector2 pivot)</td></tr>
+<tr class="memdesc:a7d0bbb8fb44799e267dcbef27d174988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that is contained the given bounds with the specified aspect ratio and pivot.  <a href="a00067.html#a7d0bbb8fb44799e267dcbef27d174988">More...</a><br /></td></tr>
+<tr class="separator:a7d0bbb8fb44799e267dcbef27d174988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:addf125cb40cfe420251e6fcdf7610436"><td class="memItemLeft" align="right" valign="top"><a id="addf125cb40cfe420251e6fcdf7610436" name="addf125cb40cfe420251e6fcdf7610436"></a>
+Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>Position</b><code> [get]</code></td></tr>
+<tr class="memdesc:addf125cb40cfe420251e6fcdf7610436"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the position of the camera. If the position is null, logs an error and returns Vector2.zero. <br /></td></tr>
+<tr class="separator:addf125cb40cfe420251e6fcdf7610436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1c4b657d482219f52a595ab44f8ab3"><td class="memItemLeft" align="right" valign="top"><a id="abc1c4b657d482219f52a595ab44f8ab3" name="abc1c4b657d482219f52a595ab44f8ab3"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>Zoom</b><code> [get]</code></td></tr>
+<tr class="memdesc:abc1c4b657d482219f52a595ab44f8ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the zoom level of the camera. If the zoom is null, logs an error and returns 1.0f. <br /></td></tr>
+<tr class="separator:abc1c4b657d482219f52a595ab44f8ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4bda909021a85144a59a8365a67a3df"><td class="memItemLeft" align="right" valign="top"><a id="aa4bda909021a85144a59a8365a67a3df" name="aa4bda909021a85144a59a8365a67a3df"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>Rotation</b><code> [get]</code></td></tr>
+<tr class="memdesc:aa4bda909021a85144a59a8365a67a3df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the rotation of the camera. If the rotation is null, logs an error and returns 0.0f. <br /></td></tr>
+<tr class="separator:aa4bda909021a85144a59a8365a67a3df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Encapsulates the state of a 2D camera, including its position, zoom level, and rotation. It provides functionality to manage, modify, and apply camera states in a flexible manner. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afb19de23469521b55d58795ae0f995d5" name="afb19de23469521b55d58795ae0f995d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb19de23469521b55d58795ae0f995d5">&#9670;&nbsp;</a></span>CameraState() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Lvl3Mage.CameraManagement2D.CameraState.CameraState </td>
+          <td>(</td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>zoom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes a new instance of the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> class with the specified position, zoom, rotation </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the camera.</td></tr>
+    <tr><td class="paramname">zoom</td><td>The zoom level of the camera.</td></tr>
+    <tr><td class="paramname">rotation</td><td>The rotation of the camera.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad3ba19998ce49e7c5b7229882082266a" name="ad3ba19998ce49e7c5b7229882082266a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3ba19998ce49e7c5b7229882082266a">&#9670;&nbsp;</a></span>CameraState() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Lvl3Mage.CameraManagement2D.CameraState.CameraState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00067.html">CameraState</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes a new instance of the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> class by copying another <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to copy.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a28098138596086a9e121744cc1a0435d" name="a28098138596086a9e121744cc1a0435d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28098138596086a9e121744cc1a0435d">&#9670;&nbsp;</a></span>ApplyTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lvl3Mage.CameraManagement2D.CameraState.ApplyTo </td>
+          <td>(</td>
+          <td class="paramtype">Camera&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>local</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to a given Camera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The Camera to which the state will be applied.</td></tr>
+    <tr><td class="paramname">local</td><td>Whether the position and rotation should be applied as local values. Defaults to false.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aecc6e28bfcdc0775de73eeb363fdd410" name="aecc6e28bfcdc0775de73eeb363fdd410"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc6e28bfcdc0775de73eeb363fdd410">&#9670;&nbsp;</a></span>ClampedPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.ClampedPosition </td>
+          <td>(</td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>clampX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>clampY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clamps the position of the camera state between a minimum and maximum value on both axes </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clampX</td><td>A vector2 with the minimum and maximum values for the clamp on the X axis</td></tr>
+    <tr><td class="paramname">clampY</td><td>A vector2 with the minimum and maximum values for the clamp on the y axis</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A clone of the state with modified position</dd></dl>
+
+</div>
+</div>
+<a id="a75b26c1012526b151b4fd27025efd5f3" name="a75b26c1012526b151b4fd27025efd5f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75b26c1012526b151b4fd27025efd5f3">&#9670;&nbsp;</a></span>ClampedPositionX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.ClampedPositionX </td>
+          <td>(</td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>clamp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clamps the position of the camera state between a minimum and maximum value on the X axis </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clamp</td><td>A vector2 with the minimum and maximum values for the clamp on the X axis</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A clone of the state with modified position</dd></dl>
+
+</div>
+</div>
+<a id="abe1d3518d786f24c1b1da62dd738723e" name="abe1d3518d786f24c1b1da62dd738723e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe1d3518d786f24c1b1da62dd738723e">&#9670;&nbsp;</a></span>ClampedPositionY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.ClampedPositionY </td>
+          <td>(</td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>clamp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clamps the position of the camera state between a minimum and maximum value on the X axis </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clamp</td><td>A vector2 with the minimum and maximum values for the clamp on the Y axis</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A clone of the state with modified position</dd></dl>
+
+</div>
+</div>
+<a id="abd14fc3bc0255fa922a838c267c2731f" name="abd14fc3bc0255fa922a838c267c2731f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd14fc3bc0255fa922a838c267c2731f">&#9670;&nbsp;</a></span>ClampedZoom() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.ClampedZoom </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clamps the zoom value of the camera state between a minimum and maximum value </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>The lower bound for the clamp</td></tr>
+    <tr><td class="paramname">max</td><td>The upped bound for the clamp</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A clone of the state with modified zoom</dd></dl>
+
+</div>
+</div>
+<a id="a1eaa68b6642b380c3d399686b8aa1a0e" name="a1eaa68b6642b380c3d399686b8aa1a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eaa68b6642b380c3d399686b8aa1a0e">&#9670;&nbsp;</a></span>ClampedZoom() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.ClampedZoom </td>
+          <td>(</td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>clamp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clamps the zoom value of the camera state between a minimum and maximum value </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clamp</td><td>A vector2 with the minimum and maximum values for the clamp</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A clone of the state with modified zoom</dd></dl>
+
+</div>
+</div>
+<a id="af6fbba94aeecf50a805a5a7b9dcb675d" name="af6fbba94aeecf50a805a5a7b9dcb675d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6fbba94aeecf50a805a5a7b9dcb675d">&#9670;&nbsp;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that is a copy of the current instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that is a copy of the current instance.</dd></dl>
+
+</div>
+</div>
+<a id="a41b49ed5c96702ba60fd3db0fd45050e" name="a41b49ed5c96702ba60fd3db0fd45050e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b49ed5c96702ba60fd3db0fd45050e">&#9670;&nbsp;</a></span>ContainedInBounds() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.ContainedInBounds </td>
+          <td>(</td>
+          <td class="paramtype">Bounds&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>aspectRatio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that is contained the given bounds with the specified aspect ratio. The camera will be centered in the bounds. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The bounds that should contain the camera.</td></tr>
+    <tr><td class="paramname">aspectRatio</td><td>The aspect ratio of the camera.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that is contained the given bounds.</dd></dl>
+
+</div>
+</div>
+<a id="a7d0bbb8fb44799e267dcbef27d174988" name="a7d0bbb8fb44799e267dcbef27d174988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d0bbb8fb44799e267dcbef27d174988">&#9670;&nbsp;</a></span>ContainedInBounds() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.ContainedInBounds </td>
+          <td>(</td>
+          <td class="paramtype">Bounds&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>aspectRatio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>pivot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that is contained the given bounds with the specified aspect ratio and pivot. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The bounds that should contain the camera.</td></tr>
+    <tr><td class="paramname">aspectRatio</td><td>The aspect ratio of the camera.</td></tr>
+    <tr><td class="paramname">pivot</td><td>The pivot point for the camera. A value of (0.5, 0.5) will center the camera</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that is contained the given bounds.</dd></dl>
+
+</div>
+</div>
+<a id="a0f197dbbcc854d64f953354067238e78" name="a0f197dbbcc854d64f953354067238e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f197dbbcc854d64f953354067238e78">&#9670;&nbsp;</a></span>CoveringBounds() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.CoveringBounds </td>
+          <td>(</td>
+          <td class="paramtype">Bounds&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>aspectRatio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that covers the given bounds with the specified aspect ratio. The bounds will be centered in the camera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The bounds the camera should cover.</td></tr>
+    <tr><td class="paramname">aspectRatio</td><td>The aspect ratio of the camera.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that covers the given bounds.</dd></dl>
+
+</div>
+</div>
+<a id="a42d657ed545975268fa20bac1ab06003" name="a42d657ed545975268fa20bac1ab06003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d657ed545975268fa20bac1ab06003">&#9670;&nbsp;</a></span>CoveringBounds() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.CoveringBounds </td>
+          <td>(</td>
+          <td class="paramtype">Bounds&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>aspectRatio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>pivot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that covers the given bounds with the specified aspect ratio and pivot. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The bounds the camera should cover.</td></tr>
+    <tr><td class="paramname">aspectRatio</td><td>The aspect ratio of the camera.</td></tr>
+    <tr><td class="paramname">pivot</td><td>The pivot point for the camera. A value of (0.5, 0.5) will center the camera</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that covers the given bounds.</dd></dl>
+
+</div>
+</div>
+<a id="adf03b263ad157951a343541508a58ab3" name="adf03b263ad157951a343541508a58ab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf03b263ad157951a343541508a58ab3">&#9670;&nbsp;</a></span>DecayPositionTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.DecayPositionTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00067.html">CameraState</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>factor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>deltaTime</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decays the position of the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to a target position over multiple calls. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The target <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to decay towards.</td></tr>
+    <tr><td class="paramname">factor</td><td>The decay factor.</td></tr>
+    <tr><td class="paramname">deltaTime</td><td>The deltaTime between the calls. Defaults to Time.deltaTime if not specified.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the decayed position.</dd></dl>
+
+</div>
+</div>
+<a id="a76091e84d65c87d54f2e117eec480131" name="a76091e84d65c87d54f2e117eec480131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76091e84d65c87d54f2e117eec480131">&#9670;&nbsp;</a></span>DecayRotationTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.DecayRotationTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00067.html">CameraState</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>factor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>deltaTime</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decays the rotation of the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to a target position over multiple calls. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The target <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to decay towards.</td></tr>
+    <tr><td class="paramname">factor</td><td>The decay factor.</td></tr>
+    <tr><td class="paramname">deltaTime</td><td>The deltaTime between the calls. Defaults to Time.deltaTime if not specified.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the decayed rotation.</dd></dl>
+
+</div>
+</div>
+<a id="a374e2b980ec21ef480be82749b5b8a16" name="a374e2b980ec21ef480be82749b5b8a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374e2b980ec21ef480be82749b5b8a16">&#9670;&nbsp;</a></span>DecayZoomTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.DecayZoomTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00067.html">CameraState</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>factor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>deltaTime</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decays the zoom of the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to a target position over multiple calls. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The target <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to decay towards.</td></tr>
+    <tr><td class="paramname">factor</td><td>The decay factor.</td></tr>
+    <tr><td class="paramname">deltaTime</td><td>The deltaTime between the calls. Defaults to Time.deltaTime if not specified.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the decayed zoom.</dd></dl>
+
+</div>
+</div>
+<a id="ab4efced970921083f14c55d72ce670df" name="ab4efced970921083f14c55d72ce670df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4efced970921083f14c55d72ce670df">&#9670;&nbsp;</a></span>Empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.Empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates an empty <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with no position, zoom, or rotation values. </p>
+<dl class="section return"><dt>Returns</dt><dd>An empty <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a>.</dd></dl>
+
+</div>
+</div>
+<a id="ace38bc2118dd3e45be93d9d78d3df315" name="ace38bc2118dd3e45be93d9d78d3df315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace38bc2118dd3e45be93d9d78d3df315">&#9670;&nbsp;</a></span>ExponentialZoom() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.ExponentialZoom </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>zoomChange</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zooms the camera exponentially with the value provided towards the center of the screen. This allows for linear zoom 'feel' when the zoom change is constant. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zoomChange</td><td>A value that dictates the direction and magnitude of zoom</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A clone of the state with modified zoom</dd></dl>
+
+</div>
+</div>
+<a id="a8583c7e573ec6fc3b0ab8961255189e3" name="a8583c7e573ec6fc3b0ab8961255189e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8583c7e573ec6fc3b0ab8961255189e3">&#9670;&nbsp;</a></span>ExponentialZoom() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.ExponentialZoom </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>zoomChange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zooms the camera exponentially with the value provided towards a target position. This allows for linear zoom 'feel' when the zoom change is constant. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zoomChange</td><td>A value that dictates the direction and magnitude of zoom</td></tr>
+    <tr><td class="paramname">target</td><td>The position in the space as the camera position to zoom towards</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A clone of the state with modified position and zoom</dd></dl>
+
+</div>
+</div>
+<a id="a7f44ef925748673e0dfd758941a4c534" name="a7f44ef925748673e0dfd758941a4c534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f44ef925748673e0dfd758941a4c534">&#9670;&nbsp;</a></span>FromCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.FromCamera </td>
+          <td>(</td>
+          <td class="paramtype">Camera&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>local</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> from the given Camera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">camera</td><td>The Camera to create the state from.</td></tr>
+    <tr><td class="paramname">local</td><td>Indicates whether the position and rotation are local to the parent transform.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> representing the state of the given Camera.</dd></dl>
+
+</div>
+</div>
+<a id="a5611f2e8af47fa16a817440a4b92908d" name="a5611f2e8af47fa16a817440a4b92908d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5611f2e8af47fa16a817440a4b92908d">&#9670;&nbsp;</a></span>GetBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Bounds Lvl3Mage.CameraManagement2D.CameraState.GetBounds </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>aspectRatio</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the bounds of the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with a specified aspect ratio. Currently does not take rotation into account. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aspectRatio</td><td>The aspect ratio of the bounds.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A Bounds object that encompasses the camera state</dd></dl>
+
+</div>
+</div>
+<a id="af3358f92c5ddb994955c0629a1f460af" name="af3358f92c5ddb994955c0629a1f460af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3358f92c5ddb994955c0629a1f460af">&#9670;&nbsp;</a></span>IsEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Lvl3Mage.CameraManagement2D.CameraState.IsEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> is empty (i.e., no position, zoom, or rotation values). </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> is empty, otherwise false.</dd></dl>
+
+</div>
+</div>
+<a id="ae87a84f9ad4c1d5d58588c235b9a5abf" name="ae87a84f9ad4c1d5d58588c235b9a5abf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae87a84f9ad4c1d5d58588c235b9a5abf">&#9670;&nbsp;</a></span>RepresentsPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Lvl3Mage.CameraManagement2D.CameraState.RepresentsPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> represents a position value. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> represents a position value, otherwise false.</dd></dl>
+
+</div>
+</div>
+<a id="aed3835c419bb929410dc9c0778907e39" name="aed3835c419bb929410dc9c0778907e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed3835c419bb929410dc9c0778907e39">&#9670;&nbsp;</a></span>RepresentsRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Lvl3Mage.CameraManagement2D.CameraState.RepresentsRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> represents a rotation value. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> represents a rotation value, otherwise false.</dd></dl>
+
+</div>
+</div>
+<a id="a60ad877ac4e57ba18c067315a3bf4ed8" name="a60ad877ac4e57ba18c067315a3bf4ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ad877ac4e57ba18c067315a3bf4ed8">&#9670;&nbsp;</a></span>RepresentsZoom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Lvl3Mage.CameraManagement2D.CameraState.RepresentsZoom </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> represents a zoom value. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> represents a zoom value, otherwise false.</dd></dl>
+
+</div>
+</div>
+<a id="a628458684f85b55d2e0e93c40b7c275e" name="a628458684f85b55d2e0e93c40b7c275e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a628458684f85b55d2e0e93c40b7c275e">&#9670;&nbsp;</a></span>WithoutPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.WithoutPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> without a position value. </p>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that doesn't represent a position</dd></dl>
+
+</div>
+</div>
+<a id="afdfdf89abbb62c490946b09803d6ebb6" name="afdfdf89abbb62c490946b09803d6ebb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdfdf89abbb62c490946b09803d6ebb6">&#9670;&nbsp;</a></span>WithoutRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.WithoutRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> without a rotation value. </p>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that doesn't represent a rotation</dd></dl>
+
+</div>
+</div>
+<a id="a3620b04c4b424df78aa64dc3a4412b5e" name="a3620b04c4b424df78aa64dc3a4412b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3620b04c4b424df78aa64dc3a4412b5e">&#9670;&nbsp;</a></span>WithoutZoom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.WithoutZoom </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> without a zoom value. </p>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> that doesn't represent a zoom</dd></dl>
+
+</div>
+</div>
+<a id="aba742bab86f218181cae05cb2dff2ac9" name="aba742bab86f218181cae05cb2dff2ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba742bab86f218181cae05cb2dff2ac9">&#9670;&nbsp;</a></span>WithPosition() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.WithPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00067.html">CameraState</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the position value from another <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to copy the position value from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the updated position value.</dd></dl>
+
+</div>
+</div>
+<a id="aaa381178c41b665288e740909997783b" name="aaa381178c41b665288e740909997783b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa381178c41b665288e740909997783b">&#9670;&nbsp;</a></span>WithPosition() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.WithPosition </td>
+          <td>(</td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the specified position value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position value to set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the updated position value.</dd></dl>
+
+</div>
+</div>
+<a id="a87eb44c79ccd0c6008486f3e7e709e41" name="a87eb44c79ccd0c6008486f3e7e709e41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87eb44c79ccd0c6008486f3e7e709e41">&#9670;&nbsp;</a></span>WithPosition() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.WithPosition </td>
+          <td>(</td>
+          <td class="paramtype">Vector2?&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the specified position value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position value to set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the updated position value.</dd></dl>
+
+</div>
+</div>
+<a id="a4e1646ed1782d76c3549e21cf172d2a3" name="a4e1646ed1782d76c3549e21cf172d2a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1646ed1782d76c3549e21cf172d2a3">&#9670;&nbsp;</a></span>WithRotation() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.WithRotation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00067.html">CameraState</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the rotation value from another <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to copy the rotation value from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the updated rotation value.</dd></dl>
+
+</div>
+</div>
+<a id="aa938a3f43c8d2ef731156d15a3dad354" name="aa938a3f43c8d2ef731156d15a3dad354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa938a3f43c8d2ef731156d15a3dad354">&#9670;&nbsp;</a></span>WithRotation() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.WithRotation </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>rotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the specified rotation value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rotation</td><td>The rotation value to set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the updated rotation value.</dd></dl>
+
+</div>
+</div>
+<a id="ae0f99d1d9fea26b4bc44f1c7ea8ef2cb" name="ae0f99d1d9fea26b4bc44f1c7ea8ef2cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0f99d1d9fea26b4bc44f1c7ea8ef2cb">&#9670;&nbsp;</a></span>WithRotation() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.WithRotation </td>
+          <td>(</td>
+          <td class="paramtype">float?&#160;</td>
+          <td class="paramname"><em>rotation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the specified rotation value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rotation</td><td>The rotation value to set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the updated rotation value.</dd></dl>
+
+</div>
+</div>
+<a id="abd4d1a0cbdedd099bcc5d363c3554e7f" name="abd4d1a0cbdedd099bcc5d363c3554e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd4d1a0cbdedd099bcc5d363c3554e7f">&#9670;&nbsp;</a></span>WithZoom() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.WithZoom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00067.html">CameraState</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the zoom value from another <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> to copy the zoom value from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the updated zoom value.</dd></dl>
+
+</div>
+</div>
+<a id="a1a659feb808afce0e45e7ad09cb2fcd6" name="a1a659feb808afce0e45e7ad09cb2fcd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a659feb808afce0e45e7ad09cb2fcd6">&#9670;&nbsp;</a></span>WithZoom() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.WithZoom </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>zoom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the specified zoom value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zoom</td><td>The zoom value to set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the updated zoom value.</dd></dl>
+
+</div>
+</div>
+<a id="adb4e06b19817c54672b92200f27cf237" name="adb4e06b19817c54672b92200f27cf237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb4e06b19817c54672b92200f27cf237">&#9670;&nbsp;</a></span>WithZoom() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.WithZoom </td>
+          <td>(</td>
+          <td class="paramtype">float?&#160;</td>
+          <td class="paramname"><em>zoom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the specified zoom value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zoom</td><td>The zoom value to set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="a00067.html" title="Encapsulates the state of a 2D camera, including its position, zoom level, and rotation....">CameraState</a> with the updated zoom value.</dd></dl>
+
+</div>
+</div>
+<a id="af01dc692944f92a490d7b1eb73434eaf" name="af01dc692944f92a490d7b1eb73434eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af01dc692944f92a490d7b1eb73434eaf">&#9670;&nbsp;</a></span>ZoomTowards() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.ZoomTowards </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00067.html">CameraState</a>&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zooms the camera state to a target zoom towards a target position </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The state that contains the target zoom value</td></tr>
+    <tr><td class="paramname">target</td><td>The position in the space as the camera position to zoom towards</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A clone of the state with modified position and zoom</dd></dl>
+
+</div>
+</div>
+<a id="a5810835ae9addf9b3842afa9eae5abd0" name="a5810835ae9addf9b3842afa9eae5abd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5810835ae9addf9b3842afa9eae5abd0">&#9670;&nbsp;</a></span>ZoomTowards() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraState.ZoomTowards </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>targetZoom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zooms the camera state to a target zoom towards a target position </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetZoom</td><td>The target zoom value</td></tr>
+    <tr><td class="paramname">target</td><td>The position in the space as the camera position to zoom towards</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A clone of the state with modified position and zoom</dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>CameraState.cs</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="a00035.html">Lvl3Mage</a></li><li class="navelem"><a class="el" href="a00036.html">CameraManagement2D</a></li><li class="navelem"><a class="el" href="a00067.html">CameraState</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

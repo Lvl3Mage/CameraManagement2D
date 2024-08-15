@@ -1,5 +1,0 @@
-<map id="Lvl3Mage.CameraManagement2D.TrackerCameraModule" name="Lvl3Mage.CameraManagement2D.TrackerCameraModule">
-<area shape="rect" id="node1" title="A camera module that tracks multiple objects and adjusts the camera&#39;s state to ensure all tracked obj..." alt="" coords="5,155,215,196"/>
-<area shape="rect" id="node2" href="$a00048.html" title="An abstract base class for camera controllers." alt="" coords="49,80,171,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="54,5,166,32"/>
-</map>

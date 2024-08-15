@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Camera Management 2D: Lvl3Mage.CameraManagement2D.CameraStateClamp Class Reference" />
+<!-- <meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" /> -->
+<meta property="og:description" content="A package that provides an extendable 2D camera management system." />
+<meta property="og:url" content="https://lvl3mage.github.io/CameraManagement2D" />
+<!-- END opengraph metadata -->
+<title>Camera Management 2D: Lvl3Mage.CameraManagement2D.CameraStateClamp Class Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+ <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/lvl3mage/CameraManagement2D" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Camera Management 2D
+   </div>
+   <div id="projectbrief">A package that provides an extendable 2D camera management system.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('a00071.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="a00068.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Lvl3Mage.CameraManagement2D.CameraStateClamp Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Provides functionality to clamp the camera state, including position, bounds, and zoom.  
+ <a href="a00071.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a46128a5e259e8cefe6860d4525f67d9c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00071.html#a46128a5e259e8cefe6860d4525f67d9c">ClampMode</a> { <a class="el" href="a00071.html#a46128a5e259e8cefe6860d4525f67d9ca672dff3c7d0fee10731c2e95b61ff60e">ClampPosition</a>
+, <a class="el" href="a00071.html#a46128a5e259e8cefe6860d4525f67d9ca8d087806ae39ac2a68cec914bd52b61f">ClampBounds</a>
+ }</td></tr>
+<tr class="memdesc:a46128a5e259e8cefe6860d4525f67d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modes for clamping the camera state.  <a href="a00071.html#a46128a5e259e8cefe6860d4525f67d9c">More...</a><br /></td></tr>
+<tr class="separator:a46128a5e259e8cefe6860d4525f67d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a557e069d434396574ec5a7b79f3385a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00071.html#a557e069d434396574ec5a7b79f3385a9">ClampState</a> (<a class="el" href="a00067.html">CameraState</a> state, float cameraAspect)</td></tr>
+<tr class="memdesc:a557e069d434396574ec5a7b79f3385a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps the camera state based on the configured clamp settings.  <a href="a00071.html#a557e069d434396574ec5a7b79f3385a9">More...</a><br /></td></tr>
+<tr class="separator:a557e069d434396574ec5a7b79f3385a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d7c13dfdd5d5f36885838608f09b93"><td class="memItemLeft" align="right" valign="top"><a id="af1d7c13dfdd5d5f36885838608f09b93" name="af1d7c13dfdd5d5f36885838608f09b93"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawGizmos</b> (Color? color=null)</td></tr>
+<tr class="memdesc:af1d7c13dfdd5d5f36885838608f09b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the clamp bounds in the editor using gizmos. <br /></td></tr>
+<tr class="separator:af1d7c13dfdd5d5f36885838608f09b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:adf406a148ef15927144d55ac2e592ca4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00071.html#adf406a148ef15927144d55ac2e592ca4">ClampPosition</a> (<a class="el" href="a00067.html">CameraState</a> state)</td></tr>
+<tr class="memdesc:adf406a148ef15927144d55ac2e592ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps the position of the camera state based on the configured X and Y clamps.  <a href="a00071.html#adf406a148ef15927144d55ac2e592ca4">More...</a><br /></td></tr>
+<tr class="separator:adf406a148ef15927144d55ac2e592ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d050a2ed51a610145ab47060f8d2970"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00067.html">CameraState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00071.html#a4d050a2ed51a610145ab47060f8d2970">ClampBounds</a> (<a class="el" href="a00067.html">CameraState</a> state, float cameraAspect)</td></tr>
+<tr class="memdesc:a4d050a2ed51a610145ab47060f8d2970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamps the bounds of the camera state based on the configured X and Y clamps.  <a href="a00071.html#a4d050a2ed51a610145ab47060f8d2970">More...</a><br /></td></tr>
+<tr class="separator:a4d050a2ed51a610145ab47060f8d2970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22f7ea965eef0b30acff405d5089a03c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00071.html#a22f7ea965eef0b30acff405d5089a03c">GetCorrection</a> (float min, float max, float clampMin, float clampMax)</td></tr>
+<tr class="memdesc:a22f7ea965eef0b30acff405d5089a03c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the correction needed to keep the bounds within the specified clamp range.  <a href="a00071.html#a22f7ea965eef0b30acff405d5089a03c">More...</a><br /></td></tr>
+<tr class="separator:a22f7ea965eef0b30acff405d5089a03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5bb125936455d27e60fd2cdf14a615a7"><td class="memItemLeft" align="right" valign="top"><a id="a5bb125936455d27e60fd2cdf14a615a7" name="a5bb125936455d27e60fd2cdf14a615a7"></a>
+<a class="el" href="a00071.html#a46128a5e259e8cefe6860d4525f67d9c">ClampMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clampMode</b> = <a class="el" href="a00071.html#a46128a5e259e8cefe6860d4525f67d9ca672dff3c7d0fee10731c2e95b61ff60e">ClampMode.ClampPosition</a></td></tr>
+<tr class="memdesc:a5bb125936455d27e60fd2cdf14a615a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mode for clamping the camera state. <br /></td></tr>
+<tr class="separator:a5bb125936455d27e60fd2cdf14a615a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b4dcea8b7ffd4cd62149aeab4eef326"><td class="memItemLeft" align="right" valign="top"><a id="a3b4dcea8b7ffd4cd62149aeab4eef326" name="a3b4dcea8b7ffd4cd62149aeab4eef326"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>clampXAxis</b> = true</td></tr>
+<tr class="memdesc:a3b4dcea8b7ffd4cd62149aeab4eef326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the X-axis should be clamped. <br /></td></tr>
+<tr class="separator:a3b4dcea8b7ffd4cd62149aeab4eef326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b002e903747e925a197c65646a5a63"><td class="memItemLeft" align="right" valign="top"><a id="af0b002e903747e925a197c65646a5a63" name="af0b002e903747e925a197c65646a5a63"></a>
+Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>xClamp</b> = new Vector2(-10, 10)</td></tr>
+<tr class="memdesc:af0b002e903747e925a197c65646a5a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">The range for clamping the X-axis. <br /></td></tr>
+<tr class="separator:af0b002e903747e925a197c65646a5a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92508979a7c56f2f823958c8a801a1cd"><td class="memItemLeft" align="right" valign="top"><a id="a92508979a7c56f2f823958c8a801a1cd" name="a92508979a7c56f2f823958c8a801a1cd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>clampYAxis</b> = true</td></tr>
+<tr class="memdesc:a92508979a7c56f2f823958c8a801a1cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the Y-axis should be clamped. <br /></td></tr>
+<tr class="separator:a92508979a7c56f2f823958c8a801a1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49c724b9688ba1e19e2d0f481aff8de6"><td class="memItemLeft" align="right" valign="top"><a id="a49c724b9688ba1e19e2d0f481aff8de6" name="a49c724b9688ba1e19e2d0f481aff8de6"></a>
+Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>yClamp</b> = new Vector2(-10, 10)</td></tr>
+<tr class="memdesc:a49c724b9688ba1e19e2d0f481aff8de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The range for clamping the Y-axis. <br /></td></tr>
+<tr class="separator:a49c724b9688ba1e19e2d0f481aff8de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752579e0620d728f2899b058471bf0f7"><td class="memItemLeft" align="right" valign="top"><a id="a752579e0620d728f2899b058471bf0f7" name="a752579e0620d728f2899b058471bf0f7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>clampZoom</b> = true</td></tr>
+<tr class="memdesc:a752579e0620d728f2899b058471bf0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the zoom should be clamped. <br /></td></tr>
+<tr class="separator:a752579e0620d728f2899b058471bf0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bff826ebf8e44b3000d47cf3dd5655f"><td class="memItemLeft" align="right" valign="top"><a id="a4bff826ebf8e44b3000d47cf3dd5655f" name="a4bff826ebf8e44b3000d47cf3dd5655f"></a>
+Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>zoomClamp</b> = new Vector2(0.1f, 15)</td></tr>
+<tr class="memdesc:a4bff826ebf8e44b3000d47cf3dd5655f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The range for clamping the zoom level. <br /></td></tr>
+<tr class="separator:a4bff826ebf8e44b3000d47cf3dd5655f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Provides functionality to clamp the camera state, including position, bounds, and zoom. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a46128a5e259e8cefe6860d4525f67d9c" name="a46128a5e259e8cefe6860d4525f67d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46128a5e259e8cefe6860d4525f67d9c">&#9670;&nbsp;</a></span>ClampMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="a00071.html#a46128a5e259e8cefe6860d4525f67d9c">Lvl3Mage.CameraManagement2D.CameraStateClamp.ClampMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modes for clamping the camera state. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a46128a5e259e8cefe6860d4525f67d9ca672dff3c7d0fee10731c2e95b61ff60e" name="a46128a5e259e8cefe6860d4525f67d9ca672dff3c7d0fee10731c2e95b61ff60e"></a>ClampPosition&#160;</td><td class="fielddoc"><p >Clamps the camera state based on the center position. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a46128a5e259e8cefe6860d4525f67d9ca8d087806ae39ac2a68cec914bd52b61f" name="a46128a5e259e8cefe6860d4525f67d9ca8d087806ae39ac2a68cec914bd52b61f"></a>ClampBounds&#160;</td><td class="fielddoc"><p >Clamps the camera state based on the camera bounds. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4d050a2ed51a610145ab47060f8d2970" name="a4d050a2ed51a610145ab47060f8d2970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d050a2ed51a610145ab47060f8d2970">&#9670;&nbsp;</a></span>ClampBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraStateClamp.ClampBounds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00067.html">CameraState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cameraAspect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clamps the bounds of the camera state based on the configured X and Y clamps. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state2D</td><td>The camera state to clamp.</td></tr>
+    <tr><td class="paramname">cameraAspect</td><td>The aspect ratio of the camera.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The clamped camera state.</dd></dl>
+
+</div>
+</div>
+<a id="adf406a148ef15927144d55ac2e592ca4" name="adf406a148ef15927144d55ac2e592ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf406a148ef15927144d55ac2e592ca4">&#9670;&nbsp;</a></span>ClampPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraStateClamp.ClampPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00067.html">CameraState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clamps the position of the camera state based on the configured X and Y clamps. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state2D</td><td>The camera state to clamp.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The clamped camera state.</dd></dl>
+
+</div>
+</div>
+<a id="a557e069d434396574ec5a7b79f3385a9" name="a557e069d434396574ec5a7b79f3385a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a557e069d434396574ec5a7b79f3385a9">&#9670;&nbsp;</a></span>ClampState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00067.html">CameraState</a> Lvl3Mage.CameraManagement2D.CameraStateClamp.ClampState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00067.html">CameraState</a>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cameraAspect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clamps the camera state based on the configured clamp settings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state2D</td><td>The camera state to clamp.</td></tr>
+    <tr><td class="paramname">cameraAspect</td><td>The aspect ratio of the camera.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The clamped camera state.</dd></dl>
+
+</div>
+</div>
+<a id="a22f7ea965eef0b30acff405d5089a03c" name="a22f7ea965eef0b30acff405d5089a03c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22f7ea965eef0b30acff405d5089a03c">&#9670;&nbsp;</a></span>GetCorrection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lvl3Mage.CameraManagement2D.CameraStateClamp.GetCorrection </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>clampMin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>clampMax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the correction needed to keep the bounds within the specified clamp range. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>The minimum value of the bounds.</td></tr>
+    <tr><td class="paramname">max</td><td>The maximum value of the bounds.</td></tr>
+    <tr><td class="paramname">clampMin</td><td>The minimum clamp value.</td></tr>
+    <tr><td class="paramname">clampMax</td><td>The maximum clamp value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The correction value.</dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>CameraStateClamp.cs</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="a00035.html">Lvl3Mage</a></li><li class="navelem"><a class="el" href="a00036.html">CameraManagement2D</a></li><li class="navelem"><a class="el" href="a00071.html">CameraStateClamp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>
