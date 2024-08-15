@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 
 namespace Lvl3Mage.CameraManagement2D
@@ -93,6 +94,11 @@ namespace Lvl3Mage.CameraManagement2D
 		/// </summary>
 		/// <returns>A CameraState calculated from the available data.</returns>
 		protected abstract CameraState ComputeCameraState();
+
+		public override string ToString()
+		{
+			return GetType().ToString().Split('.').Last();
+		}
 	}
 
 	

@@ -1,5 +1,8 @@
 ﻿using System;
+using Lvl3Mage.EditorDevToolkit.Runtime;
+using Lvl3Mage.EditorEnhancements.Runtime;
 using MyBox;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -46,7 +49,8 @@ namespace Lvl3Mage.CameraManagement2D
 		/// <summary>
 		/// The target camera controller towards which the state will be interpolated.
 		/// </summary>
-		[FormerlySerializedAs("targetController2D")] [SerializeField] CameraController targetController;
+		[MethodSourceLabeledField(nameof(CameraController.ToString), sourceType: SourceType.Field)]
+		[SerializeField] CameraController targetController;
 		protected override void OnUserInputChange(bool value)
 		{
 			targetController.UseUserInput(value);

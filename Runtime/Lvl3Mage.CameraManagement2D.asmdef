@@ -3,7 +3,9 @@
     "rootNamespace": "Lvl3Mage.CameraManagement2D",
     "references": [
         "GUID:48c9f6afdac61634db0e0f241c7d4d51",
-        "GUID:94693b803a331fb4ab48cea01302e222"
+        "GUID:94693b803a331fb4ab48cea01302e222",
+        "GUID:3c4708e15158979499e235cb9c912381",
+        "GUID:7f49a689c9bd41359de22fe807008dac"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

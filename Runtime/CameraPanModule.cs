@@ -82,7 +82,7 @@ namespace Lvl3Mage.CameraManagement2D
 			}
 
 			clamp.DrawGizmos();
-			clamp.ClampState(CameraState.FromCamera(controllerCamera, useLocalPosition).WithoutRotation(), gizmoCamera.aspect).DrawGizmos(gizmoCamera.aspect);
+			clamp.ClampState(CameraState.FromCamera(gizmoCamera, useLocalPosition).WithoutRotation(), gizmoCamera.aspect).DrawGizmos(gizmoCamera.aspect);
 		}
 
 #endif
