@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Lvl3Mage.EditorEnhancements.Runtime;
 using Lvl3Mage.InterpolationToolkit;
 using Lvl3Mage.InterpolationToolkit.Splines;
 using UnityEditor;
@@ -51,7 +52,20 @@ namespace Lvl3Mage.CameraManagement2D
 			}
 			shakeTransform = CameraStateTransform.Empty;
 		}
+		[Space(32)]
+		[MethodSourceLabeledField(nameof(GetControllerFunctionality))]
 		[SerializeField] CameraController targetController;
+		public override string GetControllerFunctionality()
+		{
+			if(targetController == null){
+				return base.GetControllerFunctionality();
+			}
+			if(targetController == this){
+				return "ERROR: Recursive Reference";
+			}
+
+			return $"{base.GetControllerFunctionality()} => {targetController.GetControllerFunctionality()}";
+		}
 		protected override CameraState ComputeCameraState()
 		{
 			CameraState state = targetController.GetCameraState();

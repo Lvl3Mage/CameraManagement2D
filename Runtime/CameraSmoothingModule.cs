@@ -49,8 +49,20 @@ namespace Lvl3Mage.CameraManagement2D
 		/// <summary>
 		/// The target camera controller towards which the state will be interpolated.
 		/// </summary>
-		[MethodSourceLabeledField(nameof(CameraController.ToString), sourceType: SourceType.Field)]
+		[Space(32)]
+		[MethodSourceLabeledField(nameof(GetControllerFunctionality))]
 		[SerializeField] CameraController targetController;
+		public override string GetControllerFunctionality()
+		{
+			if(targetController == null){
+				return base.GetControllerFunctionality();
+			}
+			if(targetController == this){
+				return "ERROR: Recursive Reference";
+			}
+
+			return $"{base.GetControllerFunctionality()} => {targetController.GetControllerFunctionality()}";
+		}
 		protected override void OnUserInputChange(bool value)
 		{
 			targetController.UseUserInput(value);
@@ -88,5 +100,6 @@ namespace Lvl3Mage.CameraManagement2D
 			from = from.DecayRotationTo(to, rotationSpeed, deltaTime);
 			return from;
 		}
+
 	}
 }

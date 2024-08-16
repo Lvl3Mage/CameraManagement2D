@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Lvl3Mage.EditorEnhancements.Runtime;
 using UnityEngine;
 
 namespace Lvl3Mage.CameraManagement2D
@@ -12,7 +14,29 @@ namespace Lvl3Mage.CameraManagement2D
 		/// <summary>
 		/// The array of camera controllers managed by this module.
 		/// </summary>
-		[SerializeField] CameraController[] cameraControllers;
+		
+		[Space(32)]
+		[MethodSourceLabeledField(nameof(GetControllerFunctionality), sourceType: SourceType.Parent, hideProperty:true)]
+		[SerializeField] string displayName;
+		[MethodSourceLabeledField(nameof(GetControllerFunctionality), sourceType: SourceType.Field)]
+		[SerializeField] CameraController[] cameraControllers = Array.Empty<CameraController>();
+		public override string GetControllerFunctionality()
+		{
+			if (cameraControllers.Length == 0){
+				return base.GetControllerFunctionality();
+			}
+			if(activeIndex >= cameraControllers.Length || activeIndex < 0){
+				return base.GetControllerFunctionality();
+			}
+			CameraController targetController = cameraControllers[activeIndex];
+			if(targetController == null){
+				return base.GetControllerFunctionality();
+			}
+			if(targetController == this){
+				return "ERROR: Recursive Reference";
+			}
+			return $"{base.GetControllerFunctionality()} => {targetController.GetControllerFunctionality()}";
+		}
 		int activeIndex = 0;
 		/// <summary>
 		/// Propagates user input changes to all managed camera controllers.

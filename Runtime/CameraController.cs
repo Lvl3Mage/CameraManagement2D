@@ -95,9 +95,11 @@ namespace Lvl3Mage.CameraManagement2D
 		/// <returns>A CameraState calculated from the available data.</returns>
 		protected abstract CameraState ComputeCameraState();
 
-		public override string ToString()
-		{
+		public string GetControllerType(){
 			return GetType().ToString().Split('.').Last();
+		}
+		public virtual string GetControllerFunctionality(){
+			return GetControllerType();
 		}
 	}
 
