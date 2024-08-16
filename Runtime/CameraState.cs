@@ -10,49 +10,25 @@ namespace Lvl3Mage.CameraManagement2D
 	{
 		private Vector2? position;
 		/// <summary>
-		/// Gets the position of the camera. If the position is null, logs an error and returns Vector2.zero.
+		/// Gets the position of the camera. If null the position is not represented.
 		/// </summary>
-		public Vector2 Position
+		public Vector2? Position
 		{
-			get
-			{
-				if (position == null){
-					Debug.LogError("Position is null! Defaulting to Vector2.zero");
-					return Vector2.zero;
-				}
-				return position.Value;
-			}
+			get => position;
 		}
+
 		private float? zoom;
 		/// <summary>
-		/// Gets the zoom level of the camera. If the zoom is null, logs an error and returns 1.0f.
+		/// Gets the zoom level of the camera. If null the zoom is not represented.
 		/// </summary>
-		public float Zoom
-		{
-			get
-			{
-				if (zoom == null){
-					Debug.LogError("Zoom is null! Defaulting to 1.0f");
-					return 1;
-				}
-				return zoom.Value;
-			}
-		}
+		public float? Zoom => zoom;
+
 		private float? rotation;
 		/// <summary>
-		/// Gets the rotation of the camera. If the rotation is null, logs an error and returns 0.0f.
+		/// Gets the rotation of the camera. If null the rotation is not represented.
 		/// </summary>
-		public float Rotation
-		{
-			get
-			{
-				if (rotation == null){
-					Debug.LogError("Rotation is null! Defaulting to 0.0f");
-					return 0;
-				}
-				return rotation.Value;
-			}
-		}
+		public float? Rotation => rotation;
+
 		/// <summary>
 		/// Initializes a new instance of the CameraState class with the specified position, zoom, rotation
 		/// </summary>
@@ -337,6 +313,39 @@ namespace Lvl3Mage.CameraManagement2D
 			return newState;
 		}
 		
+		public CameraState WithTransform(CameraStateTransform transform)
+		{
+			CameraState newState = this;
+			newState.position = (newState.position ?? Vector2.zero) + transform.Translation;
+			
+			newState.rotation = (newState.rotation ?? 0) + transform.RotationDelta;
+			
+			if(zoom == null && transform.ZoomDelta != 0){
+				Debug.LogWarning("Could not apply zoom delta to camera state without zoom value");
+			}
+			newState = newState.ExponentialZoom(transform.ZoomDelta);
+			
+			
+
+			return newState;
+		}
+		public static CameraState operator +(CameraState a, CameraStateTransform b)
+		{
+			return a.WithTransform(b);
+		}
+		public static CameraState operator +(CameraStateTransform a, CameraState b)
+		{
+			return b.WithTransform(a);
+		}
+		public static CameraState operator -(CameraState a, CameraStateTransform b)
+		{
+			return a.WithTransform(-b);
+		}
+		public static CameraState operator -(CameraStateTransform a, CameraState b)
+		{
+			return b.WithTransform(-a);
+		}
+		
 		public void ApplyTo(Camera camera)
 		{
 			ApplyTo(camera, false);
@@ -509,28 +518,28 @@ namespace Lvl3Mage.CameraManagement2D
 		/// <summary>
 		/// Zooms the camera exponentially with the value provided towards a target position. This allows for linear zoom 'feel' when the zoom change is constant.
 		/// </summary>
-		/// <param name="zoomChange">A value that dictates the direction and magnitude of zoom</param>
+		/// <param name="linearZoomChange">A value that dictates the direction and magnitude of zoom</param>
 		/// <param name="target">The position in the space as the camera position to zoom towards</param>
 		/// <returns>A clone of the state with modified position and zoom</returns>
-		public CameraState ExponentialZoom(float zoomChange, Vector2 target)
+		public CameraState ExponentialZoom(float linearZoomChange, Vector2 target)
 		{
 			if (zoom == null){
 				return Clone();
 			}
-			float newZoom = Mathf.Exp(Mathf.Log(zoom.Value) + zoomChange);
+			float newZoom = Mathf.Exp(Mathf.Log(zoom.Value) + linearZoomChange);
 			return ZoomTowards(newZoom, target);
 		}
 		/// <summary>
 		/// Zooms the camera exponentially with the value provided towards the center of the screen. This allows for linear zoom 'feel' when the zoom change is constant.
 		/// </summary>
-		/// <param name="zoomChange">A value that dictates the direction and magnitude of zoom</param>
+		/// <param name="linearZoomChange">A value that dictates the direction and magnitude of zoom</param>
 		/// <returns>A clone of the state with modified zoom</returns>
-		public CameraState ExponentialZoom(float zoomChange)
+		public CameraState ExponentialZoom(float linearZoomChange)
 		{
 			if (zoom == null){
 				return Clone();
 			}
-			return WithZoom(Mathf.Exp(Mathf.Log(zoom.Value) + zoomChange));
+			return WithZoom(Mathf.Exp(Mathf.Log(zoom.Value) + linearZoomChange));
 		}
 		/// <summary>
 		/// Clamps the zoom value of the camera state between a minimum and maximum value
