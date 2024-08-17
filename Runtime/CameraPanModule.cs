@@ -10,6 +10,11 @@ namespace Lvl3Mage.CameraManagement2D
 	/// </summary>
 	public class CameraPanModule : CameraController
 	{
+
+		public void AdaptToCamera()
+		{
+			targetState = CameraState.FromCamera(controllerCamera, useLocalPosition).WithoutRotation();
+		}
 		/// <summary>
 		/// The factor by which the zoom changes in response to user input.
 		/// </summary>
