@@ -351,8 +351,8 @@ namespace Lvl3Mage.CameraManagement2D
 				translation: a.position - b.position,
 				rotationDelta: a.rotation - b.rotation
 			);
-			if(zoom != null && b.zoom != null){
-				transform = transform.WithZoomDelta(Mathf.Log(a.Zoom) - Mathf.Log(b.Zoom));
+			if(a.zoom != null && b.zoom != null){
+				transform = transform.WithZoomDelta(Mathf.Log(a.zoom.Value) - Mathf.Log(b.zoom.Value));
 			}
 			return transform;
 		}
