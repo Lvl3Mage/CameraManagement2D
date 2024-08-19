@@ -14,14 +14,14 @@ namespace Lvl3Mage.CameraManagement2D
 	{
 		public CameraStateClamp(){}
 
-		public CameraStateClamp InsideBounds(Bounds bounds, float cameraAspect, ClampMode mode, Vector2? sizeClamp = null)
+		public static CameraStateClamp InsideBounds(Bounds bounds, float cameraAspect, ClampMode mode, Vector2? sizeClamp = null)
 		{
 				CameraState newState = CameraState.ContainedInBounds(bounds, cameraAspect);
 				Bounds innerBounds = newState.GetBounds(cameraAspect);
 				return new CameraStateClamp(mode, innerBounds, sizeClamp);
 				
 		}
-		public CameraStateClamp EnclosingBounds(Bounds bounds, float cameraAspect, ClampMode mode, Vector2? sizeClamp = null)
+		public static CameraStateClamp EnclosingBounds(Bounds bounds, float cameraAspect, ClampMode mode, Vector2? sizeClamp = null)
 		{
 				CameraState newState = CameraState.CoveringBounds(bounds, cameraAspect);
 				Bounds innerBounds = newState.GetBounds(cameraAspect);
