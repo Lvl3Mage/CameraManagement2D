@@ -15,6 +15,14 @@ namespace Lvl3Mage.CameraManagement2D
 		{
 			targetState = CameraState.FromCamera(controllerCamera, useLocalPosition).WithoutRotation();
 		}
+		public void AdaptToState(CameraState state)
+		{
+			targetState = state;
+		}
+		public void ResetDrag()
+		{
+			cursorDragStart = controllerCamera.ScreenToWorldPoint(Input.mousePosition);
+		}
 		public void SetClamp(CameraStateClamp clamp)
 		{
 			this.clamp = clamp;
