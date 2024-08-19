@@ -15,6 +15,10 @@ namespace Lvl3Mage.CameraManagement2D
 		{
 			targetState = CameraState.FromCamera(controllerCamera, useLocalPosition).WithoutRotation();
 		}
+		public void SetClamp(CameraStateClamp clamp)
+		{
+			this.clamp = clamp;
+		}
 		/// <summary>
 		/// The factor by which the zoom changes in response to user input.
 		/// </summary>

@@ -12,6 +12,16 @@ namespace Lvl3Mage.CameraManagement2D
 	[System.Serializable]
 	public class CameraStateClamp
 	{
+		public CameraStateClamp(ClampMode mode, Bounds bounds, Vector2 zoomClamp)
+		{
+			clampMode = mode;
+			xClamp = new Vector2(bounds.min.x, bounds.max.x);
+			clampXAxis = true;
+			yClamp = new Vector2(bounds.min.y, bounds.max.y);
+			clampYAxis = true;
+			zoomClamp = zoomClamp;
+			clampZoom = true;
+		}
 		/// <summary>
 		/// Modes for clamping the camera state.
 		/// </summary>

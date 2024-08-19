@@ -16,6 +16,10 @@ namespace Lvl3Mage.CameraManagement2D
 	public class TrackerCameraModule : CameraController
 	{
 		
+		public void SetClamp(CameraStateClamp clamp)
+		{
+			this.clamp = clamp;
+		}
 		/// <summary>
 		/// The list of objects currently being tracked by the camera.
 		/// </summary>
