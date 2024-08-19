@@ -117,5 +117,18 @@ namespace Lvl3Mage.CameraManagement2D
 				array[3]
 			);
 		}
+		
+		public static TransformSpline CreateTransformSpline(CameraStateTransform control1, CameraStateTransform control2, CameraStateTransform control3, CameraStateTransform control4, I4PointSplineFactory splineFactory)
+		{
+			ISpline[] splines = splineFactory.CreateSplines(control1.ToArray(), control2.ToArray(), control3.ToArray(), control4.ToArray());
+			
+			return (t) => {
+				float[] values = SplineTools.EvaluateSplines(splines, t);
+				return CameraStateTransform.FromArray(values);
+			};
+		}
+		public delegate CameraStateTransform TransformSpline(float t);
+		
+		
 	}
 }

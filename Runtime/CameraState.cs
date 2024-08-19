@@ -345,6 +345,15 @@ namespace Lvl3Mage.CameraManagement2D
 		{
 			return b.WithTransform(-a);
 		}
+		public static CameraStateTransform operator -(CameraState a, CameraState b)
+		{
+			CameraStateTransform transform = new CameraStateTransform(
+				translation: b.position - a.position,
+				rotationDelta: b.rotation - a.rotation,
+				zoomDelta: b.zoom - a.zoom
+			);
+			return transform;
+		}
 		
 		public void ApplyTo(Camera camera)
 		{
