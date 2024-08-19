@@ -349,9 +349,11 @@ namespace Lvl3Mage.CameraManagement2D
 		{
 			CameraStateTransform transform = new CameraStateTransform(
 				translation: a.position - b.position,
-				rotationDelta: a.rotation - b.rotation,
-				zoomDelta: Mathf.Log(a.zoom) - Mathf.Log(b.zoom)
+				rotationDelta: a.rotation - b.rotation
 			);
+			if(zoom != null && b.zoom != null){
+				transform = transform.WithZoomDelta(Mathf.Log(a.Zoom) - Mathf.Log(b.Zoom));
+			}
 			return transform;
 		}
 		
