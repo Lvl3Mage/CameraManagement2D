@@ -348,9 +348,9 @@ namespace Lvl3Mage.CameraManagement2D
 		public static CameraStateTransform operator -(CameraState a, CameraState b)
 		{
 			CameraStateTransform transform = new CameraStateTransform(
-				translation: b.position - a.position,
-				rotationDelta: b.rotation - a.rotation,
-				zoomDelta: b.zoom - a.zoom
+				translation: a.position - b.position,
+				rotationDelta: a.rotation - b.rotation,
+				zoomDelta: a.zoom - b.zoom
 			);
 			return transform;
 		}
