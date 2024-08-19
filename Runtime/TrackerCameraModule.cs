@@ -50,7 +50,7 @@ namespace Lvl3Mage.CameraManagement2D
 		/// <summary>
 		/// The component used to clamp the camera's state to certain bounds.
 		/// </summary>
-		[SerializeField] CameraStateClamp clamp = new();
+		[SerializeField] CameraStateClamp clamp;
 		/// <summary>
 		/// Whether to draw gizmos in the editor for visualizing clamping bounds.
 		/// </summary>
