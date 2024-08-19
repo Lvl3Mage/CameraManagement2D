@@ -1,5 +1,6 @@
 using UnityEngine;
-
+using Lvl3Mage.InterpolationToolkit.Splines;
+using Lvl3Mage.InterpolationToolkit;
 namespace Lvl3Mage.CameraManagement2D
 {
 	public struct CameraStateTransform
