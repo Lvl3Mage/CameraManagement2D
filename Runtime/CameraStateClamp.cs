@@ -14,17 +14,17 @@ namespace Lvl3Mage.CameraManagement2D
 	{
 		public CameraStateClamp(){}
 
-		public CameraStateClamp InsideBounds(Bounds bounds, float cameraaspect, ClampMode mode, Vector2? sizeClamp = null)
+		public CameraStateClamp InsideBounds(Bounds bounds, float cameraAspect, ClampMode mode, Vector2? sizeClamp = null)
 		{
-				CameraState newState = CameraState.ContainedInBounds(bounds, cameraaspect);
-				Bounds innerBounds = newState.GetBounds(cameraaspect);
+				CameraState newState = CameraState.ContainedInBounds(bounds, cameraAspect);
+				Bounds innerBounds = newState.GetBounds(cameraAspect);
 				return new CameraStateClamp(mode, innerBounds, sizeClamp);
 				
 		}
-		public CameraStateClamp EnclosingBounds(Bounds bounds, float cameraaspect, ClampMode mode)
+		public CameraStateClamp EnclosingBounds(Bounds bounds, float cameraAspect, ClampMode mode, Vector2? sizeClamp = null)
 		{
-				CameraState newState = CameraState.CoveringBounds(bounds, cameraaspect);
-				Bounds innerBounds = newState.GetBounds(cameraaspect);
+				CameraState newState = CameraState.CoveringBounds(bounds, cameraAspect);
+				Bounds innerBounds = newState.GetBounds(cameraAspect);
 				return new CameraStateClamp(mode, innerBounds, sizeClamp);
 				
 		}
@@ -32,8 +32,8 @@ namespace Lvl3Mage.CameraManagement2D
 		{
 			clampMode = mode;
 			if(bounds != null){
-				xClamp = new Vector2(bounds.min.x, bounds.max.x);
-				yClamp = new Vector2(bounds.min.y, bounds.max.y);
+				xClamp = new Vector2(bounds.Value.min.x, bounds.Value.max.x);
+				yClamp = new Vector2(bounds.Value.min.y, bounds.Value.max.y);
 			}
 			clampXAxis = bounds != null;
 			clampYAxis = bounds != null;
