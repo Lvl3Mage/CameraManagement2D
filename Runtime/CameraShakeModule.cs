@@ -12,26 +12,15 @@ namespace Lvl3Mage.CameraManagement2D
 	
 	public class CameraShakeModule : CameraController
 	{
-		
-		public static TransformSpline CreateTransformSpline(CameraStateTransform control1, CameraStateTransform control2, CameraStateTransform control3, CameraStateTransform control4, I4PointSplineFactory splineFactory)
-		{
-			ISpline[] splines = splineFactory.CreateSplines(control1.ToArray(), control2.ToArray(), control3.ToArray(), control4.ToArray());
-			
-			return (t) => {
-				float[] values = SplineTools.EvaluateSplines(splines, t);
-				return CameraStateTransform.FromArray(values);
-			};
-		}
-		public delegate CameraStateTransform TransformSpline(float t);
 
-		public TransformSpline CreateContinuousShake(I4PointSplineFactory splineFactory, CameraStateTransform tangent1, CameraStateTransform tangent2 = default)
+		public CameraStateTransform.TransformSpline CreateContinuousShake(I4PointSplineFactory splineFactory, CameraStateTransform tangent1, CameraStateTransform tangent2 = default)
 		{
-			return CreateTransformSpline(shakeTransform, tangent1, tangent2, CameraStateTransform.Empty, splineFactory);
+			return CameraStateTransform.CreateTransformSpline(shakeTransform, tangent1, tangent2, CameraStateTransform.Empty, splineFactory);
 		}
 		
 		CameraStateTransform shakeTransform;
 		Coroutine shakeCoroutine;
-		public void StartShake(TransformSpline shake, float duration)
+		public void StartShake(CameraStateTransform.TransformSpline shake, float duration)
 		{
 			if (shakeCoroutine != null)
 			{
@@ -40,7 +29,7 @@ namespace Lvl3Mage.CameraManagement2D
 			shakeCoroutine = StartCoroutine(ShakeRoutine(shake, duration));
 		}
 
-		IEnumerator ShakeRoutine(TransformSpline shake, float duration)
+		IEnumerator ShakeRoutine(CameraStateTransform.TransformSpline shake, float duration)
 		{
 			float elapsed = 0;
 			while (elapsed < duration)

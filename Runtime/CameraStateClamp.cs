@@ -1,9 +1,9 @@
+#nullable enable
 using System.Collections;
 using System.Collections.Generic;
 using Lvl3Mage.CameraManagement2D;
 using MyBox;
 using UnityEngine;
-
 namespace Lvl3Mage.CameraManagement2D
 {
 	/// <summary>
@@ -12,6 +12,36 @@ namespace Lvl3Mage.CameraManagement2D
 	[System.Serializable]
 	public class CameraStateClamp
 	{
+		public CameraStateClamp(){}
+
+		public static CameraStateClamp ContainedInBounds(Bounds bounds, float cameraAspect, ClampMode mode, Vector2? sizeClamp = null)
+		{
+				CameraState newState = CameraState.ContainedInBounds(bounds, cameraAspect);
+				Bounds innerBounds = newState.GetBounds(cameraAspect);
+				return new CameraStateClamp(mode, innerBounds, sizeClamp);
+				
+		}
+		public static CameraStateClamp CoveringBounds(Bounds bounds, float cameraAspect, ClampMode mode, Vector2? sizeClamp = null)
+		{
+				CameraState newState = CameraState.CoveringBounds(bounds, cameraAspect);
+				Bounds innerBounds = newState.GetBounds(cameraAspect);
+				return new CameraStateClamp(mode, innerBounds, sizeClamp);
+				
+		}
+		public CameraStateClamp(ClampMode mode, Bounds? bounds, Vector2? zoomClamp)
+		{
+			clampMode = mode;
+			if(bounds != null){
+				xClamp = new Vector2(bounds.Value.min.x, bounds.Value.max.x);
+				yClamp = new Vector2(bounds.Value.min.y, bounds.Value.max.y);
+			}
+			clampXAxis = bounds != null;
+			clampYAxis = bounds != null;
+			if (zoomClamp != null){
+				zoomClamp = zoomClamp;
+			}
+			clampZoom = zoomClamp != null;
+		}
 		/// <summary>
 		/// Modes for clamping the camera state.
 		/// </summary>
@@ -32,34 +62,34 @@ namespace Lvl3Mage.CameraManagement2D
 		/// <summary>
 		/// The mode for clamping the camera state.
 		/// </summary>
-		[SerializeField] ClampMode clampMode = ClampMode.ClampPosition;
+		[SerializeField] public ClampMode clampMode = ClampMode.ClampPosition;
 		/// <summary>
 		/// Indicates whether the X-axis should be clamped.
 		/// </summary>
-		[SerializeField] bool clampXAxis = true;
+		[SerializeField] public bool clampXAxis = true;
 		/// <summary>
 		/// The range for clamping the X-axis.
 		/// </summary>
 		[ConditionalField("clampXAxis")] [SerializeField]
-		Vector2 xClamp = new Vector2(-10, 10);
+		public Vector2 xClamp = new Vector2(-10, 10);
 		/// <summary>
 		/// Indicates whether the Y-axis should be clamped.
 		/// </summary>
-		[SerializeField] bool clampYAxis = true;
+		[SerializeField] public bool clampYAxis = true;
 		/// <summary>
 		/// The range for clamping the Y-axis.
 		/// </summary>
 		[ConditionalField("clampYAxis")] [SerializeField]
-		Vector2 yClamp = new Vector2(-10, 10);
+		public Vector2 yClamp = new Vector2(-10, 10);
 		/// <summary>
 		/// Indicates whether the zoom should be clamped.
 		/// </summary>
-		[SerializeField] bool clampZoom = true;
+		[SerializeField] public bool clampZoom = true;
 		/// <summary>
 		/// The range for clamping the zoom level.
 		/// </summary>
 		[ConditionalField("clampZoom")] [SerializeField]
-		Vector2 zoomClamp = new Vector2(0.1f, 15);
+		public Vector2 zoomClamp = new Vector2(0.1f, 15);
 		
 		/// <summary>
 		/// Clamps the camera state based on the configured clamp settings.

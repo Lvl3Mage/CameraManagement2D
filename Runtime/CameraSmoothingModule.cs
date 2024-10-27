@@ -89,7 +89,7 @@ namespace Lvl3Mage.CameraManagement2D
 
 		void FixedUpdate()
 		{
-			if(!active){return;}
+			// if(!active){return;}
 			interpolatedState = Decay(interpolatedState, targetController.GetCameraState(), Time.fixedDeltaTime);
 		}
 
