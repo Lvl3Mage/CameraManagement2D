@@ -26,6 +26,9 @@ namespace Lvl3Mage.CameraManagement2D
 			/// </summary>
 			ClampBounds
 		}
+		
+		
+
 		/// <summary>
 		/// The mode for clamping the camera state.
 		/// </summary>
