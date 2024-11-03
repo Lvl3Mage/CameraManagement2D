@@ -1,6 +1,6 @@
 ﻿{
   "name": "com.lvl3mage.camera-management-2d",
-  "version": "1.1.20",
+  "version": "1.1.21",
   "displayName": "Camera Management 2D",
   "description": "A package that provides an extendable 2D camera management system as well as a few built in camera controllers.",
   "unity": "2021.3",
@@ -15,7 +15,7 @@
     "com.lvl3mage.editor-enhancements": "1.1.6",
     "com.domybest.mybox": "1.8.0",
     "com.lvl3mage.editor-dev-toolkit": "1.1.2",
-    "com.lvl3mage.interpolation-toolkit": "1.1.1"
+    "com.lvl3mage.interpolation-toolkit": "1.1.2"
   },
   "author": "lvl3mage",
   "license": "MIT",
