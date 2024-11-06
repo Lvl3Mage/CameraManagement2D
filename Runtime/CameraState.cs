@@ -312,50 +312,50 @@ namespace Lvl3Mage.CameraManagement2D
 			};
 			return newState;
 		}
-		
-		public CameraState WithTransform(CameraStateTransform transform)
-		{
-			CameraState newState = this;
-			newState.position = (newState.position ?? Vector2.zero) + transform.Translation;
-			
-			newState.rotation = (newState.rotation ?? 0) + transform.RotationDelta;
-			
-			if(zoom == null && transform.ZoomDelta != 0){
-				Debug.LogWarning("Could not apply zoom delta to camera state without zoom value");
-			}
-			newState = newState.ExponentialZoom(transform.ZoomDelta);
-			
-			
-
-			return newState;
-		}
-		public static CameraState operator +(CameraState a, CameraStateTransform b)
-		{
-			return a.WithTransform(b);
-		}
-		public static CameraState operator +(CameraStateTransform a, CameraState b)
-		{
-			return b.WithTransform(a);
-		}
-		public static CameraState operator -(CameraState a, CameraStateTransform b)
-		{
-			return a.WithTransform(-b);
-		}
-		public static CameraState operator -(CameraStateTransform a, CameraState b)
-		{
-			return b.WithTransform(-a);
-		}
-		public static CameraStateTransform operator -(CameraState a, CameraState b)
-		{
-			CameraStateTransform transform = new CameraStateTransform(
-				translation: a.position - b.position,
-				rotationDelta: a.rotation - b.rotation
-			);
-			if(a.zoom != null && b.zoom != null){
-				transform = transform.WithZoomDelta(Mathf.Log(a.zoom.Value) - Mathf.Log(b.zoom.Value));
-			}
-			return transform;
-		}
+		//TODO implement WithTransform and operators
+		// public CameraState WithTransform(CameraStateTransform transform)
+		// {
+		// 	CameraState newState = this;
+		// 	newState.position = (newState.position ?? Vector2.zero) + transform.Translation;
+		//
+		// 	newState.rotation = (newState.rotation ?? 0) + transform.RotationDelta;
+		//
+		// 	if(zoom == null && transform.ZoomDelta != 0){
+		// 		Debug.LogWarning("Could not apply zoom delta to camera state without zoom value");
+		// 	}
+		// 	newState = newState.ExponentialZoom(transform.ZoomDelta);
+		//
+		//
+		//
+		// 	return newState;
+		// }
+		// public static CameraState operator +(CameraState a, CameraStateTransform b)
+		// {
+		// 	return a.WithTransform(b);
+		// }
+		// public static CameraState operator +(CameraStateTransform a, CameraState b)
+		// {
+		// 	return b.WithTransform(a);
+		// }
+		// public static CameraState operator -(CameraState a, CameraStateTransform b)
+		// {
+		// 	return a.WithTransform(-b);
+		// }
+		// public static CameraState operator -(CameraStateTransform a, CameraState b)
+		// {
+		// 	return b.WithTransform(-a);
+		// }
+		// public static CameraStateTransform operator -(CameraState a, CameraState b)
+		// {
+		// 	CameraStateTransform transform = new CameraStateTransform(
+		// 		translation: a.position - b.position,
+		// 		rotationDelta: a.rotation - b.rotation
+		// 	);
+		// 	if(a.zoom != null && b.zoom != null){
+		// 		transform = transform.WithZoomDelta(Mathf.Log(a.zoom.Value) - Mathf.Log(b.zoom.Value));
+		// 	}
+		// 	return transform;
+		// }
 		
 		public void ApplyTo(Camera camera)
 		{
