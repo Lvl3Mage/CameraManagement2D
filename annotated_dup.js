@@ -1,17 +1,15 @@
 var annotated_dup =
 [
-    [ "Lvl3Mage", "a00041.html", [
-      [ "CameraManagement2D", "a00042.html", [
-        [ "CameraController", "a00058.html", "a00058" ],
-        [ "CameraModuleManager", "a00062.html", "a00062" ],
-        [ "CameraPanModule", "a00066.html", "a00066" ],
-        [ "CameraShakeModule", "a00070.html", "a00070" ],
-        [ "CameraSmoothingModule", "a00074.html", "a00074" ],
-        [ "CameraState", "a00078.html", "a00078" ],
-        [ "CameraStateClamp", "a00082.html", "a00082" ],
-        [ "CameraStateTransform", "a00086.html", null ],
-        [ "SceneCamera", "a00090.html", "a00090" ],
-        [ "TrackerCameraModule", "a00094.html", "a00094" ]
+    [ "Lvl3Mage", "a00035.html", [
+      [ "CameraManagement2D", "a00036.html", [
+        [ "CameraController", "a00051.html", "a00051" ],
+        [ "CameraModuleManager", "a00055.html", "a00055" ],
+        [ "CameraPanModule", "a00059.html", "a00059" ],
+        [ "CameraSmoothingModule", "a00063.html", "a00063" ],
+        [ "CameraState", "a00067.html", "a00067" ],
+        [ "CameraStateClamp", "a00071.html", "a00071" ],
+        [ "SceneCamera", "a00075.html", "a00075" ],
+        [ "TrackerCameraModule", "a00079.html", "a00079" ]
       ] ]
     ] ]
 ];

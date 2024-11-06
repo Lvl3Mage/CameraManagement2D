@@ -31,13 +31,13 @@ var NAVTREE =
       [ "Documentation", "index.html#autotoc_md8", null ],
       [ "Author", "index.html#autotoc_md9", null ]
     ] ],
-    [ "[1.0.0] - 2024-07-16", "a00155.html", [
-      [ "[1.0.1] - 2024-07-24", "a00155.html#autotoc_md1", null ],
-      [ "[1.0.2] - 2024-07-24", "a00155.html#autotoc_md2", null ],
-      [ "[1.0.3] - 2024-07-29", "a00155.html#autotoc_md3", null ],
-      [ "[1.0.4] - 2024-08-01", "a00155.html#autotoc_md4", null ]
+    [ "[1.0.0] - 2024-07-16", "a00136.html", [
+      [ "[1.0.1] - 2024-07-24", "a00136.html#autotoc_md1", null ],
+      [ "[1.0.2] - 2024-07-24", "a00136.html#autotoc_md2", null ],
+      [ "[1.0.3] - 2024-07-29", "a00136.html#autotoc_md3", null ],
+      [ "[1.0.4] - 2024-08-01", "a00136.html#autotoc_md4", null ]
     ] ],
-    [ "LICENSE", "a00156.html", null ],
+    [ "LICENSE", "a00137.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -58,8 +58,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"a00041.html",
-"a00098.html#a6e99f82aea05510f0a6f40ab2154a329"
+"a00035.html",
+"a00083.html#aab010affddc4b9fb12c43373cfc52d2f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
